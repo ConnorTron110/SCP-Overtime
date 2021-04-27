@@ -1,7 +1,10 @@
 package io.github.connortron110.overtime.core.init;
 
 import io.github.connortron110.overtime.Reference;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -14,6 +17,10 @@ import java.util.function.Supplier;
 public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Reference.MOD_ID);
 
+    public static final RegistryObject<Block> GRATE_BLOCK = register("grated_floor", () ->
+            new Block(AbstractBlock.Properties.of(Material.STONE)
+                    .strength(3, 10)
+                    .sound(SoundType.STONE)));
 
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> block) {

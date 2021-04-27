@@ -13,7 +13,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        //TODO Simple enough lmao
-        //simpleBlock(BlockInit.BLOCKVARIABLE.get());
+        simpleBlock(BlockInit.GRATE_BLOCK.get());
     }
 }

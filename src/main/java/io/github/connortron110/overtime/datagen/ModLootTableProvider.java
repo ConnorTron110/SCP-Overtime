@@ -38,7 +38,7 @@ public class ModLootTableProvider extends LootTableProvider {
     public static class ModBlockLootTables extends BlockLootTables {
         @Override
         protected void addTables() {
-            //dropSelf(BlockInit.BLOCKNAME.get();
+            dropSelf(BlockInit.GRATE_BLOCK.get());
         }
 
         @Override
