@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "side": "overtime:block/scp1499_block_1",
+    "bottom": "overtime:block/scp1499_block_1",
+    "top": "overtime:block/scp1499_block_1"
+  }
+}

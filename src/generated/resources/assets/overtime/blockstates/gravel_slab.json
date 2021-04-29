@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "overtime:block/gravel_slab_top"
+    },
+    "type=bottom": {
+      "model": "overtime:block/gravel_slab"
+    },
+    "type=double": {
+      "model": "overtime:block/gravel_floor"
+    }
+  }
+}

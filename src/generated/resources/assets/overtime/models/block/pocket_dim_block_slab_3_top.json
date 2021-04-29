@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "side": "overtime:block/pocket_dim_block_3",
+    "bottom": "overtime:block/pocket_dim_block_3",
+    "top": "overtime:block/pocket_dim_block_3"
+  }
+}

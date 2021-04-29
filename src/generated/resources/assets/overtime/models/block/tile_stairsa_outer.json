@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "side": "overtime:block/tile_floora",
+    "bottom": "overtime:block/tile_floora",
+    "top": "overtime:block/tile_floora"
+  }
+}

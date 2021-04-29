@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "overtime:block/tile_slabb_top"
+    },
+    "type=bottom": {
+      "model": "overtime:block/tile_slabb"
+    },
+    "type=double": {
+      "model": "overtime:block/tile_floorb"
+    }
+  }
+}

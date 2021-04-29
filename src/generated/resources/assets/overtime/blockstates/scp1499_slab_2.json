@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "overtime:block/scp1499_slab_2_top"
+    },
+    "type=bottom": {
+      "model": "overtime:block/scp1499_slab_2"
+    },
+    "type=double": {
+      "model": "overtime:block/scp1499_block_1"
+    }
+  }
+}

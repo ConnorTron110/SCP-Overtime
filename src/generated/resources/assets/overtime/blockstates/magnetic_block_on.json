@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "overtime:block/magnetic_block_on"
+    }
+  }
+}

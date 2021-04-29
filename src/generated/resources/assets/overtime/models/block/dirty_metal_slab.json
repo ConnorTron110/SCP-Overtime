@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "side": "overtime:block/dirty_metal_floor",
+    "bottom": "overtime:block/dirty_metal_floor",
+    "top": "overtime:block/dirty_metal_floor"
+  }
+}

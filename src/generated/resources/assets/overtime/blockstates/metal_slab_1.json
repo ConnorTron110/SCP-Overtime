@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "overtime:block/metal_slab_1_top"
+    },
+    "type=bottom": {
+      "model": "overtime:block/metal_slab_1"
+    },
+    "type=double": {
+      "model": "overtime:block/metal_floor_1"
+    }
+  }
+}

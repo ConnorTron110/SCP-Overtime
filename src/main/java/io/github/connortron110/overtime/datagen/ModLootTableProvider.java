@@ -38,7 +38,137 @@ public class ModLootTableProvider extends LootTableProvider {
     public static class ModBlockLootTables extends BlockLootTables {
         @Override
         protected void addTables() {
+            dropSelf(BlockInit.MAGNETIC_BLOCK_ON.get());
+            dropSelf(BlockInit.RITUAL_BLOCK.get());
+            dropSelf(BlockInit.TILE_FLOOR_A.get());
+            dropSelf(BlockInit.TILE_STAIRS_A.get());
+            dropSelf(BlockInit.TILE_SLAB_A.get());
+            dropSelf(BlockInit.TILE_FLOOR_B.get());
+            dropSelf(BlockInit.TILE_STAIRS_B.get());
+            dropSelf(BlockInit.TILE_SLAB_B.get());
             dropSelf(BlockInit.GRATE_BLOCK.get());
+            dropSelf(BlockInit.GRATE_STAIRS.get());
+            dropSelf(BlockInit.GRATE_SLAB.get());
+            dropSelf(BlockInit.GRAVEL_BLOCK.get());
+            dropSelf(BlockInit.GRAVEL_STAIRS.get());
+            dropSelf(BlockInit.GRAVEL_SLAB.get());
+            dropSelf(BlockInit.GRANITE_FLOOR.get());
+            dropSelf(BlockInit.GRANITE_STAIRS.get());
+            dropSelf(BlockInit.GRANITE_SLAB.get());
+            dropSelf(BlockInit.GRANITE_WALL.get());
+
+            dropSelf(BlockInit.DARK_FLOOR.get());
+            dropSelf(BlockInit.DARK_STAIRS.get());
+            dropSelf(BlockInit.DARK_SLAB.get());
+            dropSelf(BlockInit.DARK_WALL.get());
+            dropSelf(BlockInit.DARK_FENCE.get());
+            dropSelf(BlockInit.DARK_FENCE_GATE.get());
+
+            dropSelf(BlockInit.METAL_FLOOR_1.get());
+            dropSelf(BlockInit.METAL_STAIRS_1.get());
+            dropSelf(BlockInit.METAL_SLAB_1.get());
+            dropSelf(BlockInit.METAL_WALL_1.get());
+            dropSelf(BlockInit.METAL_FENCE_1.get());
+            dropSelf(BlockInit.METAL_FENCE_GATE_1.get());
+
+            dropSelf(BlockInit.METAL_FLOOR_2.get());
+            dropSelf(BlockInit.METAL_STAIRS_2.get());
+            dropSelf(BlockInit.METAL_SLAB_2.get());
+            dropSelf(BlockInit.METAL_WALL_2.get());
+            dropSelf(BlockInit.METAL_FENCE_2.get());
+            dropSelf(BlockInit.METAL_FENCE_GATE_2.get());
+
+            dropSelf(BlockInit.METAL_FLOOR_3.get());
+            dropSelf(BlockInit.METAL_STAIRS_3.get());
+            dropSelf(BlockInit.METAL_SLAB_3.get());
+            dropSelf(BlockInit.METAL_WALL_3.get());
+            dropSelf(BlockInit.METAL_FENCE_3.get());
+            dropSelf(BlockInit.METAL_FENCE_GATE_3.get());
+
+            dropSelf(BlockInit.DIRTY_METAL_FLOOR.get());
+            dropSelf(BlockInit.DIRTY_METAL_STAIRS.get());
+            dropSelf(BlockInit.DIRTY_METAL_SLAB.get());
+            dropSelf(BlockInit.DIRTY_METAL_WALL.get());
+            dropSelf(BlockInit.DIRTY_METAL_FENCE.get());
+            dropSelf(BlockInit.DIRTY_METAL_FENCE_GATE.get());
+
+            dropSelf(BlockInit.GRIT_1.get());
+            dropSelf(BlockInit.GRIT_STAIRS_1.get());
+            dropSelf(BlockInit.GRIT_SLAB_1.get());
+            dropSelf(BlockInit.GRIT_2.get());
+            dropSelf(BlockInit.GRIT_STAIRS_2.get());
+            dropSelf(BlockInit.GRIT_SLAB_2.get());
+
+            dropSelf(BlockInit.LIGHT_WALL_TOP.get());
+            dropSelf(BlockInit.MED_WALL_TOP.get());
+            dropSelf(BlockInit.HEAVY_WALL_TOP_1.get());
+            dropSelf(BlockInit.HEAVY_WALL_TOP_2.get());
+            dropSelf(BlockInit.BRICK_WALL_TOP.get());
+            dropSelf(BlockInit.STAINED_BRICK_WALL_TOP.get());
+            dropSelf(BlockInit.STAINED_WALL_TOP.get());
+            dropSelf(BlockInit.CONCRETE_WALL_TOP.get());
+            dropSelf(BlockInit.POCKET_DIM_WALL_TOP.get());
+
+            dropSelf(BlockInit.LIGHT_WALL_MID.get());
+            dropSelf(BlockInit.MED_WALL_MID.get());
+            dropSelf(BlockInit.HEAVY_WALL_MID_1.get());
+            dropSelf(BlockInit.HEAVY_WALL_MID_2.get());
+            dropSelf(BlockInit.BRICK_WALL_MID.get());
+            dropSelf(BlockInit.STAINED_BRICK_WALL_MID.get());
+            dropSelf(BlockInit.STAINED_WALL_MID.get());
+            dropSelf(BlockInit.CONCRETE_WALL_MID.get());
+            dropSelf(BlockInit.POCKET_DIM_WALL_MID.get());
+
+            dropSelf(BlockInit.LIGHT_WALL_BOTTOM.get());
+            dropSelf(BlockInit.MED_WALL_BOTTOM.get());
+            dropSelf(BlockInit.HEAVY_WALL_BOTTOM_1.get());
+            dropSelf(BlockInit.HEAVY_WALL_BOTTOM_2.get());
+            dropSelf(BlockInit.BRICK_WALL_BOTTOM.get());
+            dropSelf(BlockInit.STAINED_BRICK_WALL_BOTTOM.get());
+            dropSelf(BlockInit.STAINED_WALL_BOTTOM.get());
+            dropSelf(BlockInit.CONCRETE_WALL_BOTTOM.get());
+            dropSelf(BlockInit.POCKET_DIM_WALL_BOTTOM.get());
+
+            dropSelf(BlockInit.POCKET_DIM_TILE_FLOOR.get());
+            dropSelf(BlockInit.POCKET_DIM_TILE_STAIRS.get());
+            dropSelf(BlockInit.POCKET_DIM_TILE_SLAB.get());
+
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_1.get());
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_STAIRS_1.get());
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_SLAB_1.get());
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_2.get());
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_STAIRS_2.get());
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_SLAB_2.get());
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_3.get());
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_STAIRS_3.get());
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_SLAB_3.get());
+
+            dropSelf(BlockInit.SCP1499_BLOCK_1.get());
+            dropSelf(BlockInit.SCP1499_STAIRS_1.get());
+            dropSelf(BlockInit.SCP1499_SLAB_1.get());
+            dropSelf(BlockInit.SCP1499_BLOCK_2.get());
+            dropSelf(BlockInit.SCP1499_STAIRS_2.get());
+            dropSelf(BlockInit.SCP1499_SLAB_2.get());
+
+            dropSelf(BlockInit.BLUE_WALL_TOP.get());
+            dropSelf(BlockInit.BLUE_WALL_MID.get());
+            dropSelf(BlockInit.BLUE_WALL_BOTTOM.get());
+            dropSelf(BlockInit.OFFICE_WALL_TOP.get());
+            dropSelf(BlockInit.OFFICE_WALL_BOTTOM.get());
+            dropSelf(BlockInit.OFFICE_CEILING.get());
+            dropSelf(BlockInit.WHITE_WALL.get());
+            dropSelf(BlockInit.HEAVY_BLOCK.get());
+            dropSelf(BlockInit.CLOTH_BLOCK.get());
+
+            dropWhenSilkTouch(BlockInit.CONTAINMENT_GLASS.get());
+            dropWhenSilkTouch(BlockInit.CONTAINMENT_GLASS_PANE.get());
+
+            dropSelf(BlockInit.VENT_ENTRANCE.get());
+
+            dropWhenSilkTouch(BlockInit.SCP2845_GRASS.get());
+            dropSelf(BlockInit.SCP2845_LOG.get());
+            dropWhenSilkTouch(BlockInit.SCP2845_LEAVES.get());
+            dropSelf(BlockInit.SCP2845_PLANT.get());
         }
 
         @Override

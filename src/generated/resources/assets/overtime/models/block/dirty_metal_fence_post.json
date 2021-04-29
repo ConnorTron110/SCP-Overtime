@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "overtime:block/dirty_metal_floor"
+  }
+}

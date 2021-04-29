@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "side": "overtime:block/scp2845_log",
+    "end": "overtime:block/scp2845_log_top"
+  }
+}

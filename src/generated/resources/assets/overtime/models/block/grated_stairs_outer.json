@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "side": "overtime:block/grated_floor",
+    "bottom": "overtime:block/grated_floor",
+    "top": "overtime:block/grated_floor"
+  }
+}

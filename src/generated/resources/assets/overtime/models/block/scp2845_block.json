@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "overtime:block/scp2845_side",
+    "bottom": "overtime:block/scp2845_bottom",
+    "top": "overtime:block/scp2845_top"
+  }
+}

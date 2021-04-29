@@ -19,5 +19,8 @@ public class DataGenerators {
 
         gen.addProvider(new ModLootTableProvider(gen));
         gen.addProvider(new ModRecipeProvider(gen));
+
+        ModBlockTagsProvider blockTags = new ModBlockTagsProvider(gen, event.getExistingFileHelper());
+        gen.addProvider(blockTags);
     }
 }
