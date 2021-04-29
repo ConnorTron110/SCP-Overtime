@@ -155,6 +155,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder(ItemInit.ICON_SAFE.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.ICON_SAFE.get().getRegistryName().getPath());
         getBuilder(ItemInit.ICON_EUCLID.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.ICON_EUCLID.get().getRegistryName().getPath());
         getBuilder(ItemInit.ICON_KETER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.ICON_KETER.get().getRegistryName().getPath());
+        getBuilder(ItemInit.CUPCAKE.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.CUPCAKE.get().getRegistryName().getPath());
+        getBuilder(ItemInit.MOB_DESPAWNER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/pipe");
     }
 
     private void withExistingParent(Block block) {

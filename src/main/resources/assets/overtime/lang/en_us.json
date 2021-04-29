@@ -138,6 +138,11 @@
   "item.overtime.icon_euclid": "Icon Euclid",
   "item.overtime.icon_keter": "Icon Keter",
 
+  "item.overtime.scp714": "SCP-714",
+  "item.overtime.cupcake": "Cupcake",
+  "item.overtime.mob_despawner": "Mob Despawner",
+
+
   "itemGroup.overtimeitems": "Overtime Items",
   "itemGroup.overtimeblocks": "Overtime Building Blocks",
   "itemGroup.overtimemobs": "Overtime Mobs",
