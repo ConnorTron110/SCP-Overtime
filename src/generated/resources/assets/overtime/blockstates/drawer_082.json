@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "overtime:block/drawer_082"
+    },
+    "facing=south": {
+      "model": "overtime:block/drawer_082",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "overtime:block/drawer_082",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "overtime:block/drawer_082",
+      "y": 90
+    }
+  }
+}

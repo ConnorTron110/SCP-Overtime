@@ -144,5 +144,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         logBlock(BlockInit.SCP2845_LOG.get());
         simpleBlock(BlockInit.SCP2845_LEAVES.get());
         simpleBlock(BlockInit.SCP2845_PLANT.get(), models().cross(BlockInit.SCP2845_PLANT.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.SCP2845_PLANT.get().getRegistryName().getPath())));
+
+        horizontalBlock(BlockInit.FLUTE.get(), models().getExistingFile(modLoc("block/flute")));
+        horizontalBlock(BlockInit.OLIVE_OIL.get(), models().getExistingFile(modLoc("block/olive_oil")));
+        simpleBlock(BlockInit.GRAIN_POUCH.get(), models().getExistingFile(modLoc("block/grain_pouch")));
+        simpleBlock(BlockInit.GIFT.get(), models().getExistingFile(modLoc("block/gift")));
+        horizontalBlock(BlockInit.FOOLISHNESS.get(), models().getExistingFile(modLoc("block/foolishness")));
+        horizontalBlock(BlockInit.DRAWER.get(), models().getExistingFile(modLoc("block/drawer_082")));
+        horizontalBlock(BlockInit.CEILING_CAMERA.get(), models().getExistingFile(modLoc("block/ceiling_camera")));
+        simpleBlock(BlockInit.BLOOD_PUDDLE.get(), models().getExistingFile(modLoc("block/blood_puddle")));
+        horizontalBlock(BlockInit.SERVER.get(), models().getExistingFile(modLoc("block/server")));
     }
 }

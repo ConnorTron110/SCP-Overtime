@@ -147,16 +147,30 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(BlockInit.SCP2845_GRASS.get());
         withExistingParent(BlockInit.SCP2845_LOG.get());
         withExistingParent(BlockInit.SCP2845_LEAVES.get());
-        cross(BlockInit.SCP2845_PLANT.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.SCP2845_PLANT.get().getRegistryName().getPath()));
+
+        withExistingParent(BlockInit.FLUTE.get());
+        withExistingParent(BlockInit.OLIVE_OIL.get());
+        withExistingParent(BlockInit.GRAIN_POUCH.get());
+        withExistingParent(BlockInit.GIFT.get());
+        withExistingParent(BlockInit.FOOLISHNESS.get());
+        withExistingParent(BlockInit.DRAWER.get());
+        withExistingParent(BlockInit.CEILING_CAMERA.get());
+        withExistingParent(BlockInit.BLOOD_PUDDLE.get());
+        withExistingParent(BlockInit.SERVER.get());
+        withExistingParent(BlockInit.COMPUTER.get().getRegistryName().getPath(), modLoc("block/computer_off"));
+        withExistingParent(BlockInit.TERMINAL.get().getRegistryName().getPath(), modLoc("block/terminal_off"));
 
 
         //Item Generated Models
         final ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
+        getBuilder(BlockInit.SCP2845_PLANT.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "block/"+BlockInit.SCP2845_PLANT.get().getRegistryName().getPath());
+
         getBuilder(ItemInit.ICON_SAFE.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.ICON_SAFE.get().getRegistryName().getPath());
         getBuilder(ItemInit.ICON_EUCLID.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.ICON_EUCLID.get().getRegistryName().getPath());
         getBuilder(ItemInit.ICON_KETER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.ICON_KETER.get().getRegistryName().getPath());
         getBuilder(ItemInit.CUPCAKE.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.CUPCAKE.get().getRegistryName().getPath());
         getBuilder(ItemInit.MOB_DESPAWNER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/pipe");
+
     }
 
     private void withExistingParent(Block block) {

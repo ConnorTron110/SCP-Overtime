@@ -67,11 +67,11 @@
   "block.overtime.med_wall_mid": "Med Wall Mid",
   "block.overtime.med_wall_bottom": "Med Wall Bottom",
   "block.overtime.heavy_wall_top_1": "Heavy Wall Top 1",
-  "block.overtime.heavy_wall_mid_1": "Med Wall Mid 1",
-  "block.overtime.heavy_wall_bottom_1": "Med Wall Bottom 1",
+  "block.overtime.heavy_wall_mid_1": "Heavy Wall Mid 1",
+  "block.overtime.heavy_wall_bottom_1": "Heavy Wall Bottom 1",
   "block.overtime.heavy_wall_top_2": "Heavy Wall Top 2",
-  "block.overtime.heavy_wall_mid_2": "Med Wall Mid 2",
-  "block.overtime.heavy_wall_bottom_2": "Med Wall Bottom 2",
+  "block.overtime.heavy_wall_mid_2": "Heavy Wall Mid 2",
+  "block.overtime.heavy_wall_bottom_2": "Heavy Wall Bottom 2",
   "block.overtime.brick_wall_top": "Brick Wall Top",
   "block.overtime.brick_wall_mid": "Brick Wall Mid",
   "block.overtime.brick_wall_bottom": "Brick Wall Bottom",
@@ -129,6 +129,18 @@
   "block.overtime.scp2845_leaves": "SCP-2845 Leaves",
   "block.overtime.scp2845_plant": "SCP-2845 Plant",
 
+
+  "block.overtime.flute": "Flute",
+  "block.overtime.olive_oil": "Olive Oil",
+  "block.overtime.grain_pouch": "Grain Pouch",
+  "block.overtime.gift": "Gift",
+  "block.overtime.foolishness": "Foolishness",
+  "block.overtime.drawer_082": "Drawer",
+  "block.overtime.ceiling_camera": "Ceiling Camera",
+  "block.overtime.blood_puddle": "Blood Puddle",
+  "block.overtime.server": "Server",
+  "block.overtime.computer": "Computer",
+  "block.overtime.terminal": "Terminal",
 
 
 

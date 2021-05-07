@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/cross",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "cross": "overtime:block/scp2845_plant"
+    "layer0": "overtime:block/scp2845_plant"
   }
 }

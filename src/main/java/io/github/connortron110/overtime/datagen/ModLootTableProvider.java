@@ -169,6 +169,17 @@ public class ModLootTableProvider extends LootTableProvider {
             dropSelf(BlockInit.SCP2845_LOG.get());
             dropWhenSilkTouch(BlockInit.SCP2845_LEAVES.get());
             dropSelf(BlockInit.SCP2845_PLANT.get());
+
+            dropSelf(BlockInit.FLUTE.get());
+            dropSelf(BlockInit.OLIVE_OIL.get());
+            dropSelf(BlockInit.GRAIN_POUCH.get());
+            dropSelf(BlockInit.GIFT.get());
+            dropSelf(BlockInit.FOOLISHNESS.get());
+            dropSelf(BlockInit.DRAWER.get());
+            dropSelf(BlockInit.CEILING_CAMERA.get());
+            dropSelf(BlockInit.SERVER.get());
+            dropSelf(BlockInit.COMPUTER.get());
+            dropSelf(BlockInit.TERMINAL.get());
         }
 
         @Override

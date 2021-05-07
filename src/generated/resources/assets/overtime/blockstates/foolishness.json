@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "overtime:block/foolishness"
+    },
+    "facing=south": {
+      "model": "overtime:block/foolishness",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "overtime:block/foolishness",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "overtime:block/foolishness",
+      "y": 90
+    }
+  }
+}

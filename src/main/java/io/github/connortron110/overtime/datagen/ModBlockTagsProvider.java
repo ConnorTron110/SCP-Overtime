@@ -5,6 +5,7 @@ import io.github.connortron110.overtime.core.init.BlockInit;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.tags.BlockTags;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModBlockTagsProvider extends BlockTagsProvider {
@@ -42,5 +43,15 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(BlockInit.METAL_WALL_2.get())
                 .add(BlockInit.METAL_WALL_3.get())
                 .add(BlockInit.DIRTY_METAL_WALL.get());
+
+        tag(BlockTags.LOGS)
+                .add(BlockInit.SCP2845_LOG.get());
+
+        tag(BlockTags.LEAVES)
+                .add(BlockInit.SCP2845_LEAVES.get());
+
+
+        tag(Tags.Blocks.DIRT)
+                .add(BlockInit.SCP2845_GRASS.get());
     }
 }
