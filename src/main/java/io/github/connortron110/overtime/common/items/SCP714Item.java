@@ -8,8 +8,8 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
 
-public class ItemSCP714 extends Item {
-    public ItemSCP714(Properties properties) {
+public class SCP714Item extends Item {
+    public SCP714Item(Properties properties) {
         super(properties);
     }
 
