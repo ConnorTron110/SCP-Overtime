@@ -1,6 +1,7 @@
 package io.github.connortron110.overtime;
 
 import io.github.connortron110.overtime.core.init.BlockInit;
+import io.github.connortron110.overtime.core.init.EntityInit;
 import io.github.connortron110.overtime.core.init.ItemInit;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -9,6 +10,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -48,7 +50,12 @@ public class Overtime {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         ItemInit.ITEMS.register(bus);
         BlockInit.BLOCKS.register(bus);
+        EntityInit.ENTITY_TYPES.register(bus);
 
+        bus.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    private void setup(final FMLCommonSetupEvent event) {
     }
 }

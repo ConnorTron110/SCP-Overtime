@@ -171,6 +171,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder(ItemInit.CUPCAKE.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.CUPCAKE.get().getRegistryName().getPath());
         getBuilder(ItemInit.MOB_DESPAWNER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/pipe");
 
+        final ModelFile spawnegg = getExistingFile(mcLoc("item/template_spawn_egg"));
+
     }
 
     private void withExistingParent(Block block) {
