@@ -51,6 +51,7 @@ public class Overtime {
         ItemInit.ITEMS.register(bus);
         BlockInit.BLOCKS.register(bus);
         EntityInit.ENTITY_TYPES.register(bus);
+        ModSounds.SOUNDS.register(bus);
 
         bus.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
