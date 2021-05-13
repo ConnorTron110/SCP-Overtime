@@ -17,7 +17,7 @@ import static net.minecraft.client.renderer.RenderTypeLookup.setRenderLayer;
 public class ClientEvents {
 
     @SubscribeEvent
-    public static void onRegisterEntites(RegistryEvent.Register<EntityType<?>> event) {
+    public static void onRegisterEntities(RegistryEvent.Register<EntityType<?>> event) {
         ModSpawnEggItem.initSpawnEggs();
     }
 
