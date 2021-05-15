@@ -1,2 +1,24 @@
 {
+  "scp066_rolling": {
+    "category": "hostile",
+    "sounds": [{ "name": "overtime:scp/066/rolling", "stream": false }]
+  },
+  "scp066_beethoven": {
+    "category": "hostile",
+    "sounds": [{ "name": "overtime:scp/066/beethoven", "stream": false }]
+  },
+  "scp066_idle": {
+    "category": "hostile",
+    "sounds": [
+      { "name": "overtime:scp/066/eric1", "stream": false },
+      { "name": "overtime:scp/066/eric2", "stream": false },
+      { "name": "overtime:scp/066/eric3", "stream": false },
+      { "name": "overtime:scp/066/notes1", "stream": false },
+      { "name": "overtime:scp/066/notes2", "stream": false },
+      { "name": "overtime:scp/066/notes3", "stream": false },
+      { "name": "overtime:scp/066/notes4", "stream": false },
+      { "name": "overtime:scp/066/notes5", "stream": false },
+      { "name": "overtime:scp/066/notes6", "stream": false }
+    ]
+  }
 }

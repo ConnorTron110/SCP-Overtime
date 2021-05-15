@@ -142,8 +142,18 @@
   "block.overtime.computer": "Computer",
   "block.overtime.terminal": "Terminal",
 
+  "block.overtime.scp066_block": "SCP-066 - \"Eric's Toy\"",
 
 
+  "death.attack.whipped": "%1$s got Whipped to death by SCP-066",
+  "death.attack.066deaf": "%1$s got Deafened by SCP-066",
+
+
+  "entity.overtime.scp066": "SCP-066-2 - \"Eric's Toy\"",
+  "entity.overtime.scp066_cat": "SCP-066 - Cat",
+
+
+  "item.overtime.scp066_spawn_egg": "SCP-066-2 - \"Eric's Toy\" Spawn Egg",
 
 
   "item.overtime.icon_safe": "Icon Safe",

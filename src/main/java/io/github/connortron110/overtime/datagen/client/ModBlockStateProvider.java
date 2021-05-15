@@ -154,5 +154,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(BlockInit.CEILING_CAMERA.get(), models().getExistingFile(modLoc("block/ceiling_camera")));
         simpleBlock(BlockInit.BLOOD_PUDDLE.get(), models().getExistingFile(modLoc("block/blood_puddle")));
         horizontalBlock(BlockInit.SERVER.get(), models().getExistingFile(modLoc("block/server")));
+
+        simpleBlock(BlockInit.SCP066_BLOCK.get(), models().getExistingFile(modLoc("block/scp066_block")));
     }
 }

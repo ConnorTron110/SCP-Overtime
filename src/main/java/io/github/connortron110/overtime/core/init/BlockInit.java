@@ -164,6 +164,8 @@ public class BlockInit {
     public static final RegistryObject<ComputerBlock> COMPUTER = register("computer", Overtime.TAB_MISC, ComputerBlock::new);
     public static final RegistryObject<ComputerBlock> TERMINAL = register("terminal", Overtime.TAB_MISC, ComputerBlock::new);
 
+    public static final RegistryObject<SCP066Block> SCP066_BLOCK = register("scp066_block", Overtime.TAB_MISC, SCP066Block::new);
+
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);

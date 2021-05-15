@@ -164,6 +164,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         //Item Generated Models
         final ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
         getBuilder(BlockInit.SCP2845_PLANT.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "block/"+BlockInit.SCP2845_PLANT.get().getRegistryName().getPath());
+        getBuilder(BlockInit.SCP066_BLOCK.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/scp066");
 
         getBuilder(ItemInit.ICON_SAFE.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.ICON_SAFE.get().getRegistryName().getPath());
         getBuilder(ItemInit.ICON_EUCLID.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.ICON_EUCLID.get().getRegistryName().getPath());
@@ -172,6 +173,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder(ItemInit.MOB_DESPAWNER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/pipe");
 
         final ModelFile spawnegg = getExistingFile(mcLoc("item/template_spawn_egg"));
+        getBuilder(ItemInit.SCP066_SPAWN_EGG.get().getRegistryName().getPath()).parent(spawnegg);
 
     }
 
