@@ -3,9 +3,9 @@ package io.github.connortron110.overtime.client.model;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import io.github.connortron110.overtime.common.entities.scp.SCP066_2Entity;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
-import net.minecraft.util.math.MathHelper;
 
 public class SCP066Model<T extends SCP066_2Entity> extends EntityModel<T> {
     private final ModelRenderer bone;
@@ -121,7 +121,7 @@ public class SCP066Model<T extends SCP066_2Entity> extends EntityModel<T> {
         modelRenderer.zRot = z;
     }
 
-    public void setupAnim(T entity, float f, float f1, float f2, float f3, float f4) {
-        this.bone.xRot = MathHelper.cos(f) * -1.0F * f1;
+    public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        this.bone.xRot += (limbSwingAmount - (0.4F * limbSwingAmount)) * Minecraft.getInstance().getDeltaFrameTime();
     }
 }
