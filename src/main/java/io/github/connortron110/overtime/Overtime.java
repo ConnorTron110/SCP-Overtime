@@ -6,14 +6,13 @@ import io.github.connortron110.overtime.core.init.BlockInit;
 import io.github.connortron110.overtime.core.init.EntityInit;
 import io.github.connortron110.overtime.core.init.ItemInit;
 import io.github.connortron110.overtime.core.init.ModSounds;
-import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -59,13 +58,15 @@ public class Overtime {
         ModSounds.SOUNDS.register(bus);
 
         bus.addListener(this::setup);
+        bus.addListener(this::onEntityAttributeCreation);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        DeferredWorkQueue.runLater(() -> {
-            GlobalEntityTypeAttributes.put(EntityInit.ERICS_TOY.get(), SCP066_2Entity.createMobAttributes().build());
-            GlobalEntityTypeAttributes.put(EntityInit.SCP066_CAT.get(), SCP066CatEntity.createMobAttributes().build());
-        });
+    }
+
+    private void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
+        event.put(EntityInit.ERICS_TOY.get(), SCP066_2Entity.createMobAttributes().build());
+        event.put(EntityInit.SCP066_CAT.get(), SCP066CatEntity.createMobAttributes().build());
     }
 }
