@@ -149,10 +149,12 @@
   "death.attack.066deaf": "%1$s got Deafened by SCP-066",
 
 
+  "entity.overtime.scp035_tendril": "SCP-035 Tendril",
   "entity.overtime.scp066": "SCP-066-2 - \"Eric's Toy\"",
   "entity.overtime.scp066_cat": "SCP-066 - Cat",
 
 
+  "item.overtime.scp035_tendril_spawner": "SCP-035 Tendril Spawner",
   "item.overtime.scp066_spawn_egg": "SCP-066-2 - \"Eric's Toy\" Spawn Egg",
 
 
@@ -160,6 +162,7 @@
   "item.overtime.icon_euclid": "Icon Euclid",
   "item.overtime.icon_keter": "Icon Keter",
 
+  "item.overtime.scp035": "SCP-035",
   "item.overtime.scp714": "SCP-714",
   "item.overtime.cupcake": "Cupcake",
   "item.overtime.mob_despawner": "Mob Despawner",

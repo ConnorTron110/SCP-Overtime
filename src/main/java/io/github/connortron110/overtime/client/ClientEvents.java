@@ -1,13 +1,17 @@
 package io.github.connortron110.overtime.client;
 
 import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.client.render.entity.SCP035TendrilRenderer;
 import io.github.connortron110.overtime.client.render.entity.SCP066Renderer;
 import io.github.connortron110.overtime.common.items.ModSpawnEggItem;
 import io.github.connortron110.overtime.core.init.BlockInit;
 import io.github.connortron110.overtime.core.init.EntityInit;
+import io.github.connortron110.overtime.core.init.ItemInit;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.CatRenderer;
 import net.minecraft.entity.EntityType;
+import net.minecraft.item.ItemModelsProperties;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -29,9 +33,11 @@ public class ClientEvents {
     public static void onClientSetup(FMLClientSetupEvent event) {
         setEntityRenderers();
         setBlockLayers();
+        event.enqueueWork(ClientEvents::registerItemModelOverrides);
     }
 
     private static void setEntityRenderers() {
+        RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP035_TENDRIL.get(), SCP035TendrilRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.ERICS_TOY.get(), SCP066Renderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP066_CAT.get(), CatRenderer::new);
     }
@@ -46,5 +52,9 @@ public class ClientEvents {
         setRenderLayer(BlockInit.DRAWER.get(), RenderType.cutout());
         setRenderLayer(BlockInit.BLOOD_PUDDLE.get(), RenderType.cutout());
         setRenderLayer(BlockInit.SCP066_BLOCK.get(), RenderType.cutout());
+    }
+
+    private static void registerItemModelOverrides() {
+        ItemModelsProperties.register(ItemInit.SCP035.get(), new ResourceLocation(Reference.MOD_ID, "state"), (stack, world, entity) -> stack.getOrCreateTag().getFloat("state"));
     }
 }

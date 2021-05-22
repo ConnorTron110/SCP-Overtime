@@ -1,4 +1,46 @@
 {
+  "scp035_takeover": {
+    "category": "hostile",
+    "sounds": [
+      { "name": "overtime:scp/035/takeover_1", "stream": false },
+      { "name": "overtime:scp/035/takeover_2", "stream": false }
+    ]
+  },
+  "scp035_angry": {
+    "category": "hostile",
+    "sounds": [
+      { "name": "overtime:scp/035/angry_1", "stream": false },
+      { "name": "overtime:scp/035/angry_2", "stream": false },
+      { "name": "overtime:scp/035/angry_3", "stream": false },
+      { "name": "overtime:scp/035/angry_4", "stream": false }
+    ]
+  },
+  "scp035_idle": {
+    "category": "hostile",
+    "sounds": [
+      { "name": "overtime:scp/035/idle_1", "stream": false },
+      { "name": "overtime:scp/035/idle_2", "stream": false },
+      { "name": "overtime:scp/035/idle_3", "stream": false },
+      { "name": "overtime:scp/035/idle_4", "stream": false },
+      { "name": "overtime:scp/035/idle_5", "stream": false },
+      { "name": "overtime:scp/035/idle_6", "stream": false }
+    ]
+  },
+  "scp035_equip": {
+    "category": "hostile",
+    "sounds": [
+      { "name": "overtime:scp/035/equip", "stream": false }
+    ]
+  },
+  "scp035_tendril_idle": {
+    "category": "hostile",
+    "sounds": [{ "name": "overtime:scp/035/tendril/idle", "stream": false }]
+  },
+  "scp035_tendril_spawn": {
+    "category": "hostile",
+    "sounds": [{ "name": "overtime:scp/035/tendril/spawn", "stream": false }]
+  },
+
   "scp066_rolling": {
     "category": "hostile",
     "sounds": [{ "name": "overtime:scp/066/rolling", "stream": false }]

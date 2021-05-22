@@ -173,6 +173,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder(ItemInit.MOB_DESPAWNER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/pipe");
 
         final ModelFile spawnegg = getExistingFile(mcLoc("item/template_spawn_egg"));
+        getBuilder(ItemInit.SCP035_TENDRIL_SPAWNER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.SCP035_TENDRIL_SPAWNER.get().getRegistryName().getPath());
         getBuilder(ItemInit.SCP066_SPAWN_EGG.get().getRegistryName().getPath()).parent(spawnegg);
 
     }

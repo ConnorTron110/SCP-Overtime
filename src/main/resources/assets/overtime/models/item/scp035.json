@@ -1,0 +1,20 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "overtime:item/scp035"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "overtime:state": 1.0
+      },
+      "model": "overtime:item/scp035_equipped"
+    },
+    {
+      "predicate": {
+        "overtime:state": 2.0
+      },
+      "model": "overtime:item/scp035_angry"
+    }
+  ]
+}

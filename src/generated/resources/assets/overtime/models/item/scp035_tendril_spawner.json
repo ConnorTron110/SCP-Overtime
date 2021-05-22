@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "overtime:item/scp035_tendril_spawner"
+  }
+}

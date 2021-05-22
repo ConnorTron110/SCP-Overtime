@@ -1,5 +1,6 @@
 package io.github.connortron110.overtime;
 
+import io.github.connortron110.overtime.common.entities.scp.SCP035TendrilEntity;
 import io.github.connortron110.overtime.common.entities.scp.SCP066CatEntity;
 import io.github.connortron110.overtime.common.entities.scp.SCP066_2Entity;
 import io.github.connortron110.overtime.core.init.BlockInit;
@@ -66,6 +67,7 @@ public class Overtime {
     }
 
     private void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
+        event.put(EntityInit.SCP035_TENDRIL.get(), SCP035TendrilEntity.createMobAttributes().build());
         event.put(EntityInit.ERICS_TOY.get(), SCP066_2Entity.createMobAttributes().build());
         event.put(EntityInit.SCP066_CAT.get(), SCP066CatEntity.createMobAttributes().build());
     }
