@@ -171,6 +171,25 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder(ItemInit.ICON_KETER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.ICON_KETER.get().getRegistryName().getPath());
         getBuilder(ItemInit.CUPCAKE.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.CUPCAKE.get().getRegistryName().getPath());
         getBuilder(ItemInit.MOB_DESPAWNER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/pipe");
+        getBuilder(ItemInit.HAZMAT_HELMET.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/hazmat_suit_helmet");
+        getBuilder(ItemInit.HAZMAT_CHEST.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/hazmat_suit_chest");
+        getBuilder(ItemInit.HAZMAT_LEGGINGS.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/hazmat_suit_leggings");
+        getBuilder(ItemInit.HAZMAT_BOOTS.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/hazmat_suit_boots");
+        getBuilder(ItemInit.HAZMAT_LEGGINGS_YELLOW.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/hazmat_suit_yellow_leggings");
+        getBuilder(ItemInit.HAZMAT_CHEST_YELLOW.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/hazmat_suit_yellow_chest");
+        getBuilder(ItemInit.HAZMAT_HELMET_YELLOW.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/hazmat_suit_yellow_helmet");
+        getBuilder(ItemInit.JUMPSUIT_CHEST.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/jumpsuit_chest");
+        getBuilder(ItemInit.JUMPSUIT_LEGGINGS.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/jumpsuit_leggings");
+        getBuilder(ItemInit.JUMPSUIT_BOOTS.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/jumpsuit_boots");
+        getBuilder(ItemInit.JUMPSUIT_LEGGINGS_ORANGE.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/jumpsuit_orange_leggings");
+        getBuilder(ItemInit.JUMPSUIT_CHEST_ORANGE.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/jumpsuit_orange_chest");
+        getBuilder(ItemInit.GASMASK.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/gasmask");
+        getBuilder(ItemInit.LABCOAT_CHEST.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/labcoat_chest");
+        getBuilder(ItemInit.LABCOAT_LEGGINGS.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/labcoat_leggings");
+        getBuilder(ItemInit.LABCOAT_BOOTS.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/labcoat_boots");
+        getBuilder(ItemInit.LABCOAT_LEGGINGS_RED.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/labcoat_red_leggings");
+        getBuilder(ItemInit.LABCOAT_CHEST_RED.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/labcoat_red_chest");
+
 
         final ModelFile spawnegg = getExistingFile(mcLoc("item/template_spawn_egg"));
         getBuilder(ItemInit.SCP035_TENDRIL_SPAWNER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.SCP035_TENDRIL_SPAWNER.get().getRegistryName().getPath());

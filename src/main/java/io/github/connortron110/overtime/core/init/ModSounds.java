@@ -10,6 +10,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Reference.MOD_ID);
 
+    public static final RegistryObject<SoundEvent> MASK_BREATHING = registerSound("mask_breathing");
+
     public static final RegistryObject<SoundEvent> SCP035_TAKEOVER = registerSound("scp035_takeover");
     public static final RegistryObject<SoundEvent> SCP035_ANGRY = registerSound("scp035_angry");
     public static final RegistryObject<SoundEvent> SCP035_IDLE = registerSound("scp035_idle");
