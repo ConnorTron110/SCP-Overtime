@@ -1,6 +1,5 @@
 package io.github.connortron110.overtime.common.items;
 
-import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.Reference;
 import io.github.connortron110.overtime.client.model.SCP427NecklaceModel;
 import io.github.connortron110.overtime.common.entities.scp.SCP427_1Entity;
@@ -71,8 +70,6 @@ public class SCP427Item extends ArmorItem {
 
         CompoundNBT nbt = stack.getOrCreateTag();
         double stage = nbt.getDouble("stage");
-
-        Overtime.LOGGER.debug(stage);
 
         //Potion Side
         if (!player.hasEffect(Effects.ABSORPTION) && !player.hasEffect(Effects.REGENERATION)) {
