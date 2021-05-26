@@ -165,6 +165,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         final ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
         getBuilder(BlockInit.SCP2845_PLANT.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "block/"+BlockInit.SCP2845_PLANT.get().getRegistryName().getPath());
         getBuilder(BlockInit.SCP066_BLOCK.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/scp066");
+        getBuilder(ItemInit.SCP427.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/scp427");
 
         getBuilder(ItemInit.ICON_SAFE.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.ICON_SAFE.get().getRegistryName().getPath());
         getBuilder(ItemInit.ICON_EUCLID.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.ICON_EUCLID.get().getRegistryName().getPath());
@@ -194,7 +195,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         final ModelFile spawnegg = getExistingFile(mcLoc("item/template_spawn_egg"));
         getBuilder(ItemInit.SCP035_TENDRIL_SPAWNER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.SCP035_TENDRIL_SPAWNER.get().getRegistryName().getPath());
         getBuilder(ItemInit.SCP066_SPAWN_EGG.get().getRegistryName().getPath()).parent(spawnegg);
-
+        getBuilder(ItemInit.SCP427_SPAWN_EGG.get().getRegistryName().getPath()).parent(spawnegg);
     }
 
     private void withExistingParent(Block block) {

@@ -3,6 +3,7 @@ package io.github.connortron110.overtime.client;
 import io.github.connortron110.overtime.Reference;
 import io.github.connortron110.overtime.client.render.entity.SCP035TendrilRenderer;
 import io.github.connortron110.overtime.client.render.entity.SCP066Renderer;
+import io.github.connortron110.overtime.client.render.entity.SCP427Renderer;
 import io.github.connortron110.overtime.common.items.ModSpawnEggItem;
 import io.github.connortron110.overtime.core.init.BlockInit;
 import io.github.connortron110.overtime.core.init.EntityInit;
@@ -40,6 +41,7 @@ public class ClientEvents {
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP035_TENDRIL.get(), SCP035TendrilRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.ERICS_TOY.get(), SCP066Renderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP066_CAT.get(), CatRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP427.get(), SCP427Renderer::new);
     }
 
 

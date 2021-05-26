@@ -40,8 +40,10 @@ public class ItemInit {
     public static final RegistryObject<ArmorItem> LABCOAT_CHEST_RED = ITEMS.register("labcoat_red_chest", () -> new LabcoatItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST, new Item.Properties().tab(Overtime.TAB_ITEMS), "red"));
 
     public static final RegistryObject<SCP035Item> SCP035 = ITEMS.register("scp035", () -> new SCP035Item(new Item.Properties().stacksTo(1).tab(Overtime.TAB_MISC)));
+    public static final RegistryObject<SCP427Item> SCP427 = ITEMS.register("scp427", () -> new SCP427Item(new Item.Properties().stacksTo(1).tab(Overtime.TAB_MISC)));
     public static final RegistryObject<SCP714Item> SCP714 = ITEMS.register("scp714", () -> new SCP714Item(new Item.Properties().stacksTo(1).tab(Overtime.TAB_MISC)));
 
     public static final RegistryObject<SCP035SpawnerItem> SCP035_TENDRIL_SPAWNER = ITEMS.register("scp035_tendril_spawner", () -> new SCP035SpawnerItem(EntityInit.SCP035_TENDRIL));
     public static final RegistryObject<SpawnEggItem> SCP066_SPAWN_EGG = ITEMS.register("scp066_spawn_egg", () -> new ModSpawnEggItem(EntityInit.ERICS_TOY, new Color(0xC90000).getRGB(), new Color(0x650101).getRGB()));
+    public static final RegistryObject<SpawnEggItem> SCP427_SPAWN_EGG = ITEMS.register("scp427_spawn_egg", () -> new ModSpawnEggItem(EntityInit.SCP427, new Color(0xFFE9CDCA, true).getRGB(), new Color(0xC69189).getRGB()));
 }
