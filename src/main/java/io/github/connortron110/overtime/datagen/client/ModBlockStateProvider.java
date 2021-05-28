@@ -122,8 +122,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock(BlockInit.SCP1499_STAIRS_1.get(), modLoc("block/"+BlockInit.SCP1499_BLOCK_1.get().getRegistryName().getPath()));
         slabBlock(BlockInit.SCP1499_SLAB_1.get(), modLoc("block/"+BlockInit.SCP1499_BLOCK_1.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.SCP1499_BLOCK_1.get().getRegistryName().getPath()));
         simpleBlock(BlockInit.SCP1499_BLOCK_2.get());
-        stairsBlock(BlockInit.SCP1499_STAIRS_2.get(), modLoc("block/"+BlockInit.SCP1499_BLOCK_1.get().getRegistryName().getPath()));
-        slabBlock(BlockInit.SCP1499_SLAB_2.get(), modLoc("block/"+BlockInit.SCP1499_BLOCK_1.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.SCP1499_BLOCK_1.get().getRegistryName().getPath()));
+        stairsBlock(BlockInit.SCP1499_STAIRS_2.get(), modLoc("block/"+BlockInit.SCP1499_BLOCK_2.get().getRegistryName().getPath()));
+        slabBlock(BlockInit.SCP1499_SLAB_2.get(), modLoc("block/"+BlockInit.SCP1499_BLOCK_2.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.SCP1499_BLOCK_1.get().getRegistryName().getPath()));
 
         simpleBlock(BlockInit.BLUE_WALL_TOP.get());
         simpleBlock(BlockInit.BLUE_WALL_MID.get());
