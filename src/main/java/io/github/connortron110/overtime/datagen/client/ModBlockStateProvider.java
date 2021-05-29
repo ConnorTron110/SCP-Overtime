@@ -39,12 +39,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceBlock(BlockInit.DARK_FENCE.get(), modLoc("block/"+BlockInit.DARK_FLOOR.get().getRegistryName().getPath()));
         fenceGateBlock(BlockInit.DARK_FENCE_GATE.get(), modLoc("block/"+BlockInit.DARK_FLOOR.get().getRegistryName().getPath()));
 
+        simpleBlock(BlockInit.POCKET_DIM_TILE_FLOOR.get());
+        stairsBlock(BlockInit.POCKET_DIM_TILE_STAIRS.get(), modLoc("block/"+BlockInit.POCKET_DIM_TILE_FLOOR.get().getRegistryName().getPath()));
+        slabBlock(BlockInit.POCKET_DIM_TILE_SLAB.get(), modLoc("block/"+BlockInit.POCKET_DIM_TILE_FLOOR.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.POCKET_DIM_TILE_FLOOR.get().getRegistryName().getPath()));
+
         simpleBlock(BlockInit.METAL_FLOOR_1.get());
         stairsBlock(BlockInit.METAL_STAIRS_1.get(), modLoc("block/"+BlockInit.METAL_FLOOR_1.get().getRegistryName().getPath()));
         slabBlock(BlockInit.METAL_SLAB_1.get(), modLoc("block/"+BlockInit.METAL_FLOOR_1.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.METAL_FLOOR_1.get().getRegistryName().getPath()));
         wallBlock(BlockInit.METAL_WALL_1.get(), modLoc("block/"+BlockInit.METAL_FLOOR_1.get().getRegistryName().getPath()));
         fenceBlock(BlockInit.METAL_FENCE_1.get(), modLoc("block/"+BlockInit.METAL_FLOOR_1.get().getRegistryName().getPath()));
         fenceGateBlock(BlockInit.METAL_FENCE_GATE_1.get(), modLoc("block/"+BlockInit.METAL_FLOOR_1.get().getRegistryName().getPath()));
+
+        simpleBlock(BlockInit.POCKET_DIM_BLOCK_1.get());
+        stairsBlock(BlockInit.POCKET_DIM_BLOCK_STAIRS_1.get(), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_1.get().getRegistryName().getPath()));
+        slabBlock(BlockInit.POCKET_DIM_BLOCK_SLAB_1.get(), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_1.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_1.get().getRegistryName().getPath()));
 
         simpleBlock(BlockInit.METAL_FLOOR_2.get());
         stairsBlock(BlockInit.METAL_STAIRS_2.get(), modLoc("block/"+BlockInit.METAL_FLOOR_2.get().getRegistryName().getPath()));
@@ -53,12 +61,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceBlock(BlockInit.METAL_FENCE_2.get(), modLoc("block/"+BlockInit.METAL_FLOOR_2.get().getRegistryName().getPath()));
         fenceGateBlock(BlockInit.METAL_FENCE_GATE_2.get(), modLoc("block/"+BlockInit.METAL_FLOOR_2.get().getRegistryName().getPath()));
 
+        simpleBlock(BlockInit.POCKET_DIM_BLOCK_2.get());
+        stairsBlock(BlockInit.POCKET_DIM_BLOCK_STAIRS_2.get(), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_2.get().getRegistryName().getPath()));
+        slabBlock(BlockInit.POCKET_DIM_BLOCK_SLAB_2.get(), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_2.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_2.get().getRegistryName().getPath()));
+
         simpleBlock(BlockInit.METAL_FLOOR_3.get());
         stairsBlock(BlockInit.METAL_STAIRS_3.get(), modLoc("block/"+BlockInit.METAL_FLOOR_3.get().getRegistryName().getPath()));
         slabBlock(BlockInit.METAL_SLAB_3.get(), modLoc("block/"+BlockInit.METAL_FLOOR_3.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.METAL_FLOOR_3.get().getRegistryName().getPath()));
         wallBlock(BlockInit.METAL_WALL_3.get(), modLoc("block/"+BlockInit.METAL_FLOOR_3.get().getRegistryName().getPath()));
         fenceBlock(BlockInit.METAL_FENCE_3.get(), modLoc("block/"+BlockInit.METAL_FLOOR_3.get().getRegistryName().getPath()));
         fenceGateBlock(BlockInit.METAL_FENCE_GATE_3.get(), modLoc("block/"+BlockInit.METAL_FLOOR_3.get().getRegistryName().getPath()));
+
+        simpleBlock(BlockInit.POCKET_DIM_BLOCK_3.get());
+        stairsBlock(BlockInit.POCKET_DIM_BLOCK_STAIRS_3.get(), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_3.get().getRegistryName().getPath()));
+        slabBlock(BlockInit.POCKET_DIM_BLOCK_SLAB_3.get(), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_3.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_3.get().getRegistryName().getPath()));
 
         simpleBlock(BlockInit.DIRTY_METAL_FLOOR.get());
         stairsBlock(BlockInit.DIRTY_METAL_STAIRS.get(), modLoc("block/"+BlockInit.DIRTY_METAL_FLOOR.get().getRegistryName().getPath()));
@@ -67,12 +83,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         fenceBlock(BlockInit.DIRTY_METAL_FENCE.get(), modLoc("block/"+BlockInit.DIRTY_METAL_FLOOR.get().getRegistryName().getPath()));
         fenceGateBlock(BlockInit.DIRTY_METAL_FENCE_GATE.get(), modLoc("block/"+BlockInit.DIRTY_METAL_FLOOR.get().getRegistryName().getPath()));
 
-        simpleBlock(BlockInit.GRIT_1.get());
-        stairsBlock(BlockInit.GRIT_STAIRS_1.get(), modLoc("block/"+BlockInit.GRIT_1.get().getRegistryName().getPath()));
-        slabBlock(BlockInit.GRIT_SLAB_1.get(), modLoc("block/"+BlockInit.GRIT_1.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.GRIT_1.get().getRegistryName().getPath()));
-        simpleBlock(BlockInit.GRIT_2.get());
-        stairsBlock(BlockInit.GRIT_STAIRS_2.get(), modLoc("block/"+BlockInit.GRIT_2.get().getRegistryName().getPath()));
-        slabBlock(BlockInit.GRIT_SLAB_2.get(), modLoc("block/"+BlockInit.GRIT_2.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.GRIT_2.get().getRegistryName().getPath()));
+        simpleBlock(BlockInit.POCKET_DIM_WALL_TOP.get());
+        simpleBlock(BlockInit.POCKET_DIM_WALL_MID.get());
+        simpleBlock(BlockInit.POCKET_DIM_WALL_BOTTOM.get());
 
         simpleBlock(BlockInit.LIGHT_WALL_TOP.get());
         simpleBlock(BlockInit.MED_WALL_TOP.get());
@@ -82,7 +95,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(BlockInit.STAINED_BRICK_WALL_TOP.get());
         simpleBlock(BlockInit.STAINED_WALL_TOP.get());
         simpleBlock(BlockInit.CONCRETE_WALL_TOP.get());
-        simpleBlock(BlockInit.POCKET_DIM_WALL_TOP.get());
+        simpleBlock(BlockInit.BLUE_WALL_TOP.get());
 
         simpleBlock(BlockInit.LIGHT_WALL_MID.get());
         simpleBlock(BlockInit.MED_WALL_MID.get());
@@ -92,7 +105,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(BlockInit.STAINED_BRICK_WALL_MID.get());
         simpleBlock(BlockInit.STAINED_WALL_MID.get());
         simpleBlock(BlockInit.CONCRETE_WALL_MID.get());
-        simpleBlock(BlockInit.POCKET_DIM_WALL_MID.get());
+        simpleBlock(BlockInit.BLUE_WALL_MID.get());
 
         simpleBlock(BlockInit.LIGHT_WALL_BOTTOM.get());
         simpleBlock(BlockInit.MED_WALL_BOTTOM.get());
@@ -102,21 +115,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(BlockInit.STAINED_BRICK_WALL_BOTTOM.get());
         simpleBlock(BlockInit.STAINED_WALL_BOTTOM.get());
         simpleBlock(BlockInit.CONCRETE_WALL_BOTTOM.get());
-        simpleBlock(BlockInit.POCKET_DIM_WALL_BOTTOM.get());
+        simpleBlock(BlockInit.BLUE_WALL_BOTTOM.get());
 
-        simpleBlock(BlockInit.POCKET_DIM_TILE_FLOOR.get());
-        stairsBlock(BlockInit.POCKET_DIM_TILE_STAIRS.get(), modLoc("block/"+BlockInit.POCKET_DIM_TILE_FLOOR.get().getRegistryName().getPath()));
-        slabBlock(BlockInit.POCKET_DIM_TILE_SLAB.get(), modLoc("block/"+BlockInit.POCKET_DIM_TILE_FLOOR.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.POCKET_DIM_TILE_FLOOR.get().getRegistryName().getPath()));
+        simpleBlock(BlockInit.OFFICE_WALL_TOP.get());
+        simpleBlock(BlockInit.OFFICE_WALL_MID.get());
+        simpleBlock(BlockInit.OFFICE_WALL_BOTTOM.get());
+        simpleBlock(BlockInit.OFFICE_CEILING.get());
+        //TODO Change
+        simpleBlock(BlockInit.WHITE_WALL.get(), models().cubeAll(BlockInit.WHITE_WALL.get().getRegistryName().getPath(), modLoc("block/office_wall_mid")));
+        simpleBlock(BlockInit.HEAVY_BLOCK.get());
 
-        simpleBlock(BlockInit.POCKET_DIM_BLOCK_1.get());
-        stairsBlock(BlockInit.POCKET_DIM_BLOCK_STAIRS_1.get(), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_1.get().getRegistryName().getPath()));
-        slabBlock(BlockInit.POCKET_DIM_BLOCK_SLAB_1.get(), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_1.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_1.get().getRegistryName().getPath()));
-        simpleBlock(BlockInit.POCKET_DIM_BLOCK_2.get());
-        stairsBlock(BlockInit.POCKET_DIM_BLOCK_STAIRS_2.get(), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_2.get().getRegistryName().getPath()));
-        slabBlock(BlockInit.POCKET_DIM_BLOCK_SLAB_2.get(), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_2.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_2.get().getRegistryName().getPath()));
-        simpleBlock(BlockInit.POCKET_DIM_BLOCK_3.get());
-        stairsBlock(BlockInit.POCKET_DIM_BLOCK_STAIRS_3.get(), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_3.get().getRegistryName().getPath()));
-        slabBlock(BlockInit.POCKET_DIM_BLOCK_SLAB_3.get(), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_3.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.POCKET_DIM_BLOCK_3.get().getRegistryName().getPath()));
+        simpleBlock(BlockInit.GRIT_1.get());
+        stairsBlock(BlockInit.GRIT_STAIRS_1.get(), modLoc("block/"+BlockInit.GRIT_1.get().getRegistryName().getPath()));
+        slabBlock(BlockInit.GRIT_SLAB_1.get(), modLoc("block/"+BlockInit.GRIT_1.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.GRIT_1.get().getRegistryName().getPath()));
+        simpleBlock(BlockInit.GRIT_2.get());
+        stairsBlock(BlockInit.GRIT_STAIRS_2.get(), modLoc("block/"+BlockInit.GRIT_2.get().getRegistryName().getPath()));
+        slabBlock(BlockInit.GRIT_SLAB_2.get(), modLoc("block/"+BlockInit.GRIT_2.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.GRIT_2.get().getRegistryName().getPath()));
 
         simpleBlock(BlockInit.SCP1499_BLOCK_1.get());
         stairsBlock(BlockInit.SCP1499_STAIRS_1.get(), modLoc("block/"+BlockInit.SCP1499_BLOCK_1.get().getRegistryName().getPath()));
@@ -125,18 +139,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock(BlockInit.SCP1499_STAIRS_2.get(), modLoc("block/"+BlockInit.SCP1499_BLOCK_2.get().getRegistryName().getPath()));
         slabBlock(BlockInit.SCP1499_SLAB_2.get(), modLoc("block/"+BlockInit.SCP1499_BLOCK_2.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.SCP1499_BLOCK_1.get().getRegistryName().getPath()));
 
-        simpleBlock(BlockInit.BLUE_WALL_TOP.get());
-        simpleBlock(BlockInit.BLUE_WALL_MID.get());
-        simpleBlock(BlockInit.BLUE_WALL_BOTTOM.get());
-        simpleBlock(BlockInit.OFFICE_WALL_TOP.get());
-        simpleBlock(BlockInit.OFFICE_WALL_MID.get());
-        simpleBlock(BlockInit.OFFICE_WALL_BOTTOM.get());
-        simpleBlock(BlockInit.OFFICE_CEILING.get());
-        //TODO Change
-        simpleBlock(BlockInit.WHITE_WALL.get(), models().cubeAll(BlockInit.WHITE_WALL.get().getRegistryName().getPath(), modLoc("block/office_wall_mid")));
-        simpleBlock(BlockInit.HEAVY_BLOCK.get());
         simpleBlock(BlockInit.CLOTH_BLOCK.get());
-
         simpleBlock(BlockInit.CONTAINMENT_GLASS.get());
         paneBlock(BlockInit.CONTAINMENT_GLASS_PANE.get(), modLoc("block/"+BlockInit.CONTAINMENT_GLASS.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.CONTAINMENT_GLASS.get().getRegistryName().getPath()));
 

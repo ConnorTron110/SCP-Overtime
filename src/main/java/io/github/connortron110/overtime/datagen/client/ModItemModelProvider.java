@@ -43,12 +43,20 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceInventory(BlockInit.DARK_FENCE.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.DARK_FLOOR.get().getRegistryName().getPath()));
         fenceGate(BlockInit.DARK_FENCE_GATE.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.DARK_FLOOR.get().getRegistryName().getPath()));
 
+        withExistingParent(BlockInit.POCKET_DIM_TILE_FLOOR.get());
+        withExistingParent(BlockInit.POCKET_DIM_TILE_STAIRS.get());
+        withExistingParent(BlockInit.POCKET_DIM_TILE_SLAB.get());
+
         withExistingParent(BlockInit.METAL_FLOOR_1.get());
         withExistingParent(BlockInit.METAL_STAIRS_1.get());
         withExistingParent(BlockInit.METAL_SLAB_1.get());
         wallInventory(BlockInit.METAL_WALL_1.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.METAL_FLOOR_1.get().getRegistryName().getPath()));
         fenceInventory(BlockInit.METAL_FENCE_1.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.METAL_FLOOR_1.get().getRegistryName().getPath()));
         fenceGate(BlockInit.METAL_FENCE_GATE_1.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.METAL_FLOOR_1.get().getRegistryName().getPath()));
+
+        withExistingParent(BlockInit.POCKET_DIM_BLOCK_1.get());
+        withExistingParent(BlockInit.POCKET_DIM_BLOCK_STAIRS_1.get());
+        withExistingParent(BlockInit.POCKET_DIM_BLOCK_SLAB_1.get());
 
         withExistingParent(BlockInit.METAL_FLOOR_2.get());
         withExistingParent(BlockInit.METAL_STAIRS_2.get());
@@ -57,12 +65,20 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceInventory(BlockInit.METAL_FENCE_2.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.METAL_FLOOR_2.get().getRegistryName().getPath()));
         fenceGate(BlockInit.METAL_FENCE_GATE_2.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.METAL_FLOOR_2.get().getRegistryName().getPath()));
 
+        withExistingParent(BlockInit.POCKET_DIM_BLOCK_2.get());
+        withExistingParent(BlockInit.POCKET_DIM_BLOCK_STAIRS_2.get());
+        withExistingParent(BlockInit.POCKET_DIM_BLOCK_SLAB_2.get());
+
         withExistingParent(BlockInit.METAL_FLOOR_3.get());
         withExistingParent(BlockInit.METAL_STAIRS_3.get());
         withExistingParent(BlockInit.METAL_SLAB_3.get());
         wallInventory(BlockInit.METAL_WALL_3.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.METAL_FLOOR_3.get().getRegistryName().getPath()));
         fenceInventory(BlockInit.METAL_FENCE_3.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.METAL_FLOOR_3.get().getRegistryName().getPath()));
         fenceGate(BlockInit.METAL_FENCE_GATE_3.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.METAL_FLOOR_3.get().getRegistryName().getPath()));
+
+        withExistingParent(BlockInit.POCKET_DIM_BLOCK_3.get());
+        withExistingParent(BlockInit.POCKET_DIM_BLOCK_STAIRS_3.get());
+        withExistingParent(BlockInit.POCKET_DIM_BLOCK_SLAB_3.get());
 
         withExistingParent(BlockInit.DIRTY_METAL_FLOOR.get());
         withExistingParent(BlockInit.DIRTY_METAL_STAIRS.get());
@@ -71,12 +87,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceInventory(BlockInit.DIRTY_METAL_FENCE.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.DIRTY_METAL_FLOOR.get().getRegistryName().getPath()));
         fenceGate(BlockInit.DIRTY_METAL_FENCE_GATE.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.DIRTY_METAL_FLOOR.get().getRegistryName().getPath()));
 
-        withExistingParent(BlockInit.GRIT_1.get());
-        withExistingParent(BlockInit.GRIT_STAIRS_1.get());
-        withExistingParent(BlockInit.GRIT_SLAB_1.get());
-        withExistingParent(BlockInit.GRIT_2.get());
-        withExistingParent(BlockInit.GRIT_STAIRS_2.get());
-        withExistingParent(BlockInit.GRIT_SLAB_2.get());
+        withExistingParent(BlockInit.POCKET_DIM_WALL_TOP.get());
+        withExistingParent(BlockInit.POCKET_DIM_WALL_MID.get());
+        withExistingParent(BlockInit.POCKET_DIM_WALL_BOTTOM.get());
 
         withExistingParent(BlockInit.LIGHT_WALL_TOP.get());
         withExistingParent(BlockInit.MED_WALL_TOP.get());
@@ -86,7 +99,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(BlockInit.STAINED_BRICK_WALL_TOP.get());
         withExistingParent(BlockInit.STAINED_WALL_TOP.get());
         withExistingParent(BlockInit.CONCRETE_WALL_TOP.get());
-        withExistingParent(BlockInit.POCKET_DIM_WALL_TOP.get());
+        withExistingParent(BlockInit.BLUE_WALL_TOP.get());
 
         withExistingParent(BlockInit.LIGHT_WALL_MID.get());
         withExistingParent(BlockInit.MED_WALL_MID.get());
@@ -96,7 +109,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(BlockInit.STAINED_BRICK_WALL_MID.get());
         withExistingParent(BlockInit.STAINED_WALL_MID.get());
         withExistingParent(BlockInit.CONCRETE_WALL_MID.get());
-        withExistingParent(BlockInit.POCKET_DIM_WALL_MID.get());
+        withExistingParent(BlockInit.BLUE_WALL_MID.get());
 
         withExistingParent(BlockInit.LIGHT_WALL_BOTTOM.get());
         withExistingParent(BlockInit.MED_WALL_BOTTOM.get());
@@ -106,21 +119,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(BlockInit.STAINED_BRICK_WALL_BOTTOM.get());
         withExistingParent(BlockInit.STAINED_WALL_BOTTOM.get());
         withExistingParent(BlockInit.CONCRETE_WALL_BOTTOM.get());
-        withExistingParent(BlockInit.POCKET_DIM_WALL_BOTTOM.get());
+        withExistingParent(BlockInit.BLUE_WALL_BOTTOM.get());
 
-        withExistingParent(BlockInit.POCKET_DIM_TILE_FLOOR.get());
-        withExistingParent(BlockInit.POCKET_DIM_TILE_STAIRS.get());
-        withExistingParent(BlockInit.POCKET_DIM_TILE_SLAB.get());
+        withExistingParent(BlockInit.OFFICE_WALL_TOP.get());
+        withExistingParent(BlockInit.OFFICE_WALL_MID.get());
+        withExistingParent(BlockInit.OFFICE_WALL_BOTTOM.get());
+        withExistingParent(BlockInit.OFFICE_CEILING.get());
+        withExistingParent(BlockInit.WHITE_WALL.get());
+        withExistingParent(BlockInit.HEAVY_BLOCK.get());
 
-        withExistingParent(BlockInit.POCKET_DIM_BLOCK_1.get());
-        withExistingParent(BlockInit.POCKET_DIM_BLOCK_STAIRS_1.get());
-        withExistingParent(BlockInit.POCKET_DIM_BLOCK_SLAB_1.get());
-        withExistingParent(BlockInit.POCKET_DIM_BLOCK_2.get());
-        withExistingParent(BlockInit.POCKET_DIM_BLOCK_STAIRS_2.get());
-        withExistingParent(BlockInit.POCKET_DIM_BLOCK_SLAB_2.get());
-        withExistingParent(BlockInit.POCKET_DIM_BLOCK_3.get());
-        withExistingParent(BlockInit.POCKET_DIM_BLOCK_STAIRS_3.get());
-        withExistingParent(BlockInit.POCKET_DIM_BLOCK_SLAB_3.get());
+        withExistingParent(BlockInit.GRIT_1.get());
+        withExistingParent(BlockInit.GRIT_STAIRS_1.get());
+        withExistingParent(BlockInit.GRIT_SLAB_1.get());
+        withExistingParent(BlockInit.GRIT_2.get());
+        withExistingParent(BlockInit.GRIT_STAIRS_2.get());
+        withExistingParent(BlockInit.GRIT_SLAB_2.get());
 
         withExistingParent(BlockInit.SCP1499_BLOCK_1.get());
         withExistingParent(BlockInit.SCP1499_STAIRS_1.get());
@@ -129,17 +142,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(BlockInit.SCP1499_STAIRS_2.get());
         withExistingParent(BlockInit.SCP1499_SLAB_2.get());
 
-        withExistingParent(BlockInit.BLUE_WALL_TOP.get());
-        withExistingParent(BlockInit.BLUE_WALL_MID.get());
-        withExistingParent(BlockInit.BLUE_WALL_BOTTOM.get());
-        withExistingParent(BlockInit.OFFICE_WALL_TOP.get());
-        withExistingParent(BlockInit.OFFICE_WALL_MID.get());
-        withExistingParent(BlockInit.OFFICE_WALL_BOTTOM.get());
-        withExistingParent(BlockInit.OFFICE_CEILING.get());
-        withExistingParent(BlockInit.WHITE_WALL.get());
-        withExistingParent(BlockInit.HEAVY_BLOCK.get());
         withExistingParent(BlockInit.CLOTH_BLOCK.get());
-
         withExistingParent(BlockInit.CONTAINMENT_GLASS.get());
         paneSideAlt(BlockInit.CONTAINMENT_GLASS_PANE.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.CONTAINMENT_GLASS.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.CONTAINMENT_GLASS.get().getRegistryName().getPath()));
 

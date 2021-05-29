@@ -64,12 +64,20 @@ public class ModLootTableProvider extends LootTableProvider {
             dropSelf(BlockInit.DARK_FENCE.get());
             dropSelf(BlockInit.DARK_FENCE_GATE.get());
 
+            dropSelf(BlockInit.POCKET_DIM_TILE_FLOOR.get());
+            dropSelf(BlockInit.POCKET_DIM_TILE_STAIRS.get());
+            dropSelf(BlockInit.POCKET_DIM_TILE_SLAB.get());
+
             dropSelf(BlockInit.METAL_FLOOR_1.get());
             dropSelf(BlockInit.METAL_STAIRS_1.get());
             dropSelf(BlockInit.METAL_SLAB_1.get());
             dropSelf(BlockInit.METAL_WALL_1.get());
             dropSelf(BlockInit.METAL_FENCE_1.get());
             dropSelf(BlockInit.METAL_FENCE_GATE_1.get());
+
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_1.get());
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_STAIRS_1.get());
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_SLAB_1.get());
 
             dropSelf(BlockInit.METAL_FLOOR_2.get());
             dropSelf(BlockInit.METAL_STAIRS_2.get());
@@ -78,12 +86,20 @@ public class ModLootTableProvider extends LootTableProvider {
             dropSelf(BlockInit.METAL_FENCE_2.get());
             dropSelf(BlockInit.METAL_FENCE_GATE_2.get());
 
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_2.get());
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_STAIRS_2.get());
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_SLAB_2.get());
+
             dropSelf(BlockInit.METAL_FLOOR_3.get());
             dropSelf(BlockInit.METAL_STAIRS_3.get());
             dropSelf(BlockInit.METAL_SLAB_3.get());
             dropSelf(BlockInit.METAL_WALL_3.get());
             dropSelf(BlockInit.METAL_FENCE_3.get());
             dropSelf(BlockInit.METAL_FENCE_GATE_3.get());
+
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_3.get());
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_STAIRS_3.get());
+            dropSelf(BlockInit.POCKET_DIM_BLOCK_SLAB_3.get());
 
             dropSelf(BlockInit.DIRTY_METAL_FLOOR.get());
             dropSelf(BlockInit.DIRTY_METAL_STAIRS.get());
@@ -92,12 +108,9 @@ public class ModLootTableProvider extends LootTableProvider {
             dropSelf(BlockInit.DIRTY_METAL_FENCE.get());
             dropSelf(BlockInit.DIRTY_METAL_FENCE_GATE.get());
 
-            dropSelf(BlockInit.GRIT_1.get());
-            dropSelf(BlockInit.GRIT_STAIRS_1.get());
-            dropSelf(BlockInit.GRIT_SLAB_1.get());
-            dropSelf(BlockInit.GRIT_2.get());
-            dropSelf(BlockInit.GRIT_STAIRS_2.get());
-            dropSelf(BlockInit.GRIT_SLAB_2.get());
+            dropSelf(BlockInit.POCKET_DIM_WALL_TOP.get());
+            dropSelf(BlockInit.POCKET_DIM_WALL_MID.get());
+            dropSelf(BlockInit.POCKET_DIM_WALL_BOTTOM.get());
 
             dropSelf(BlockInit.LIGHT_WALL_TOP.get());
             dropSelf(BlockInit.MED_WALL_TOP.get());
@@ -107,7 +120,7 @@ public class ModLootTableProvider extends LootTableProvider {
             dropSelf(BlockInit.STAINED_BRICK_WALL_TOP.get());
             dropSelf(BlockInit.STAINED_WALL_TOP.get());
             dropSelf(BlockInit.CONCRETE_WALL_TOP.get());
-            dropSelf(BlockInit.POCKET_DIM_WALL_TOP.get());
+            dropSelf(BlockInit.BLUE_WALL_TOP.get());
 
             dropSelf(BlockInit.LIGHT_WALL_MID.get());
             dropSelf(BlockInit.MED_WALL_MID.get());
@@ -117,7 +130,7 @@ public class ModLootTableProvider extends LootTableProvider {
             dropSelf(BlockInit.STAINED_BRICK_WALL_MID.get());
             dropSelf(BlockInit.STAINED_WALL_MID.get());
             dropSelf(BlockInit.CONCRETE_WALL_MID.get());
-            dropSelf(BlockInit.POCKET_DIM_WALL_MID.get());
+            dropSelf(BlockInit.BLUE_WALL_MID.get());
 
             dropSelf(BlockInit.LIGHT_WALL_BOTTOM.get());
             dropSelf(BlockInit.MED_WALL_BOTTOM.get());
@@ -127,21 +140,21 @@ public class ModLootTableProvider extends LootTableProvider {
             dropSelf(BlockInit.STAINED_BRICK_WALL_BOTTOM.get());
             dropSelf(BlockInit.STAINED_WALL_BOTTOM.get());
             dropSelf(BlockInit.CONCRETE_WALL_BOTTOM.get());
-            dropSelf(BlockInit.POCKET_DIM_WALL_BOTTOM.get());
+            dropSelf(BlockInit.BLUE_WALL_BOTTOM.get());
 
-            dropSelf(BlockInit.POCKET_DIM_TILE_FLOOR.get());
-            dropSelf(BlockInit.POCKET_DIM_TILE_STAIRS.get());
-            dropSelf(BlockInit.POCKET_DIM_TILE_SLAB.get());
+            dropSelf(BlockInit.OFFICE_WALL_TOP.get());
+            dropSelf(BlockInit.OFFICE_WALL_MID.get());
+            dropSelf(BlockInit.OFFICE_WALL_BOTTOM.get());
+            dropSelf(BlockInit.OFFICE_CEILING.get());
+            dropSelf(BlockInit.WHITE_WALL.get());
+            dropSelf(BlockInit.HEAVY_BLOCK.get());
 
-            dropSelf(BlockInit.POCKET_DIM_BLOCK_1.get());
-            dropSelf(BlockInit.POCKET_DIM_BLOCK_STAIRS_1.get());
-            dropSelf(BlockInit.POCKET_DIM_BLOCK_SLAB_1.get());
-            dropSelf(BlockInit.POCKET_DIM_BLOCK_2.get());
-            dropSelf(BlockInit.POCKET_DIM_BLOCK_STAIRS_2.get());
-            dropSelf(BlockInit.POCKET_DIM_BLOCK_SLAB_2.get());
-            dropSelf(BlockInit.POCKET_DIM_BLOCK_3.get());
-            dropSelf(BlockInit.POCKET_DIM_BLOCK_STAIRS_3.get());
-            dropSelf(BlockInit.POCKET_DIM_BLOCK_SLAB_3.get());
+            dropSelf(BlockInit.GRIT_1.get());
+            dropSelf(BlockInit.GRIT_STAIRS_1.get());
+            dropSelf(BlockInit.GRIT_SLAB_1.get());
+            dropSelf(BlockInit.GRIT_2.get());
+            dropSelf(BlockInit.GRIT_STAIRS_2.get());
+            dropSelf(BlockInit.GRIT_SLAB_2.get());
 
             dropSelf(BlockInit.SCP1499_BLOCK_1.get());
             dropSelf(BlockInit.SCP1499_STAIRS_1.get());
@@ -150,17 +163,7 @@ public class ModLootTableProvider extends LootTableProvider {
             dropSelf(BlockInit.SCP1499_STAIRS_2.get());
             dropSelf(BlockInit.SCP1499_SLAB_2.get());
 
-            dropSelf(BlockInit.BLUE_WALL_TOP.get());
-            dropSelf(BlockInit.BLUE_WALL_MID.get());
-            dropSelf(BlockInit.BLUE_WALL_BOTTOM.get());
-            dropSelf(BlockInit.OFFICE_WALL_TOP.get());
-            dropSelf(BlockInit.OFFICE_WALL_MID.get());
-            dropSelf(BlockInit.OFFICE_WALL_BOTTOM.get());
-            dropSelf(BlockInit.OFFICE_CEILING.get());
-            dropSelf(BlockInit.WHITE_WALL.get());
-            dropSelf(BlockInit.HEAVY_BLOCK.get());
             dropSelf(BlockInit.CLOTH_BLOCK.get());
-
             dropWhenSilkTouch(BlockInit.CONTAINMENT_GLASS.get());
             dropWhenSilkTouch(BlockInit.CONTAINMENT_GLASS_PANE.get());
 
