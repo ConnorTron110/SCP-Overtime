@@ -154,6 +154,7 @@ public class ModLootTableProvider extends LootTableProvider {
             dropSelf(BlockInit.BLUE_WALL_MID.get());
             dropSelf(BlockInit.BLUE_WALL_BOTTOM.get());
             dropSelf(BlockInit.OFFICE_WALL_TOP.get());
+            dropSelf(BlockInit.OFFICE_WALL_MID.get());
             dropSelf(BlockInit.OFFICE_WALL_BOTTOM.get());
             dropSelf(BlockInit.OFFICE_CEILING.get());
             dropSelf(BlockInit.WHITE_WALL.get());
@@ -164,6 +165,16 @@ public class ModLootTableProvider extends LootTableProvider {
             dropWhenSilkTouch(BlockInit.CONTAINMENT_GLASS_PANE.get());
 
             dropSelf(BlockInit.VENT_ENTRANCE.get());
+
+            dropSelf(BlockInit.MESH_FLOOR.get());
+            dropSelf(BlockInit.MESH_STAIR.get());
+            dropSelf(BlockInit.MESH_SLAB.get());
+
+            dropSelf(BlockInit.CAUTION_LINE_VERTICAL.get());
+            dropSelf(BlockInit.CAUTION_LINE_DIAGONAL.get());
+
+            dropSelf(BlockInit.LIGHT_DOOR.get());
+            dropSelf(BlockInit.HEAVY_DOOR.get());
 
             dropWhenSilkTouch(BlockInit.SCP2845_GRASS.get());
             dropSelf(BlockInit.SCP2845_LOG.get());

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "overtime:block/office_wall_mid"
+    "all": "overtime:block/caution_line_diagonal"
   }
 }

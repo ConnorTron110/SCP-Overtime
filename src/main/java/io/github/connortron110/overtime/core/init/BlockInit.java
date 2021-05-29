@@ -135,8 +135,10 @@ public class BlockInit {
     public static final RegistryObject<Block> BLUE_WALL_MID = register("blue_wall_mid", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.STONE)));
     public static final RegistryObject<Block> BLUE_WALL_BOTTOM = register("blue_wall_bottom", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.STONE)));
     public static final RegistryObject<Block> OFFICE_WALL_TOP = register("office_wall_top", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.STONE)));
+    public static final RegistryObject<Block> OFFICE_WALL_MID = register("office_wall_mid", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.STONE)));
     public static final RegistryObject<Block> OFFICE_WALL_BOTTOM = register("office_wall_bottom", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.STONE)));
     public static final RegistryObject<Block> OFFICE_CEILING = register("office_ceiling", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.STONE)));
+    //TODO Needs own texture
     public static final RegistryObject<Block> WHITE_WALL = register("white_wall", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.STONE)));
     public static final RegistryObject<Block> HEAVY_BLOCK = register("heavy_block", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.STONE)));
     public static final RegistryObject<Block> CLOTH_BLOCK = register("cloth_block", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.FABRIC)));
@@ -144,7 +146,17 @@ public class BlockInit {
     public static final RegistryObject<GlassBlock> CONTAINMENT_GLASS = register("containment_glass", Overtime.TAB_BLOCKS, () -> new GlassBlock(AbstractBlock.Properties.copy(ModMaterialProperties.TRANSPARENT_FULL_BLOCK)));
     public static final RegistryObject<PaneBlock> CONTAINMENT_GLASS_PANE = register("containment_glass_pane", Overtime.TAB_BLOCKS, () -> new PaneBlock(AbstractBlock.Properties.copy(ModMaterialProperties.GLASS)));
 
-    public static final RegistryObject<TrapDoorBlock> VENT_ENTRANCE = register("vent_entrance", Overtime.TAB_BLOCKS, () -> new TrapDoorBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL)));
+    public static final RegistryObject<TrapDoorBlock> VENT_ENTRANCE = register("vent_entrance", Overtime.TAB_BLOCKS, () -> new TrapDoorBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL).noCollission()));
+
+    public static final RegistryObject<Block> MESH_FLOOR = register("mesh_floor", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.METAL).noOcclusion()));
+    public static final RegistryObject<StairsBlock> MESH_STAIR = register("mesh_stair", Overtime.TAB_BLOCKS, () -> new StairsBlock(() -> MESH_FLOOR.get().defaultBlockState(), AbstractBlock.Properties.copy(ModMaterialProperties.METAL).noOcclusion()));
+    public static final RegistryObject<SlabBlock> MESH_SLAB = register("mesh_slab", Overtime.TAB_BLOCKS, () -> new SlabBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL).noOcclusion()));
+
+    public static final RegistryObject<Block> CAUTION_LINE_VERTICAL = register("caution_line_vertical", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.METAL).noOcclusion()));
+    public static final RegistryObject<Block> CAUTION_LINE_DIAGONAL = register("caution_line_diagonal", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.METAL).noOcclusion()));
+
+    public static final RegistryObject<DoorBlock> LIGHT_DOOR = register("light_door", Overtime.TAB_BLOCKS, () -> new DoorBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL).requiresCorrectToolForDrops().strength(3.0F).sound(SoundType.METAL).noOcclusion()));
+    public static final RegistryObject<DoorBlock> HEAVY_DOOR = register("heavy_door", Overtime.TAB_BLOCKS, () -> new DoorBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL).requiresCorrectToolForDrops().strength(5.0F).sound(SoundType.METAL).noOcclusion()));
 
     public static final RegistryObject<GrassBlock> SCP2845_GRASS = register("scp2845_block", Overtime.TAB_BLOCKS, () -> new GrassBlock(AbstractBlock.Properties.copy(ModMaterialProperties.GRASS)));
     public static final RegistryObject<RotatedPillarBlock> SCP2845_LOG = register("scp2845_log", Overtime.TAB_BLOCKS, () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(ModMaterialProperties.WOOD).sound(SoundType.BASALT)));

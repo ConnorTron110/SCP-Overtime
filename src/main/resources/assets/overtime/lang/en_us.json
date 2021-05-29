@@ -114,15 +114,23 @@
   "block.overtime.blue_wall_bottom": "Blue Wall Bottom",
 
   "block.overtime.office_wall_top": "Office Wall Top",
+  "block.overtime.office_wall_mid": "Office Wall Mid",
   "block.overtime.office_wall_bottom": "Office Wall Bottom",
+
   "block.overtime.office_ceiling": "Office Ceiling",
   "block.overtime.white_wall": "White Wall",
-
   "block.overtime.heavy_block": "Heavy Block",
   "block.overtime.cloth_block": "Cloth Block",
   "block.overtime.containment_glass": "Containment Glass",
   "block.overtime.containment_glass_pane": "Containment Glass Pane",
   "block.overtime.vent_entrance": "Vent Entrance",
+  "block.overtime.mesh_floor": "Mesh Floor",
+  "block.overtime.mesh_stair": "Mesh Stair",
+  "block.overtime.mesh_slab": "Mesh slab",
+  "block.overtime.caution_line_vertical": "Caution Line Vertical",
+  "block.overtime.caution_line_diagonal": "Caution Line Diagonal",
+  "block.overtime.light_door": "Light Door",
+  "block.overtime.heavy_door": "Heavy Door",
 
   "block.overtime.scp2845_block": "SCP-2845 Block",
   "block.overtime.scp2845_log": "SCP-2845 Log",

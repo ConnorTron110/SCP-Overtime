@@ -49,6 +49,9 @@ public class ClientEvents {
         setRenderLayer(BlockInit.CONTAINMENT_GLASS.get(), RenderType.translucent());
         setRenderLayer(BlockInit.CONTAINMENT_GLASS_PANE.get(), RenderType.translucent());
         setRenderLayer(BlockInit.VENT_ENTRANCE.get(), RenderType.cutout());
+        setRenderLayer(BlockInit.MESH_FLOOR.get(), RenderType.cutout());
+        setRenderLayer(BlockInit.MESH_STAIR.get(), RenderType.cutout());
+        setRenderLayer(BlockInit.MESH_SLAB.get(), RenderType.cutout());
         setRenderLayer(BlockInit.SCP2845_PLANT.get(), RenderType.cutout());
         setRenderLayer(BlockInit.GIFT.get(), RenderType.cutout());
         setRenderLayer(BlockInit.DRAWER.get(), RenderType.cutout());

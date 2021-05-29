@@ -129,9 +129,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(BlockInit.BLUE_WALL_MID.get());
         simpleBlock(BlockInit.BLUE_WALL_BOTTOM.get());
         simpleBlock(BlockInit.OFFICE_WALL_TOP.get());
+        simpleBlock(BlockInit.OFFICE_WALL_MID.get());
         simpleBlock(BlockInit.OFFICE_WALL_BOTTOM.get());
         simpleBlock(BlockInit.OFFICE_CEILING.get());
-        simpleBlock(BlockInit.WHITE_WALL.get());
+        //TODO Change
+        simpleBlock(BlockInit.WHITE_WALL.get(), models().cubeAll(BlockInit.WHITE_WALL.get().getRegistryName().getPath(), modLoc("block/office_wall_mid")));
         simpleBlock(BlockInit.HEAVY_BLOCK.get());
         simpleBlock(BlockInit.CLOTH_BLOCK.get());
 
@@ -139,6 +141,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         paneBlock(BlockInit.CONTAINMENT_GLASS_PANE.get(), modLoc("block/"+BlockInit.CONTAINMENT_GLASS.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.CONTAINMENT_GLASS.get().getRegistryName().getPath()));
 
         trapdoorBlock(BlockInit.VENT_ENTRANCE.get(), modLoc("block/"+BlockInit.VENT_ENTRANCE.get().getRegistryName().getPath()), true);
+
+        simpleBlock(BlockInit.MESH_FLOOR.get());
+        stairsBlock(BlockInit.MESH_STAIR.get(), modLoc("block/"+BlockInit.MESH_FLOOR.get().getRegistryName().getPath()));
+        slabBlock(BlockInit.MESH_SLAB.get(), modLoc("block/"+BlockInit.MESH_FLOOR.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.MESH_FLOOR.get().getRegistryName().getPath()));
+
+        simpleBlock(BlockInit.CAUTION_LINE_VERTICAL.get());
+        simpleBlock(BlockInit.CAUTION_LINE_DIAGONAL.get());
+
+        doorBlock(BlockInit.LIGHT_DOOR.get(), modLoc("block/light_door_bottom"), modLoc("block/light_door_top"));
+        doorBlock(BlockInit.HEAVY_DOOR.get(), modLoc("block/heavy_door_bottom"), modLoc("block/heavy_door_top"));
 
         simpleBlock(BlockInit.SCP2845_GRASS.get(), models().cubeBottomTop(BlockInit.SCP2845_GRASS.get().getRegistryName().getPath(), modLoc("block/scp2845_side"), modLoc("block/scp2845_bottom"), modLoc("block/scp2845_top")));
         logBlock(BlockInit.SCP2845_LOG.get());

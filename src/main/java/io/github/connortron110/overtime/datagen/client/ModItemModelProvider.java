@@ -133,6 +133,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(BlockInit.BLUE_WALL_MID.get());
         withExistingParent(BlockInit.BLUE_WALL_BOTTOM.get());
         withExistingParent(BlockInit.OFFICE_WALL_TOP.get());
+        withExistingParent(BlockInit.OFFICE_WALL_MID.get());
         withExistingParent(BlockInit.OFFICE_WALL_BOTTOM.get());
         withExistingParent(BlockInit.OFFICE_CEILING.get());
         withExistingParent(BlockInit.WHITE_WALL.get());
@@ -143,6 +144,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         paneSideAlt(BlockInit.CONTAINMENT_GLASS_PANE.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.CONTAINMENT_GLASS.get().getRegistryName().getPath()), modLoc("block/"+BlockInit.CONTAINMENT_GLASS.get().getRegistryName().getPath()));
 
         trapdoorBottom(BlockInit.VENT_ENTRANCE.get().getRegistryName().getPath(), modLoc("block/"+BlockInit.VENT_ENTRANCE.get().getRegistryName().getPath()));
+
+        withExistingParent(BlockInit.MESH_FLOOR.get());
+        withExistingParent(BlockInit.MESH_STAIR.get());
+        withExistingParent(BlockInit.MESH_SLAB.get());
+
+        withExistingParent(BlockInit.CAUTION_LINE_VERTICAL.get());
+        withExistingParent(BlockInit.CAUTION_LINE_DIAGONAL.get());
 
         withExistingParent(BlockInit.SCP2845_GRASS.get());
         withExistingParent(BlockInit.SCP2845_LOG.get());
@@ -163,6 +171,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //Item Generated Models
         final ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
+        getBuilder(BlockInit.LIGHT_DOOR.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/light_door");
+        getBuilder(BlockInit.HEAVY_DOOR.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/heavy_door");
         getBuilder(BlockInit.SCP2845_PLANT.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "block/"+BlockInit.SCP2845_PLANT.get().getRegistryName().getPath());
         getBuilder(BlockInit.SCP066_BLOCK.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/scp066");
         getBuilder(ItemInit.SCP427.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/scp427");
