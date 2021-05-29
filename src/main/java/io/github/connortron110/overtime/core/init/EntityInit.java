@@ -1,10 +1,7 @@
 package io.github.connortron110.overtime.core.init;
 
 import io.github.connortron110.overtime.Reference;
-import io.github.connortron110.overtime.common.entities.scp.SCP035TendrilEntity;
-import io.github.connortron110.overtime.common.entities.scp.SCP066CatEntity;
-import io.github.connortron110.overtime.common.entities.scp.SCP066_2Entity;
-import io.github.connortron110.overtime.common.entities.scp.SCP427_1Entity;
+import io.github.connortron110.overtime.common.entities.scp.*;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;
@@ -33,4 +30,9 @@ public class EntityInit {
             () -> EntityType.Builder.of(SCP427_1Entity::new, EntityClassification.MONSTER)
                     .sized(1.5F,2.5F)
                     .build(new ResourceLocation(Reference.MOD_ID, "scp427").toString()));
+
+    public static final RegistryObject<EntityType<SCP1762Entity>> SCP1762 = ENTITY_TYPES.register("scp1762",
+            () -> EntityType.Builder.of(SCP1762Entity::new, EntityClassification.CREATURE)
+                    .sized(.5F, .5F)
+                    .build(new ResourceLocation(Reference.MOD_ID, "scp1762").toString()));
 }

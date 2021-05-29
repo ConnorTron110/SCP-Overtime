@@ -196,6 +196,7 @@ public class ModLootTableProvider extends LootTableProvider {
             dropSelf(BlockInit.TERMINAL.get());
 
             dropSelf(BlockInit.SCP066_BLOCK.get());
+            dropSelf(BlockInit.SCP1762.get());
         }
 
         @Override

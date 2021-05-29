@@ -153,6 +153,7 @@
   "block.overtime.terminal": "Terminal",
 
   "block.overtime.scp066_block": "SCP-066 - \"Eric's Toy\"",
+  "block.overtime.scp1762": "SCP-1762 - Where The Dragons Went",
 
 
   "death.attack.whipped": "%1$s got Whipped to death by SCP-066",
@@ -164,6 +165,7 @@
   "entity.overtime.scp066": "SCP-066-2 - \"Eric's Toy\"",
   "entity.overtime.scp066_cat": "SCP-066 - Cat",
   "entity.overtime.scp427": "SCP-427 - Lovecraftian Locket Flesh",
+  "entity.overtime.scp1762": "SCP-1762 - Origami Dragon",
 
 
   "item.overtime.scp035_tendril_spawner": "SCP-035 Tendril Spawner",

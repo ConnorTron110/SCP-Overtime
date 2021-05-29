@@ -170,6 +170,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(BlockInit.SERVER.get());
         withExistingParent(BlockInit.COMPUTER.get().getRegistryName().getPath(), modLoc("block/computer_off"));
         withExistingParent(BlockInit.TERMINAL.get().getRegistryName().getPath(), modLoc("block/terminal_off"));
+        withExistingParent(BlockInit.SCP1762.get().getRegistryName().getPath(), modLoc("block/scp1762_closed"));
 
 
         //Item Generated Models

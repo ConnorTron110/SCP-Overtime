@@ -23,6 +23,8 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> SCP066_BEETHOVEN = registerSound("scp066_beethoven");
     public static final RegistryObject<SoundEvent> SCP066_IDLE = registerSound("scp066_idle");
 
+    public static final RegistryObject<SoundEvent> SCP1762_OST = registerSound("scp1762_ost");
+
     private static RegistryObject<SoundEvent> registerSound(String name) {
         return SOUNDS.register(name, () -> new SoundEvent(new ResourceLocation(Reference.MOD_ID, name)));
     }

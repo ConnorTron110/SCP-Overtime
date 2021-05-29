@@ -183,6 +183,7 @@ public class BlockInit {
     public static final RegistryObject<ComputerBlock> TERMINAL = register("terminal", Overtime.TAB_MISC, ComputerBlock::new);
 
     public static final RegistryObject<SCP066Block> SCP066_BLOCK = register("scp066_block", Overtime.TAB_MISC, SCP066Block::new);
+    public static final RegistryObject<SCP1762Block> SCP1762 = register("scp1762", Overtime.TAB_MISC, SCP1762Block::new);
 
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> block) {

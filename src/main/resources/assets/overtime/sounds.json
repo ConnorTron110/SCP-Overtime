@@ -70,5 +70,12 @@
       { "name": "overtime:scp/066/notes5", "stream": false },
       { "name": "overtime:scp/066/notes6", "stream": false }
     ]
+  },
+
+  "scp1762_ost": {
+    "category": "music",
+    "sounds": [
+      { "name": "overtime:scp/1762ost", "stream": true }
+    ]
   }
 }
