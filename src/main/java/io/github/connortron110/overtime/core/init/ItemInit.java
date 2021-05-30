@@ -41,6 +41,8 @@ public class ItemInit {
 
     public static final RegistryObject<SCP035Item> SCP035 = ITEMS.register("scp035", () -> new SCP035Item(new Item.Properties().stacksTo(1).tab(Overtime.TAB_MISC)));
     public static final RegistryObject<SCP427Item> SCP427 = ITEMS.register("scp427", () -> new SCP427Item(new Item.Properties().stacksTo(1).tab(Overtime.TAB_MISC)));
+    public static final RegistryObject<SCP500ContainerItem> SCP500_CONTAINER = ITEMS.register("scp500_container", () -> new SCP500ContainerItem(new Item.Properties().stacksTo(1).tab(Overtime.TAB_MISC)));
+    public static final RegistryObject<SCP500PillItem> SCP500_PILL = ITEMS.register("scp500_pill", () -> new SCP500PillItem(new Item.Properties().tab(Overtime.TAB_MISC).stacksTo(1).food((new Food.Builder()).alwaysEat().fast().build())));
     public static final RegistryObject<SCP714Item> SCP714 = ITEMS.register("scp714", () -> new SCP714Item(new Item.Properties().stacksTo(1).tab(Overtime.TAB_MISC)));
 
     public static final RegistryObject<SCP035SpawnerItem> SCP035_TENDRIL_SPAWNER = ITEMS.register("scp035_tendril_spawner", () -> new SCP035SpawnerItem(EntityInit.SCP035_TENDRIL));

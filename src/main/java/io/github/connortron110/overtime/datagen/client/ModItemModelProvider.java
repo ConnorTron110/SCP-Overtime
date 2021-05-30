@@ -181,6 +181,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder(BlockInit.SCP2845_PLANT.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "block/"+BlockInit.SCP2845_PLANT.get().getRegistryName().getPath());
         getBuilder(BlockInit.SCP066_BLOCK.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/scp066");
         getBuilder(ItemInit.SCP427.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/scp427");
+        getBuilder(ItemInit.SCP500_PILL.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/scp500_pill");
 
         getBuilder(ItemInit.ICON_SAFE.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.ICON_SAFE.get().getRegistryName().getPath());
         getBuilder(ItemInit.ICON_EUCLID.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.ICON_EUCLID.get().getRegistryName().getPath());

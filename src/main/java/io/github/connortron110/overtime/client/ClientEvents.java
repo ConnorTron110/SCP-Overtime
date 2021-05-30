@@ -63,5 +63,6 @@ public class ClientEvents {
 
     private static void registerItemModelOverrides() {
         ItemModelsProperties.register(ItemInit.SCP035.get(), new ResourceLocation(Reference.MOD_ID, "state"), (stack, world, entity) -> stack.getOrCreateTag().getFloat("state"));
+        ItemModelsProperties.register(ItemInit.SCP500_CONTAINER.get(), new ResourceLocation(Reference.MOD_ID, "empty"), (stack, world, entity) -> (stack.getDamageValue() == stack.getMaxDamage()) ? 1F : 0F);
     }
 }
