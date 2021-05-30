@@ -153,6 +153,7 @@
   "block.overtime.terminal": "Terminal",
 
   "block.overtime.scp066_block": "SCP-066 - \"Eric's Toy\"",
+  "block.overtime.scp1025": "SCP-1025 - Encyclopedia of Diseases",
   "block.overtime.scp1762": "SCP-1762 - Where The Dragons Went",
 
 
@@ -200,6 +201,9 @@
   "item.overtime.labcoat_boots": "Labcoat Boots",
   "item.overtime.labcoat_red_leggings": "Red Labcoat Leggings",
   "item.overtime.labcoat_red_chest": "Red Labcoat Chest",
+
+  "scp1025.effect": "You read an article about %1$s",
+  "scp1025.noeffect": "Its just a blank page...",
 
 
   "itemGroup.overtimeitems": "Overtime Items",

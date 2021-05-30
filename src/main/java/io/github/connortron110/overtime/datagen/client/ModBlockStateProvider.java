@@ -171,5 +171,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(BlockInit.SERVER.get(), models().getExistingFile(modLoc("block/server")));
 
         simpleBlock(BlockInit.SCP066_BLOCK.get(), models().getExistingFile(modLoc("block/scp066_block")));
+        horizontalBlock(BlockInit.SCP1025.get(), models().getExistingFile(modLoc("block/scp1025")));
     }
 }
