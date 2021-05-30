@@ -94,7 +94,7 @@ public class SCP066Block extends Block {
             world.playSound(null, pos, SoundEvents.RABBIT_ATTACK, SoundCategory.NEUTRAL, 1F, 1F);
 
             if (!world.isClientSide) {
-                SCP066_2Entity customEntity = new SCP066_2Entity(EntityInit.ERICS_TOY.get(), world);
+                SCP066_2Entity customEntity = new SCP066_2Entity(EntityInit.SCP066.get(), world);
                 customEntity.moveTo(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, RANDOM.nextFloat() * 360.0F, 0.0F);
                 customEntity.finalizeSpawn((IServerWorld) world, world.getCurrentDifficultyAt(customEntity.blockPosition()), SpawnReason.MOB_SUMMONED, null, null);
                 world.addFreshEntity(customEntity);

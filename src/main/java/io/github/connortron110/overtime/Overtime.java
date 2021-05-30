@@ -66,7 +66,7 @@ public class Overtime {
 
     private void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
         event.put(EntityInit.SCP035_TENDRIL.get(), SCP035TendrilEntity.createMobAttributes().build());
-        event.put(EntityInit.ERICS_TOY.get(), SCP066_2Entity.createMobAttributes().build());
+        event.put(EntityInit.SCP066.get(), SCP066_2Entity.createMobAttributes().build());
         event.put(EntityInit.SCP066_CAT.get(), SCP066CatEntity.createMobAttributes().build());
         event.put(EntityInit.SCP427.get(), SCP427_1Entity.createMobAttributes().build());
         event.put(EntityInit.SCP1762.get(), SCP1762Entity.createMobAttributes().build());

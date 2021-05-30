@@ -40,7 +40,7 @@ public class ClientEvents {
 
     private static void setEntityRenderers() {
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP035_TENDRIL.get(), SCP035TendrilRenderer::new);
-        RenderingRegistry.registerEntityRenderingHandler(EntityInit.ERICS_TOY.get(), SCP066Renderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP066.get(), SCP066Renderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP066_CAT.get(), CatRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP427.get(), SCP427Renderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP1762.get(), SCP1762Renderer::new);
