@@ -40,6 +40,7 @@ public class ItemInit {
     public static final RegistryObject<ArmorItem> LABCOAT_CHEST_RED = ITEMS.register("labcoat_red_chest", () -> new LabcoatItem(ArmorMaterial.LEATHER, EquipmentSlotType.CHEST, new Item.Properties().tab(Overtime.TAB_ITEMS), "red"));
 
     public static final RegistryObject<SCP035Item> SCP035 = ITEMS.register("scp035", () -> new SCP035Item(new Item.Properties().stacksTo(1).tab(Overtime.TAB_MISC)));
+    public static final RegistryObject<SCP207Item> SCP207 = ITEMS.register("scp207", () -> new SCP207Item(new Item.Properties().stacksTo(1).tab(Overtime.TAB_MISC)));
     public static final RegistryObject<SCP427Item> SCP427 = ITEMS.register("scp427", () -> new SCP427Item(new Item.Properties().stacksTo(1).tab(Overtime.TAB_MISC)));
     public static final RegistryObject<SCP500ContainerItem> SCP500_CONTAINER = ITEMS.register("scp500_container", () -> new SCP500ContainerItem(new Item.Properties().stacksTo(1).tab(Overtime.TAB_MISC)));
     public static final RegistryObject<SCP500PillItem> SCP500_PILL = ITEMS.register("scp500_pill", () -> new SCP500PillItem(new Item.Properties().tab(Overtime.TAB_MISC).stacksTo(1).food((new Food.Builder()).alwaysEat().fast().build())));
