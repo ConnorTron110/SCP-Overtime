@@ -3,8 +3,6 @@ package io.github.connortron110.overtime.common.entities.scp;
 import io.github.connortron110.overtime.common.entities.ai.SCP035TendrilAttackGoal;
 import io.github.connortron110.overtime.core.init.ModSounds;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
@@ -18,17 +16,6 @@ import net.minecraft.world.World;
 public class SCP035TendrilEntity extends MonsterEntity {
     public SCP035TendrilEntity(EntityType<? extends MonsterEntity> entity, World world) {
         super(entity, world);
-    }
-
-    public static AttributeModifierMap.MutableAttribute createMobAttributes() {
-        return MonsterEntity.createLivingAttributes()
-                .add(Attributes.FOLLOW_RANGE, 16D)
-                .add(Attributes.MOVEMENT_SPEED, 0)
-                .add(Attributes.MAX_HEALTH, 20D)
-                .add(Attributes.ARMOR, 0D)
-                .add(Attributes.ATTACK_DAMAGE, 4D)
-                .add(Attributes.ATTACK_KNOCKBACK, 2D)
-                .add(Attributes.KNOCKBACK_RESISTANCE, 1000D);
     }
 
     @Override

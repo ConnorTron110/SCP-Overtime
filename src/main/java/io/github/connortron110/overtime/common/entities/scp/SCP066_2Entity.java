@@ -4,8 +4,6 @@ import io.github.connortron110.overtime.core.init.ModSounds;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -29,17 +27,6 @@ public class SCP066_2Entity extends MonsterEntity {
         super(entity, world);
         xpReward = 2;
         setPersistenceRequired();
-    }
-
-    public static AttributeModifierMap.MutableAttribute createMobAttributes() {
-        return MonsterEntity.createLivingAttributes()
-                .add(Attributes.FOLLOW_RANGE, 16D)
-                .add(Attributes.MOVEMENT_SPEED, .2D)
-                .add(Attributes.MAX_HEALTH, 66D)
-                .add(Attributes.ARMOR, 0D)
-                .add(Attributes.ATTACK_DAMAGE, 1D)
-                .add(Attributes.ATTACK_KNOCKBACK, 2D)
-                .add(Attributes.KNOCKBACK_RESISTANCE, .1D);
     }
 
     @Override

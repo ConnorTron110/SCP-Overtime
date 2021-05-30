@@ -8,8 +8,6 @@ import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.controller.FlyingMovementController;
 import net.minecraft.entity.ai.goal.RandomWalkingGoal;
 import net.minecraft.entity.ai.goal.TemptGoal;
@@ -46,18 +44,6 @@ public class SCP1762Entity extends CreatureEntity {
         moveControl = new FlyingMovementController(this, 10, true);
         this.setPathfindingMalus(PathNodeType.DANGER_FIRE, -1.0F);
         this.setPathfindingMalus(PathNodeType.DAMAGE_FIRE, -1.0F);
-    }
-
-    public static AttributeModifierMap.MutableAttribute createMobAttributes() {
-        return CreatureEntity.createLivingAttributes()
-                .add(Attributes.FOLLOW_RANGE, 16D)
-                .add(Attributes.MOVEMENT_SPEED, .3D)
-                .add(Attributes.MAX_HEALTH, 2D)
-                .add(Attributes.ARMOR, 0D)
-                .add(Attributes.ATTACK_DAMAGE, 3D)
-                .add(Attributes.ATTACK_KNOCKBACK, 2D)
-                .add(Attributes.KNOCKBACK_RESISTANCE, .1D)
-                .add(Attributes.FLYING_SPEED, .3D);
     }
 
     @Override

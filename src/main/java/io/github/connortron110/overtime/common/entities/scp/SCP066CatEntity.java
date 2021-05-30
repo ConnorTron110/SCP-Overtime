@@ -3,13 +3,10 @@ package io.github.connortron110.overtime.common.entities.scp;
 import io.github.connortron110.overtime.common.blocks.SCP066Block;
 import io.github.connortron110.overtime.core.init.BlockInit;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.ai.attributes.AttributeModifierMap;
-import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.LookAtGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
 import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.CatEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -26,17 +23,6 @@ public class SCP066CatEntity extends CatEntity {
 
     public SCP066CatEntity(EntityType<? extends CatEntity> entity, World world) {
         super(entity, world);
-    }
-
-    public static AttributeModifierMap.MutableAttribute createMobAttributes() {
-        return MonsterEntity.createLivingAttributes()
-                .add(Attributes.FOLLOW_RANGE, 16D)
-                .add(Attributes.MOVEMENT_SPEED, .2D)
-                .add(Attributes.MAX_HEALTH, 66D)
-                .add(Attributes.ARMOR, 0D)
-                .add(Attributes.ATTACK_DAMAGE, 1D)
-                .add(Attributes.ATTACK_KNOCKBACK, 2D)
-                .add(Attributes.KNOCKBACK_RESISTANCE, .1D);
     }
 
     @Override
