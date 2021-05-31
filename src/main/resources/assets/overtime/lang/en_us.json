@@ -160,7 +160,7 @@
   "death.attack.whipped": "%1$s got Whipped to death by SCP-066",
   "death.attack.066deaf": "%1$s got Deafened by SCP-066",
   "death.attack.427fleshbeast": "%1$s got Transmutated by SCP-427",
-
+  "death.attack.5167deaf": "%1$s got Deafened by SCP-5167",
 
   "entity.overtime.scp035_tendril": "SCP-035 Tendril",
   "entity.overtime.scp066": "SCP-066-2 - \"Eric's Toy\"",
@@ -172,6 +172,7 @@
   "item.overtime.scp035_tendril_spawner": "SCP-035 Tendril Spawner",
   "item.overtime.scp066_spawn_egg": "SCP-066-2 - \"Eric's Toy\" Spawn Egg",
   "item.overtime.scp427_spawn_egg": "SCP-427 Lovecraftian Flesh Spawn Egg",
+  "item.overtime.scp5167_spawn_egg": "SCP-5167 When The Imposter Is Sus Spawn Egg",
 
 
   "item.overtime.icon_safe": "Icon Safe",

@@ -18,6 +18,7 @@ public class EntityInit {
     public static final RegistryObject<EntityType<SCP066CatEntity>> SCP066_CAT = register("scp066_cat", SCP066CatEntity::new, EntityClassification.CREATURE, 1F, 1F);
     public static final RegistryObject<EntityType<SCP427_1Entity>> SCP427 = register("scp427", SCP427_1Entity::new, EntityClassification.MONSTER, 1.5F, 2.5F);
     public static final RegistryObject<EntityType<SCP1762Entity>> SCP1762 = register("scp1762", SCP1762Entity::new, EntityClassification.CREATURE, .5F, .5F);
+    public static final RegistryObject<EntityType<SCP5167Entity>> SCP5167 = register("scp5167", SCP5167Entity::new, EntityClassification.MONSTER, .6F, 1F);
 
     @SuppressWarnings("rawtypes")
     private static RegistryObject register(String name, EntityType.IFactory factory, EntityClassification classification, float width, float height) {

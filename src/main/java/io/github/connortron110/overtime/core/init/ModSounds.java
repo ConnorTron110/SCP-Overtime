@@ -25,6 +25,10 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> SCP1762_OST = registerSound("scp1762_ost");
 
+    public static final RegistryObject<SoundEvent> SCP5167_DEATH = registerSound("scp5167_death");
+    public static final RegistryObject<SoundEvent> SCP5167_MEETING = registerSound("scp5167_meeting");
+    public static final RegistryObject<SoundEvent> SCP5167_WALK = registerSound("scp5167_walk");
+
     private static RegistryObject<SoundEvent> registerSound(String name) {
         return SOUNDS.register(name, () -> new SoundEvent(new ResourceLocation(Reference.MOD_ID, name)));
     }

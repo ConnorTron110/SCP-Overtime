@@ -77,5 +77,24 @@
     "sounds": [
       { "name": "overtime:scp/1762ost", "stream": true }
     ]
+  },
+
+  "scp5167_death": {
+    "category": "hostile",
+    "sounds": [
+      { "name": "overtime:scp/5167/death", "stream": false }
+    ]
+  },
+  "scp5167_meeting": {
+    "category": "hostile",
+    "sounds": [
+      { "name": "overtime:scp/5167/meeting", "stream": false }
+    ]
+  },
+  "scp5167_walk": {
+    "category": "hostile",
+    "sounds": [
+      { "name": "overtime:scp/5167/walk", "stream": false }
+    ]
   }
 }
