@@ -1,4 +1,13 @@
 {
+  "heavy_step": {
+    "category": "ambient",
+    "sounds": [
+      { "name": "overtime:heavy_step1", "stream": false },
+      { "name": "overtime:heavy_step2", "stream": false },
+      { "name": "overtime:heavy_step3", "stream": false },
+      { "name": "overtime:heavy_step4", "stream": false }
+    ]
+  },
   "mask_breathing": {
     "category": "player",
     "sounds": [
@@ -76,6 +85,28 @@
     "category": "music",
     "sounds": [
       { "name": "overtime:scp/1762ost", "stream": true }
+    ]
+  },
+
+  "scp3456_death": {
+    "category": "music",
+    "sounds": [
+      { "name": "overtime:scp/3456/death", "stream": false }
+    ]
+  },
+  "scp3456_idle": {
+    "category": "music",
+    "sounds": [
+      { "name": "overtime:scp/3456/idle1", "stream": false },
+      { "name": "overtime:scp/3456/idle2", "stream": false },
+      { "name": "overtime:scp/3456/idle3", "stream": false },
+      { "name": "overtime:scp/3456/scream", "stream": false }
+    ]
+  },
+  "scp3456_hurt": {
+    "category": "music",
+    "sounds": [
+      { "name": "overtime:scp/3456/hurt", "stream": false }
     ]
   },
 

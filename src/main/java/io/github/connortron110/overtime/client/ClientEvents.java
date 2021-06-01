@@ -41,6 +41,7 @@ public class ClientEvents {
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP066_CAT.get(), CatRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP427.get(), SCP427Renderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP1762.get(), SCP1762Renderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP3456.get(), SCP3456Renderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP5167.get(), SCP5167Renderer::new);
     }
 

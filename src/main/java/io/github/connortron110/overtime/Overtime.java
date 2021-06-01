@@ -72,6 +72,7 @@ public class Overtime {
         event.put(EntityInit.SCP066_CAT.get(), createBaseAttributes(66, .2, 0,0).build());
         event.put(EntityInit.SCP427.get(), createBaseAttributes(800, .4, 6,10).build());
         event.put(EntityInit.SCP1762.get(), createBaseAttributes(2, .3, 3,2).add(Attributes.FLYING_SPEED, .3).build());
+        event.put(EntityInit.SCP3456.get(), createBaseAttributes(750, .3, 9, 2).build());
         event.put(EntityInit.SCP5167.get(), createBaseAttributes(50, .4, 3, 1).build());
     }
 
