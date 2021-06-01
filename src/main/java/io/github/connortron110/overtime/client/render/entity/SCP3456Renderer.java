@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class SCP3456Renderer extends MobRenderer<SCP3456Entity, SCP3456Model<SCP3456Entity>> {
     public SCP3456Renderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new SCP3456Model<>(), 0.45F);
+        super(rendererManager, new SCP3456Model<>(), 2F);
     }
 
     @Override

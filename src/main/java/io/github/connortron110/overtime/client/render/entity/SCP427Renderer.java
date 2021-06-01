@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class SCP427Renderer extends MobRenderer<SCP427_1Entity, SCP427_1Model<SCP427_1Entity>> {
     public SCP427Renderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new SCP427_1Model<>(), 0.45F);
+        super(rendererManager, new SCP427_1Model<>(), 1.5F);
     }
 
     @Override

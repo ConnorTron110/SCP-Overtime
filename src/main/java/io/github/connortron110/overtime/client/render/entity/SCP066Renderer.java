@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class SCP066Renderer extends MobRenderer<SCP066_2Entity, SCP066Model<SCP066_2Entity>> {
     public SCP066Renderer(EntityRendererManager rendererManager) {
-        super(rendererManager, new SCP066Model<>(), 0.45F);
+        super(rendererManager, new SCP066Model<>(), 0.5F);
         addLayer(new GlowLayer<>(this));
     }
 
