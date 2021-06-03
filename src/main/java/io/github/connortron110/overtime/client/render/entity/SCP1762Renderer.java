@@ -1,6 +1,6 @@
 package io.github.connortron110.overtime.client.render.entity;
 
-import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.client.model.SCP1762Model;
 import io.github.connortron110.overtime.common.entities.scp.SCP1762Entity;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
@@ -14,6 +14,6 @@ public class SCP1762Renderer extends MobRenderer<SCP1762Entity, SCP1762Model<SCP
 
     @Override
     public ResourceLocation getTextureLocation(SCP1762Entity entity) {
-        return new ResourceLocation(Reference.MOD_ID, "textures/entity/scp1762_"+entity.getVariant()+".png");
+        return new ResourceLocation(Overtime.MOD_ID, "textures/entity/scp1762_"+entity.getVariant()+".png");
     }
 }

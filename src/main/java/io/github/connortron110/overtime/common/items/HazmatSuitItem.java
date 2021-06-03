@@ -1,7 +1,7 @@
 package io.github.connortron110.overtime.common.items;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.client.model.HazmatSuitModel;
 import io.github.connortron110.overtime.core.init.ModSounds;
 import net.minecraft.client.Minecraft;
@@ -65,7 +65,7 @@ public class HazmatSuitItem extends ArmorItem {
         RenderSystem.defaultBlendFunc();
         RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.disableAlphaTest();
-        Minecraft.getInstance().getTextureManager().bind(new ResourceLocation(Reference.MOD_ID, "textures/misc/hazmatblur.png"));
+        Minecraft.getInstance().getTextureManager().bind(new ResourceLocation(Overtime.MOD_ID, "textures/misc/hazmatblur.png"));
         Tessellator tessellator = Tessellator.getInstance();
         BufferBuilder bufferbuilder = tessellator.getBuilder();
         bufferbuilder.begin(7, DefaultVertexFormats.POSITION_TEX);
@@ -90,6 +90,6 @@ public class HazmatSuitItem extends ArmorItem {
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-        return new ResourceLocation(Reference.MOD_ID, "textures/models/hazmat_suit"+color+".png").toString();
+        return new ResourceLocation(Overtime.MOD_ID, "textures/models/hazmat_suit"+color+".png").toString();
     }
 }

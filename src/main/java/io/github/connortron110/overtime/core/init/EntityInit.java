@@ -1,6 +1,6 @@
 package io.github.connortron110.overtime.core.init;
 
-import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.common.entities.projectile.AcidSpitEntity;
 import io.github.connortron110.overtime.common.entities.scp.*;
 import net.minecraft.entity.EntityClassification;
@@ -17,9 +17,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 @SuppressWarnings("unchecked")
-@Mod.EventBusSubscriber(modid = Reference.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = Overtime.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class EntityInit {
-    public static DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITIES, Reference.MOD_ID);
+    public static DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITIES, Overtime.MOD_ID);
 
     public static final RegistryObject<EntityType<AcidSpitEntity>> ACID_SPIT = register("acid_spit", AcidSpitEntity::new, EntityClassification.MISC, .25F, .25F);
 
@@ -59,6 +59,6 @@ public class EntityInit {
     private static RegistryObject register(String name, EntityType.IFactory factory, EntityClassification classification, float width, float height) {
         return ENTITY_TYPES.register(name, () -> EntityType.Builder.of(factory, classification)
                 .sized(width, height)
-                .build(new ResourceLocation(Reference.MOD_ID, name).toString()));
+                .build(new ResourceLocation(Overtime.MOD_ID, name).toString()));
     }
 }

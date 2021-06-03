@@ -1,6 +1,6 @@
 package io.github.connortron110.overtime.client.render.entity;
 
-import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.client.model.SCP3199Model;
 import io.github.connortron110.overtime.client.render.entity.layers.GlowLayer;
 import io.github.connortron110.overtime.common.entities.scp.SCP3199Entity;
@@ -16,6 +16,6 @@ public class SCP3199Renderer extends MobRenderer<SCP3199Entity, SCP3199Model<SCP
 
     @Override
     public ResourceLocation getTextureLocation(SCP3199Entity entity) {
-        return new ResourceLocation(Reference.MOD_ID, "textures/entity/scp3199.png");
+        return new ResourceLocation(Overtime.MOD_ID, "textures/entity/scp3199.png");
     }
 }

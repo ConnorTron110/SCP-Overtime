@@ -1,6 +1,6 @@
 package io.github.connortron110.overtime.datagen.client;
 
-import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.core.init.BlockInit;
 import io.github.connortron110.overtime.core.init.ItemInit;
 import net.minecraft.block.Block;
@@ -11,7 +11,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, Reference.MOD_ID, existingFileHelper);
+        super(generator, Overtime.MOD_ID, existingFileHelper);
     }
 
     @Override

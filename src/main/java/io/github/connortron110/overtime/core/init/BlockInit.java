@@ -1,7 +1,6 @@
 package io.github.connortron110.overtime.core.init;
 
 import io.github.connortron110.overtime.Overtime;
-import io.github.connortron110.overtime.Reference;
 import io.github.connortron110.overtime.common.blocks.*;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -15,7 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.function.Supplier;
 
 public class BlockInit {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Reference.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Overtime.MOD_ID);
 
     public static final RegistryObject<Block> MAGNETIC_BLOCK_ON = register("magnetic_block_on", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.METAL)));
     public static final RegistryObject<Block> RITUAL_BLOCK = register("ritual_block", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.FABRIC)));

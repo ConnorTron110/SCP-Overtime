@@ -1,6 +1,6 @@
 package io.github.connortron110.overtime.client.render.entity;
 
-import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.client.model.SCP3456Model;
 import io.github.connortron110.overtime.common.entities.scp.SCP3456Entity;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
@@ -14,6 +14,6 @@ public class SCP3456Renderer extends MobRenderer<SCP3456Entity, SCP3456Model<SCP
 
     @Override
     public ResourceLocation getTextureLocation(SCP3456Entity entity) {
-        return new ResourceLocation(Reference.MOD_ID, "textures/entity/scp3456.png");
+        return new ResourceLocation(Overtime.MOD_ID, "textures/entity/scp3456.png");
     }
 }

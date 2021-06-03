@@ -1,6 +1,6 @@
 package io.github.connortron110.overtime.common.items;
 
-import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.client.model.JumpSuitModel;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.entity.Entity;
@@ -32,6 +32,6 @@ public class JumpSuitItem extends ArmorItem {
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-        return new ResourceLocation(Reference.MOD_ID, "textures/models/jumpsuit"+color+".png").toString();
+        return new ResourceLocation(Overtime.MOD_ID, "textures/models/jumpsuit"+color+".png").toString();
     }
 }

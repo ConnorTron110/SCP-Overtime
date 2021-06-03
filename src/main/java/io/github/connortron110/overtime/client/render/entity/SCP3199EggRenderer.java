@@ -1,6 +1,6 @@
 package io.github.connortron110.overtime.client.render.entity;
 
-import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.client.model.SCP3199EggModel;
 import io.github.connortron110.overtime.common.entities.scp.SCP3199EggEntity;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
@@ -14,6 +14,6 @@ public class SCP3199EggRenderer extends MobRenderer<SCP3199EggEntity, SCP3199Egg
 
     @Override
     public ResourceLocation getTextureLocation(SCP3199EggEntity entity) {
-        return new ResourceLocation(Reference.MOD_ID, "textures/entity/scp3199_egg.png");
+        return new ResourceLocation(Overtime.MOD_ID, "textures/entity/scp3199_egg.png");
     }
 }

@@ -1,6 +1,6 @@
 package io.github.connortron110.overtime.client;
 
-import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.client.render.entity.*;
 import io.github.connortron110.overtime.common.items.ModSpawnEggItem;
 import io.github.connortron110.overtime.core.init.BlockInit;
@@ -21,7 +21,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 import static net.minecraft.client.renderer.RenderTypeLookup.setRenderLayer;
 
-@Mod.EventBusSubscriber(modid = Reference.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = Overtime.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientEvents {
 
     @SubscribeEvent
@@ -66,7 +66,7 @@ public class ClientEvents {
     }
 
     private static void registerItemModelOverrides() {
-        ItemModelsProperties.register(ItemInit.SCP035.get(), new ResourceLocation(Reference.MOD_ID, "state"), (stack, world, entity) -> stack.getOrCreateTag().getFloat("state"));
-        ItemModelsProperties.register(ItemInit.SCP500_CONTAINER.get(), new ResourceLocation(Reference.MOD_ID, "empty"), (stack, world, entity) -> (stack.getDamageValue() == stack.getMaxDamage()) ? 1F : 0F);
+        ItemModelsProperties.register(ItemInit.SCP035.get(), new ResourceLocation(Overtime.MOD_ID, "state"), (stack, world, entity) -> stack.getOrCreateTag().getFloat("state"));
+        ItemModelsProperties.register(ItemInit.SCP500_CONTAINER.get(), new ResourceLocation(Overtime.MOD_ID, "empty"), (stack, world, entity) -> (stack.getDamageValue() == stack.getMaxDamage()) ? 1F : 0F);
     }
 }

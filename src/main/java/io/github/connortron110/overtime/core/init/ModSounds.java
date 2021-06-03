@@ -1,6 +1,6 @@
 package io.github.connortron110.overtime.core.init;
 
-import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.Overtime;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.fml.RegistryObject;
@@ -8,7 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModSounds {
-    public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Reference.MOD_ID);
+    public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Overtime.MOD_ID);
 
     public static final RegistryObject<SoundEvent> GENERIC_STEP = registerSound("generic_step");
     public static final RegistryObject<SoundEvent> HEAVY_STEP = registerSound("heavy_step");
@@ -40,6 +40,6 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> SCP5167_WALK = registerSound("scp5167_walk");
 
     private static RegistryObject<SoundEvent> registerSound(String name) {
-        return SOUNDS.register(name, () -> new SoundEvent(new ResourceLocation(Reference.MOD_ID, name)));
+        return SOUNDS.register(name, () -> new SoundEvent(new ResourceLocation(Overtime.MOD_ID, name)));
     }
 }

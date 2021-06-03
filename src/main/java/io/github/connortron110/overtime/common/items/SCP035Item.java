@@ -1,7 +1,7 @@
 package io.github.connortron110.overtime.common.items;
 
 import com.google.common.collect.Multimap;
-import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.client.model.SCP035MaskModel;
 import io.github.connortron110.overtime.core.init.ItemInit;
 import io.github.connortron110.overtime.core.init.ModSounds;
@@ -160,7 +160,7 @@ public class SCP035Item extends ArmorItem {
         } else if (stack.getTag().getFloat("state") == State.EQUIPPED.state){
             state = "equipped";
         }
-        return new ResourceLocation(Reference.MOD_ID, "textures/models/scp035_"+ state +".png").toString();
+        return new ResourceLocation(Overtime.MOD_ID, "textures/models/scp035_"+ state +".png").toString();
     }
 
     @Override

@@ -1,7 +1,6 @@
 package io.github.connortron110.overtime.core.init;
 
 import io.github.connortron110.overtime.Overtime;
-import io.github.connortron110.overtime.Reference;
 import io.github.connortron110.overtime.common.items.*;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -12,7 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.awt.*;
 
 public class ItemInit {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Overtime.MOD_ID);
 
     public static final RegistryObject<Item> ICON_SAFE = ITEMS.register("icon_safe", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ICON_EUCLID = ITEMS.register("icon_euclid", () -> new Item(new Item.Properties()));

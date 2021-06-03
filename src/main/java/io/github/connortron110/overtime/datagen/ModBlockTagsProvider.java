@@ -1,6 +1,6 @@
 package io.github.connortron110.overtime.datagen;
 
-import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.core.init.BlockInit;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
@@ -10,7 +10,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModBlockTagsProvider extends BlockTagsProvider {
     public ModBlockTagsProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, Reference.MOD_ID, existingFileHelper);
+        super(generator, Overtime.MOD_ID, existingFileHelper);
     }
 
     @Override

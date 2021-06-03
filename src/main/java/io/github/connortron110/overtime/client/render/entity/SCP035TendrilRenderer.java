@@ -1,6 +1,6 @@
 package io.github.connortron110.overtime.client.render.entity;
 
-import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.client.model.SCP035TendrilModel;
 import io.github.connortron110.overtime.common.entities.scp.SCP035TendrilEntity;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
@@ -14,6 +14,6 @@ public class SCP035TendrilRenderer extends MobRenderer<SCP035TendrilEntity, SCP0
 
     @Override
     public ResourceLocation getTextureLocation(SCP035TendrilEntity entity) {
-        return new ResourceLocation(Reference.MOD_ID, "textures/entity/scp035_tendril.png");
+        return new ResourceLocation(Overtime.MOD_ID, "textures/entity/scp035_tendril.png");
     }
 }
