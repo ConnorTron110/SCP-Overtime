@@ -10,6 +10,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ModSounds {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, Reference.MOD_ID);
 
+    public static final RegistryObject<SoundEvent> GENERIC_STEP = registerSound("generic_step");
     public static final RegistryObject<SoundEvent> HEAVY_STEP = registerSound("heavy_step");
     public static final RegistryObject<SoundEvent> MASK_BREATHING = registerSound("mask_breathing");
 
@@ -25,6 +26,10 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> SCP066_IDLE = registerSound("scp066_idle");
 
     public static final RegistryObject<SoundEvent> SCP1762_OST = registerSound("scp1762_ost");
+
+    public static final RegistryObject<SoundEvent> SCP3199_DEATH = registerSound("scp3199_death");
+    public static final RegistryObject<SoundEvent> SCP3199_IDLE = registerSound("scp3199_idle");
+    public static final RegistryObject<SoundEvent> SCP3199_SCREAM = registerSound("scp3199_scream");
 
     public static final RegistryObject<SoundEvent> SCP3456_DEATH = registerSound("scp3456_death");
     public static final RegistryObject<SoundEvent> SCP3456_IDLE = registerSound("scp3456_idle");
