@@ -1,6 +1,7 @@
 package io.github.connortron110.overtime.core.init;
 
 import io.github.connortron110.overtime.Reference;
+import io.github.connortron110.overtime.common.entities.projectile.AcidSpitEntity;
 import io.github.connortron110.overtime.common.entities.scp.*;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -12,6 +13,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 @SuppressWarnings("unchecked")
 public class EntityInit {
     public static DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITIES, Reference.MOD_ID);
+
+    public static final RegistryObject<EntityType<AcidSpitEntity>> ACID_SPIT = register("acid_spit", AcidSpitEntity::new, EntityClassification.MISC, .25F, .25F);
 
     public static final RegistryObject<EntityType<SCP035TendrilEntity>> SCP035_TENDRIL = register("scp035_tendril", SCP035TendrilEntity::new, EntityClassification.MONSTER, 1F, 3F);
     public static final RegistryObject<EntityType<SCP066_2Entity>> SCP066 = register("scp066", SCP066_2Entity::new, EntityClassification.MONSTER, .6F, .6F);

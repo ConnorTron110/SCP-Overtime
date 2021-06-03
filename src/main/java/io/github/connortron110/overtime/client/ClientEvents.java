@@ -8,6 +8,7 @@ import io.github.connortron110.overtime.core.init.EntityInit;
 import io.github.connortron110.overtime.core.init.ItemInit;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.CatRenderer;
+import net.minecraft.client.renderer.entity.LlamaSpitRenderer;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.ItemModelsProperties;
 import net.minecraft.util.ResourceLocation;
@@ -36,6 +37,8 @@ public class ClientEvents {
     }
 
     private static void setEntityRenderers() {
+        RenderingRegistry.registerEntityRenderingHandler(EntityInit.ACID_SPIT.get(), LlamaSpitRenderer::new);
+
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP035_TENDRIL.get(), SCP035TendrilRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP066.get(), SCP066Renderer::new);
         RenderingRegistry.registerEntityRenderingHandler(EntityInit.SCP066_CAT.get(), CatRenderer::new);
