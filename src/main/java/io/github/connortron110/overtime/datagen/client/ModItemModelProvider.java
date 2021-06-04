@@ -212,6 +212,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder(ItemInit.SCP035_TENDRIL_SPAWNER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ItemInit.SCP035_TENDRIL_SPAWNER.get().getRegistryName().getPath());
         getBuilder(ItemInit.SCP066_SPAWN_EGG.get().getRegistryName().getPath()).parent(spawnegg);
         getBuilder(ItemInit.SCP427_SPAWN_EGG.get().getRegistryName().getPath()).parent(spawnegg);
+        getBuilder(ItemInit.SCP835_JP_SPAWN_EGG.get().getRegistryName().getPath()).parent(spawnegg);
         getBuilder(ItemInit.SCP1529_SPAWN_EGG.get().getRegistryName().getPath()).parent(spawnegg);
         getBuilder(ItemInit.SCP3199_SPAWN_EGG.get().getRegistryName().getPath()).parent(spawnegg);
         getBuilder(ItemInit.SCP3456_SPAWN_EGG.get().getRegistryName().getPath()).parent(spawnegg);
