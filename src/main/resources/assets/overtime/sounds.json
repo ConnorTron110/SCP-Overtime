@@ -97,6 +97,34 @@
     ]
   },
 
+  "scp2761_death": {
+    "category": "hostile",
+    "sounds": [
+      { "name": "overtime:scp/2761/death", "stream": false }
+    ]
+  },
+  "scp2761_hurt": {
+    "category": "hostile",
+    "sounds": [
+      { "name": "overtime:scp/2761/hurt1", "stream": false },
+      { "name": "overtime:scp/2761/hurt2", "stream": false },
+      { "name": "overtime:scp/2761/hurt3", "stream": false }
+    ]
+  },
+  "scp2761_idle": {
+    "category": "hostile",
+    "sounds": [
+      { "name": "overtime:scp/2761/idle1", "stream": false },
+      { "name": "overtime:scp/2761/idle2", "stream": false },
+      { "name": "overtime:scp/2761/idle3", "stream": false },
+      { "name": "overtime:scp/2761/idle4", "stream": false },
+      { "name": "overtime:scp/2761/idle5", "stream": false },
+      { "name": "overtime:scp/2761/idle6", "stream": false },
+      { "name": "overtime:scp/2761/idle7", "stream": false },
+      { "name": "overtime:scp/2761/idle8", "stream": false }
+    ]
+  },
+
   "scp3199_death": {
     "category": "hostile",
     "sounds": [

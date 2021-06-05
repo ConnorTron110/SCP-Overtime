@@ -27,6 +27,10 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> SCP1762_OST = registerSound("scp1762_ost");
 
+    public static final RegistryObject<SoundEvent> SCP2761_DEATH = registerSound("scp2761_death");
+    public static final RegistryObject<SoundEvent> SCP2761_HURT = registerSound("scp2761_hurt");
+    public static final RegistryObject<SoundEvent> SCP2761_IDLE = registerSound("scp2761_idle");
+
     public static final RegistryObject<SoundEvent> SCP3199_DEATH = registerSound("scp3199_death");
     public static final RegistryObject<SoundEvent> SCP3199_IDLE = registerSound("scp3199_idle");
     public static final RegistryObject<SoundEvent> SCP3199_SCREAM = registerSound("scp3199_scream");
