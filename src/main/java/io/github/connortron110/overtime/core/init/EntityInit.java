@@ -27,6 +27,7 @@ public class EntityInit {
     public static final RegistryObject<EntityType<SCP066_2Entity>> SCP066 = register("scp066", SCP066_2Entity::new, EntityClassification.MONSTER, .6F, .6F);
     public static final RegistryObject<EntityType<SCP066CatEntity>> SCP066_CAT = register("scp066_cat", SCP066CatEntity::new, EntityClassification.CREATURE, 1F, 1F);
     public static final RegistryObject<EntityType<SCP427_1Entity>> SCP427 = register("scp427", SCP427_1Entity::new, EntityClassification.MONSTER, 1.5F, 2.5F);
+    public static final RegistryObject<EntityType<SCP745Entity>> SCP745 = register("scp745", SCP745Entity::new, EntityClassification.MONSTER, 1.5F, 1.8F);
     public static final RegistryObject<EntityType<SCP835_JPEntity>> SCP835_JP = register("scp835_jp", SCP835_JPEntity::new, EntityClassification.MONSTER, .7F, 2F);
     public static final RegistryObject<EntityType<SCP1762Entity>> SCP1762 = register("scp1762", SCP1762Entity::new, EntityClassification.CREATURE, .5F, .5F);
     public static final RegistryObject<EntityType<SCP1529Entity>> SCP1529 = register("scp1529", SCP1529Entity::new, EntityClassification.MONSTER, .7F, 2F);
@@ -42,6 +43,7 @@ public class EntityInit {
         event.put(EntityInit.SCP066.get(), createBaseAttributes(66, .2, 1,2).build());
         event.put(EntityInit.SCP066_CAT.get(), createBaseAttributes(66, .2, 0,0).build());
         event.put(EntityInit.SCP427.get(), createBaseAttributes(800, .4, 6,10).build());
+        event.put(EntityInit.SCP745.get(), createBaseAttributes(45, .5, 5, 1).add(Attributes.KNOCKBACK_RESISTANCE, .1).build());
         event.put(EntityInit.SCP835_JP.get(), createBaseAttributes(80, .4, 8, 1).build());
         event.put(EntityInit.SCP1529.get(), createBaseAttributes(300, .2, 1, 1).add(Attributes.KNOCKBACK_RESISTANCE, 1000).build());
         event.put(EntityInit.SCP1762.get(), createBaseAttributes(2, .3, 3,2).add(Attributes.FLYING_SPEED, .3).build());

@@ -90,6 +90,19 @@
     ]
   },
 
+  "scp745_death": {
+    "category": "hostile",
+    "sounds": [{ "name": "overtime:scp/745/death", "stream": false }]
+  },
+  "scp745_hurt": {
+    "category": "hostile",
+    "sounds": [{ "name": "overtime:scp/745/hurt", "stream": false }]
+  },
+  "scp745_idle": {
+    "category": "hostile",
+    "sounds": [{ "name": "overtime:scp/745/idle", "stream": false }]
+  },
+
   "scp1762_ost": {
     "category": "music",
     "sounds": [
