@@ -1,6 +1,7 @@
 package io.github.connortron110.overtime.common.entities.scp;
 
 import io.github.connortron110.overtime.core.init.ModSounds;
+import io.github.connortron110.overtime.core.util.CommonCode;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -10,7 +11,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.*;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.WorldWorkerManager;
@@ -60,9 +60,7 @@ public class SCP066_2Entity extends MonsterEntity {
 
         if (!level.isClientSide){
 
-            BlockPos pos1 = new BlockPos(position().x - 2.5D, position().y - 2.5D, position().z - 2.5D);
-            BlockPos pos2 = new BlockPos(position().x + 2.5D, position().y + 2.5D, position().z + 2.5D);
-            List<LivingEntity> players = level.getEntitiesOfClass(PlayerEntity.class, new AxisAlignedBB(pos1, pos2), EntityPredicates.NO_CREATIVE_OR_SPECTATOR);
+            List<LivingEntity> players = CommonCode.getPlayersAround(blockPosition(), level, 2.5D, EntityPredicates.NO_CREATIVE_OR_SPECTATOR);
 
             //Spin Attack
             if (getPersistentData().getBoolean("066spin")) {

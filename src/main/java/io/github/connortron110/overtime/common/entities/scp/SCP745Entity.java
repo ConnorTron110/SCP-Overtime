@@ -1,9 +1,9 @@
 package io.github.connortron110.overtime.common.entities.scp;
 
 import io.github.connortron110.overtime.core.init.ModSounds;
+import io.github.connortron110.overtime.core.util.CommonCode;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -16,12 +16,9 @@ import net.minecraft.potion.Effects;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EntityPredicates;
 import net.minecraft.util.SoundEvent;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
-
-import java.util.List;
 
 public class SCP745Entity extends MonsterEntity {
 
@@ -94,10 +91,7 @@ public class SCP745Entity extends MonsterEntity {
         super.baseTick();
 
         if (level.isClientSide) return;
-        BlockPos pos1 = new BlockPos(getX() - 4, getY() - 4, getZ() - 4);
-        BlockPos pos2 = new BlockPos(getX() + 4, getY() + 4, getZ() + 4);
-        List<LivingEntity> players = level.getEntitiesOfClass(PlayerEntity.class, new AxisAlignedBB(pos1, pos2), EntityPredicates.LIVING_ENTITY_STILL_ALIVE);
-        if (!players.isEmpty() && Math.random() < 0.005D) {
+        if (!CommonCode.getPlayersAround(blockPosition(), level, 4.0D, EntityPredicates.NO_CREATIVE_OR_SPECTATOR).isEmpty() && Math.random() < 0.005D) {
             addEffect(new EffectInstance(Effects.GLOWING, 60, 0, false, false));
             addEffect(new EffectInstance(Effects.GLOWING, 60, 1, false, false));
         }

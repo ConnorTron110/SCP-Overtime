@@ -1,6 +1,7 @@
 package io.github.connortron110.overtime.common.entities.scp;
 
 import io.github.connortron110.overtime.core.init.ModSounds;
+import io.github.connortron110.overtime.core.util.CommonCode;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
@@ -20,7 +21,6 @@ import net.minecraft.potion.Effects;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EntityPredicates;
 import net.minecraft.util.SoundEvent;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
@@ -156,20 +156,13 @@ public class SCP5167Entity extends MonsterEntity {
 
         if (!level.isClientSide) {
             if (isImposter()) {
-                {
-                    BlockPos pos1 = new BlockPos(getX() - 20, getY() - 20, getZ() - 20);
-                    BlockPos pos2 = new BlockPos(getX() + 20, getY() + 20, getZ() + 20);
-                    List<LivingEntity> players = level.getEntitiesOfClass(PlayerEntity.class, new AxisAlignedBB(pos1, pos2), EntityPredicates.NO_CREATIVE_OR_SPECTATOR);
-
-                    if (players.isEmpty()) {
-                        setImposter(false);
-                        return;
-                    }
+                if (CommonCode.getPlayersAround(blockPosition(), level, 20.0D, EntityPredicates.NO_CREATIVE_OR_SPECTATOR).isEmpty()) {
+                    setImposter(false);
+                    return;
                 }
 
-                BlockPos pos1 = new BlockPos(getX() - 3, getY() - 3, getZ() - 3);
-                BlockPos pos2 = new BlockPos(getX() + 3, getY() + 3, getZ() + 3);
-                List<LivingEntity> players = level.getEntitiesOfClass(PlayerEntity.class, new AxisAlignedBB(pos1, pos2), EntityPredicates.NO_CREATIVE_OR_SPECTATOR);
+
+                List<LivingEntity> players = CommonCode.getPlayersAround(blockPosition(), level, 3.0D, EntityPredicates.NO_CREATIVE_OR_SPECTATOR);
                 if (!players.isEmpty()) {
                     //Meeting Deafen
                     if (Math.random() < 0.005D) {
@@ -195,11 +188,7 @@ public class SCP5167Entity extends MonsterEntity {
             }
 
 
-
-            BlockPos pos1 = new BlockPos(getX() - 2.5D, getY() - 2.5D, getZ() - 2.5D);
-            BlockPos pos2 = new BlockPos(getX() + 2.5D, getY() + 2.5D, getZ() + 2.5D);
-            List<LivingEntity> players = level.getEntitiesOfClass(PlayerEntity.class, new AxisAlignedBB(pos1, pos2), EntityPredicates.NO_CREATIVE_OR_SPECTATOR);
-
+            List<LivingEntity> players = CommonCode.getPlayersAround(blockPosition(), level, 2.5D, EntityPredicates.NO_CREATIVE_OR_SPECTATOR);
             if (!players.isEmpty()) {
                 players.parallelStream().forEach(entity -> {
                     entity.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 120, 0, false, false));
