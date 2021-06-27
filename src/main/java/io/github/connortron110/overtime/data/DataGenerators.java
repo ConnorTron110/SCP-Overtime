@@ -1,8 +1,8 @@
-package io.github.connortron110.overtime.datagen;
+package io.github.connortron110.overtime.data;
 
 import io.github.connortron110.overtime.Overtime;
-import io.github.connortron110.overtime.datagen.client.ModBlockStateProvider;
-import io.github.connortron110.overtime.datagen.client.ModItemModelProvider;
+import io.github.connortron110.overtime.data.client.ModBlockStateProvider;
+import io.github.connortron110.overtime.data.client.ModItemModelProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

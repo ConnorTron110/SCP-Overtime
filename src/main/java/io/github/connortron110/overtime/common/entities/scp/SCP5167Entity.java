@@ -52,8 +52,8 @@ public class SCP5167Entity extends MonsterEntity {
 
     @Override
     protected void registerGoals() {
-        villageGoal = new ReturnToVillageGoal(this, .6D, false);
-        temptGoal = new TemptGoal(this, 1.0D, Ingredient.of((new ItemStack(Blocks.AIR, 1)).getItem()), false);
+        villageGoal = new ReturnToVillageGoal(this, 0.6D, false);
+        temptGoal = new TemptGoal(this, 1D, Ingredient.of((new ItemStack(Blocks.AIR, 1)).getItem()), false);
 
         leapAtTargetGoal = new LeapAtTargetGoal(this, 0.5F);
         meleeAttackGoal = new MeleeAttackGoal(this, 1.2D, true);
@@ -61,8 +61,8 @@ public class SCP5167Entity extends MonsterEntity {
         nearestAttackableTargetGoal = new NearestAttackableTargetGoal<>(this, PlayerEntity.class, false, false);
 
         this.goalSelector.addGoal(2, new OpenDoorGoal(this, true));
-        this.goalSelector.addGoal(3, new FollowMobGoal(this, 1.0D, 10.0F, 5.0F));
-        this.goalSelector.addGoal(5, new RandomWalkingGoal(this, 1.0D));
+        this.goalSelector.addGoal(3, new FollowMobGoal(this, 1D, 10F, 5F));
+        this.goalSelector.addGoal(5, new RandomWalkingGoal(this, 1D));
         this.goalSelector.addGoal(6, new LookRandomlyGoal(this));
         this.goalSelector.addGoal(7, new SwimGoal(this));
         addExtraGoals();
@@ -123,7 +123,7 @@ public class SCP5167Entity extends MonsterEntity {
 
     @Override
     protected void playStepSound(BlockPos pos, BlockState state) {
-        playSound(ModSounds.SCP5167_WALK.get(), .15F, 1F);
+        playSound(ModSounds.SCP5167_WALK.get(), 0.15F, 1F);
     }
 
     @Override
@@ -145,7 +145,7 @@ public class SCP5167Entity extends MonsterEntity {
     public void awardKillScore(Entity entity, int score, DamageSource damageSource) {
         super.awardKillScore(entity, score, damageSource);
         setImposter(false);
-        playSound(ModSounds.SCP5167_DEATH.get(), 1, 1);
+        playSound(ModSounds.SCP5167_DEATH.get(), 1F, 1F);
     }
 
     private boolean hasCalledChange = false;
@@ -154,65 +154,64 @@ public class SCP5167Entity extends MonsterEntity {
     public void baseTick() {
         super.baseTick();
 
-        if (!level.isClientSide) {
-            if (isImposter()) {
-                if (CommonCode.getPlayersAround(blockPosition(), level, 20.0D, EntityPredicates.NO_CREATIVE_OR_SPECTATOR).isEmpty()) {
-                    setImposter(false);
-                    return;
-                }
-
-
-                List<LivingEntity> players = CommonCode.getPlayersAround(blockPosition(), level, 3.0D, EntityPredicates.NO_CREATIVE_OR_SPECTATOR);
-                if (!players.isEmpty()) {
-                    //Meeting Deafen
-                    if (Math.random() < 0.005D) {
-                        level.getServer().getCommands().performCommand(createCommandSourceStack().withSuppressedOutput().withPermission(4), "/particle minecraft:poof ~ ~0.5 ~ 0.05 0.05 0.05 .2 15 normal");
-                        playSound(ModSounds.SCP5167_MEETING.get(), 1, 1);
-                        players.parallelStream().forEach(entity -> {
-                            entity.hurt(DEAF, 10);
-                            entity.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 60, 2, false, false));
-                            entity.addEffect(new EffectInstance(Effects.CONFUSION, 60, 2, false, false));
-                        });
-                    }
-
-                    //Power Sabotage
-                    if (Math.random() < 0.005D) {
-                        players.parallelStream().forEach(entity -> {
-                            //Its meant to hurt the player here, but that doesnt make any sense
-                            //entity.hurt(DEAF, 10);
-                            entity.addEffect(new EffectInstance(Effects.BLINDNESS, 120, 1, false, false));
-                        });
-                    }
-                }
+        if (level.isClientSide) return;
+        if (isImposter()) {
+            if (CommonCode.getPlayersAround(blockPosition(), level, 20D, EntityPredicates.NO_CREATIVE_OR_SPECTATOR).isEmpty()) {
+                setImposter(false);
                 return;
             }
 
 
-            List<LivingEntity> players = CommonCode.getPlayersAround(blockPosition(), level, 2.5D, EntityPredicates.NO_CREATIVE_OR_SPECTATOR);
+            List<LivingEntity> players = CommonCode.getPlayersAround(blockPosition(), level, 3D, EntityPredicates.NO_CREATIVE_OR_SPECTATOR);
             if (!players.isEmpty()) {
-                players.parallelStream().forEach(entity -> {
-                    entity.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 120, 0, false, false));
-                    entity.addEffect(new EffectInstance(Effects.CONFUSION, 120, 0, false, false));
-                });
-
-                if (!isImposter() && !hasCalledChange) {
-                    hasCalledChange = true;
-                    WorldWorkerManager.addWorker(new WorldWorkerManager.IWorker() {
-                        int ticks = 0;
-
-                        @Override
-                        public boolean hasWork() {
-                            return ticks <= 500 && isAlive();
-                        }
-
-                        @Override
-                        public boolean doWork() {
-                            if (ticks == 500) setImposter(true);
-                            ticks++;
-                            return false;
-                        }
+                //Meeting Deafen
+                if (Math.random() < 0.005D) {
+                    level.getServer().getCommands().performCommand(createCommandSourceStack().withSuppressedOutput().withPermission(4), "/particle minecraft:poof ~ ~0.5 ~ 0.05 0.05 0.05 .2 15 normal");
+                    playSound(ModSounds.SCP5167_MEETING.get(), 1, 1);
+                    players.parallelStream().forEach(entity -> {
+                        entity.hurt(DEAF, 10);
+                        entity.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 60, 2, false, false));
+                        entity.addEffect(new EffectInstance(Effects.CONFUSION, 60, 2, false, false));
                     });
                 }
+
+                //Power Sabotage
+                if (Math.random() < 0.005D) {
+                    players.parallelStream().forEach(entity -> {
+                        //Its meant to hurt the player here, but that doesnt make any sense
+                        //entity.hurt(DEAF, 10);
+                        entity.addEffect(new EffectInstance(Effects.BLINDNESS, 120, 1, false, false));
+                    });
+                }
+            }
+            return;
+        }
+
+
+        List<LivingEntity> players = CommonCode.getPlayersAround(blockPosition(), level, 2.5D, EntityPredicates.NO_CREATIVE_OR_SPECTATOR);
+        if (!players.isEmpty()) {
+            players.parallelStream().forEach(entity -> {
+                entity.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 120, 0, false, false));
+                entity.addEffect(new EffectInstance(Effects.CONFUSION, 120, 0, false, false));
+            });
+
+            if (!isImposter() && !hasCalledChange) {
+                hasCalledChange = true;
+                WorldWorkerManager.addWorker(new WorldWorkerManager.IWorker() {
+                    int ticks = 0;
+
+                    @Override
+                    public boolean hasWork() {
+                        return ticks <= 500 && isAlive();
+                    }
+
+                    @Override
+                    public boolean doWork() {
+                        if (ticks == 500) setImposter(true);
+                        ticks++;
+                        return false;
+                    }
+                });
             }
         }
     }

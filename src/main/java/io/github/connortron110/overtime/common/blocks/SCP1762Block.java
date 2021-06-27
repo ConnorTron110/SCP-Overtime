@@ -1,8 +1,8 @@
 package io.github.connortron110.overtime.common.blocks;
 
 import io.github.connortron110.overtime.common.entities.scp.SCP1762Entity;
-import io.github.connortron110.overtime.core.init.BlockInit;
-import io.github.connortron110.overtime.core.init.EntityInit;
+import io.github.connortron110.overtime.core.init.ModBlocks;
+import io.github.connortron110.overtime.core.init.ModEntities;
 import io.github.connortron110.overtime.core.init.ModSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -48,14 +48,14 @@ public class SCP1762Block extends HorizontalBlock {
     @Override
     public void onPlace(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
         if (state.getValue(ACTIVE)) {
-            world.playSound(null, pos, ModSounds.SCP1762_OST.get(), SoundCategory.NEUTRAL, 1.0F, 1.0F);
+            world.playSound(null, pos, ModSounds.SCP1762_OST.get(), SoundCategory.NEUTRAL, 1F, 1F);
 
             WorldWorkerManager.addWorker(new WorldWorkerManager.IWorker() {
                 int ticks = 0;
 
                 @Override
                 public boolean hasWork() {
-                    if (world.getBlockState(pos).getBlock() != BlockInit.SCP1762.get()) {
+                    if (world.getBlockState(pos).getBlock() != ModBlocks.SCP1762.get()) {
                         return false;
                     }
                     return ticks <= 2440 && state.getValue(OPEN);
@@ -93,8 +93,8 @@ public class SCP1762Block extends HorizontalBlock {
         world.getBlockTicks().scheduleTick(pos, this, 5);
 
         if (Math.random() < 0.05D) {
-            SCP1762Entity dragon = new SCP1762Entity(EntityInit.SCP1762.get(), world);
-            dragon.moveTo(pos, rand.nextFloat() * 360.0F, 0.0F);
+            SCP1762Entity dragon = new SCP1762Entity(ModEntities.SCP1762.get(), world);
+            dragon.moveTo(pos, rand.nextFloat() * 360F, 0F);
             dragon.finalizeSpawn(world, world.getCurrentDifficultyAt(dragon.blockPosition()), SpawnReason.TRIGGERED, null, null);
             world.addFreshEntity(dragon);
         }
@@ -127,7 +127,7 @@ public class SCP1762Block extends HorizontalBlock {
                 double y = pos.getY() + 0.5D;
                 double z = pos.getZ() + 0.5D;
                 double d4 = rand.nextDouble() * 0.6D - 0.3D;
-                world.addParticle(ParticleTypes.LARGE_SMOKE, x + d4, y, z + d4, 0.0D, 0.0D, 0.0D);
+                world.addParticle(ParticleTypes.LARGE_SMOKE, x + d4, y, z + d4, 0D, 0D, 0D);
             }
         }
     }

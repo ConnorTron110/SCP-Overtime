@@ -38,7 +38,7 @@ public class SCP650Renderer extends MobRenderer<SCP650Entity, EntityModel<SCP650
     @Override
     public void render(SCP650Entity entity, float p_225623_2_, float p_225623_3_, MatrixStack p_225623_4_, IRenderTypeBuffer p_225623_5_, int p_225623_6_) {
         if (entity.getRandom().nextDouble() > 0.85D) {
-            if (!CommonCode.isBeingViewed(entity, 25, -.05D)) {
+            if (!CommonCode.isBeingViewed(entity, 25, -0.05D)) {
                 model = MODELS.get(entity.getRandom().nextInt(MODELS.size()));
             }
         }

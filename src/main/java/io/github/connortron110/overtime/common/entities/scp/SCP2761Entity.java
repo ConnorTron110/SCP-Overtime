@@ -93,7 +93,7 @@ public class SCP2761Entity extends MonsterEntity {
 
     @Override
     public void playStepSound(BlockPos pos, BlockState blockIn) {
-        playSound(ModSounds.HEAVY_STEP.get(), 0.15F, 1.0F);
+        playSound(ModSounds.HEAVY_STEP.get(), 0.15F, 1F);
     }
 
     @Override

@@ -1,7 +1,7 @@
 package io.github.connortron110.overtime.common.entities.scp;
 
 import io.github.connortron110.overtime.common.blocks.SCP066Block;
-import io.github.connortron110.overtime.core.init.BlockInit;
+import io.github.connortron110.overtime.core.init.ModBlocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.LookAtGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
@@ -29,7 +29,7 @@ public class SCP066CatEntity extends CatEntity {
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new SwimGoal(this));
         this.goalSelector.addGoal(11, new WaterAvoidingRandomWalkingGoal(this, 0.8D, 1.0000001E-5F));
-        this.goalSelector.addGoal(12, new LookAtGoal(this, PlayerEntity.class, 10.0F));
+        this.goalSelector.addGoal(12, new LookAtGoal(this, PlayerEntity.class, 10F));
     }
 
     @Override
@@ -38,12 +38,12 @@ public class SCP066CatEntity extends CatEntity {
     @Override
     public void onRemovedFromWorld() {
         super.onRemovedFromWorld();
-        if (!level.isClientSide) {
-            ItemEntity entityToSpawn = new ItemEntity(level, position().x, position().y, position().z, new ItemStack(BlockInit.SCP066_BLOCK.get().asItem(), 1));
-            entityToSpawn.setPickUpDelay(10);
-            entityToSpawn.setExtendedLifetime();
-            level.addFreshEntity(entityToSpawn);
-        }
+
+        if (level.isClientSide) return;
+        ItemEntity entityToSpawn = new ItemEntity(level, position().x, position().y, position().z, new ItemStack(ModBlocks.SCP066_BLOCK.get().asItem(), 1));
+        entityToSpawn.setPickUpDelay(10);
+        entityToSpawn.setExtendedLifetime();
+        level.addFreshEntity(entityToSpawn);
     }
 
     @Override
@@ -61,8 +61,7 @@ public class SCP066CatEntity extends CatEntity {
             @Override
             public boolean doWork() {
                 if (ticks == 500) {
-                    if (!level.isClientSide)
-                        remove();
+                    if (!level.isClientSide) remove();
                 }
                 ticks++;
                 return false;
@@ -73,11 +72,10 @@ public class SCP066CatEntity extends CatEntity {
     @Override
     public ActionResultType mobInteract(PlayerEntity player, Hand hand) {
         level.playSound(null, blockPosition(), SCP066Block.NOTES.get(new Random().nextInt(SCP066Block.NOTES.size())), SoundCategory.BLOCKS, 1F, (float) Math.pow(2.0D, (new Random().nextInt(24) - 12) / 12.0D));
-        level.addParticle(ParticleTypes.NOTE, position().x, position().y + .8D, position().z, new Random().nextDouble(), 0.0D, 0.0D);
+        level.addParticle(ParticleTypes.NOTE, position().x, position().y + 0.8D, position().z, new Random().nextDouble(), 0D, 0D);
 
         if (Math.random() < 0.01D) {
-            if (!level.isClientSide)
-                remove();
+            if (!level.isClientSide) remove();
         }
         return ActionResultType.SUCCESS;
     }

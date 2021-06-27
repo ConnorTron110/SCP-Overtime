@@ -25,7 +25,7 @@ public class SCP035TendrilEntity extends MonsterEntity {
         this.goalSelector.addGoal(4, new LookRandomlyGoal(this));
 
         //this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(5, new SCP035TendrilAttackGoal<>(this, PlayerEntity.class));
+        this.targetSelector.addGoal(1, new SCP035TendrilAttackGoal<>(this, PlayerEntity.class));
     }
 
     @Override
@@ -36,12 +36,12 @@ public class SCP035TendrilEntity extends MonsterEntity {
     @Override
     public void onAddedToWorld() {
         super.onAddedToWorld();
-        level.playSound(null, blockPosition(), ModSounds.SCP035_TENDRIL_SPAWN.get(), SoundCategory.HOSTILE, 1, 1);
+        level.playSound(null, blockPosition(), ModSounds.SCP035_TENDRIL_SPAWN.get(), SoundCategory.HOSTILE, 1F, 1F);
     }
 
     @Override
     public void baseTick() {
         super.baseTick();
-        makeStuckInBlock(null, new Vector3d(0,0.5,0));
+        makeStuckInBlock(null, new Vector3d(0D,0.5D,0D));
     }
 }

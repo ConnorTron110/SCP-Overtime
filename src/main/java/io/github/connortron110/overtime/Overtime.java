@@ -1,8 +1,8 @@
 package io.github.connortron110.overtime;
 
-import io.github.connortron110.overtime.core.init.BlockInit;
-import io.github.connortron110.overtime.core.init.EntityInit;
-import io.github.connortron110.overtime.core.init.ItemInit;
+import io.github.connortron110.overtime.core.init.ModBlocks;
+import io.github.connortron110.overtime.core.init.ModEntities;
+import io.github.connortron110.overtime.core.init.ModItems;
 import io.github.connortron110.overtime.core.init.ModSounds;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -26,33 +26,33 @@ public class Overtime {
     public static final ItemGroup TAB_ITEMS = (new ItemGroup(ItemGroup.TABS.length, "overtimeitems") {
         @OnlyIn(Dist.CLIENT)
         public ItemStack makeIcon() {
-            return new ItemStack(ItemInit.ICON_EUCLID.get());
+            return new ItemStack(ModItems.ICON_EUCLID.get());
         }
     });
     public static final ItemGroup TAB_BLOCKS = (new ItemGroup(ItemGroup.TABS.length, "overtimeblocks") {
         @OnlyIn(Dist.CLIENT)
         public ItemStack makeIcon() {
-            return new ItemStack(ItemInit.ICON_SAFE.get());
+            return new ItemStack(ModItems.ICON_SAFE.get());
         }
     });
     public static final ItemGroup TAB_MOBS = (new ItemGroup(ItemGroup.TABS.length, "overtimemobs") {
         @OnlyIn(Dist.CLIENT)
         public ItemStack makeIcon() {
-            return new ItemStack(ItemInit.ICON_KETER.get());
+            return new ItemStack(ModItems.ICON_KETER.get());
         }
     });
     public static final ItemGroup TAB_MISC = (new ItemGroup(ItemGroup.TABS.length, "overtimemisc") {
         @OnlyIn(Dist.CLIENT)
         public ItemStack makeIcon() {
-            return new ItemStack(ItemInit.ICON_SAFE.get());
+            return new ItemStack(ModItems.ICON_SAFE.get());
         }
     });
 
     public Overtime() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        ItemInit.ITEMS.register(bus);
-        BlockInit.BLOCKS.register(bus);
-        EntityInit.ENTITY_TYPES.register(bus);
+        ModItems.ITEMS.register(bus);
+        ModBlocks.BLOCKS.register(bus);
+        ModEntities.ENTITY_TYPES.register(bus);
         ModSounds.SOUNDS.register(bus);
 
         bus.addListener(this::setup);

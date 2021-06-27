@@ -44,8 +44,8 @@ public class CommonCode {
         AtomicBoolean isViewed = new AtomicBoolean(false);
         if (!players.isEmpty()) {
             players.parallelStream().forEach(player -> {
-                Vector3d playerEyePos = viewed.getEyePosition(1).subtract(player.getEyePosition(1)).normalize();
-                Vector3d playerLookPos = player.getViewVector(1).normalize();
+                Vector3d playerEyePos = viewed.getEyePosition(1F).subtract(player.getEyePosition(1F)).normalize();
+                Vector3d playerLookPos = player.getViewVector(1F).normalize();
                 double dotProduct = playerLookPos.dot(playerEyePos);
                 if (dotProduct > threshold) {
                     if (viewed.canSee(player)) {

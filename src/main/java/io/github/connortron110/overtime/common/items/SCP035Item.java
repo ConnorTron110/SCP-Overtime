@@ -3,7 +3,7 @@ package io.github.connortron110.overtime.common.items;
 import com.google.common.collect.Multimap;
 import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.client.model.SCP035MaskModel;
-import io.github.connortron110.overtime.core.init.ItemInit;
+import io.github.connortron110.overtime.core.init.ModItems;
 import io.github.connortron110.overtime.core.init.ModSounds;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.enchantment.Enchantments;
@@ -83,11 +83,11 @@ public class SCP035Item extends ArmorItem {
 
                     @Override
                     public boolean doWork() {
-                        if (ticks == 0) world.playSound(null, player.blockPosition(),ModSounds.SCP035_EQUIP.get(), SoundCategory.HOSTILE, 1, 1);
+                        if (ticks == 0) world.playSound(null, player.blockPosition(),ModSounds.SCP035_EQUIP.get(), SoundCategory.HOSTILE, 1F, 1F);
                         if (ticks == 100) {
                             setState(stack, State.EQUIPPED.state);
                             stack.enchant(Enchantments.BINDING_CURSE, 1);
-                            world.playSound(null, player.blockPosition(),ModSounds.SCP035_TAKEOVER.get(), SoundCategory.HOSTILE, 1, 1);
+                            world.playSound(null, player.blockPosition(),ModSounds.SCP035_TAKEOVER.get(), SoundCategory.HOSTILE, 1F, 1F);
                             //Added these 2 lines to give a more visual effect to it changing state
                             player.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 60, 1, false, false));
                             player.addEffect(new EffectInstance(Effects.CONFUSION, 120, 0, false, false));
@@ -101,16 +101,16 @@ public class SCP035Item extends ArmorItem {
             }
         }
         else if (nbt.getFloat("state") == State.EQUIPPED.state) {
-            if (player.getHealth() < 9) {
-                world.playSound(null, player.blockPosition(), ModSounds.SCP035_ANGRY.get(), SoundCategory.HOSTILE, 1, 1);
+            if (player.getHealth() < 9F) {
+                world.playSound(null, player.blockPosition(), ModSounds.SCP035_ANGRY.get(), SoundCategory.HOSTILE, 1F, 1F);
                 setState(stack, State.ANGRY.state);
-                player.addItem(ItemInit.SCP035_TENDRIL_SPAWNER.get().getDefaultInstance());
+                player.addItem(ModItems.SCP035_TENDRIL_SPAWNER.get().getDefaultInstance());
             }
         } else { //Angry state check technically not needed
             player.addEffect(new EffectInstance(Effects.DAMAGE_BOOST, 60, 1, true, true));
             player.addEffect(new EffectInstance(Effects.DAMAGE_RESISTANCE, 60, 2, true, true));
-            if (!player.inventory.contains(ItemInit.SCP035_TENDRIL_SPAWNER.get().getDefaultInstance())) {
-                player.addItem(ItemInit.SCP035_TENDRIL_SPAWNER.get().getDefaultInstance());
+            if (!player.inventory.contains(ModItems.SCP035_TENDRIL_SPAWNER.get().getDefaultInstance())) {
+                player.addItem(ModItems.SCP035_TENDRIL_SPAWNER.get().getDefaultInstance());
             }
         }
 
@@ -124,8 +124,8 @@ public class SCP035Item extends ArmorItem {
             if (slot < 4) {
                 if (((PlayerEntity) entity).inventory.armor.get(slot).getItem() != stack.getItem()) {
                     if (stack.getOrCreateTag().getFloat("state") == State.PASSIVE.state) {
-                        if (random.nextDouble() < 0.008) {
-                            entity.playSound(ModSounds.SCP035_IDLE.get(), 1, 1);
+                        if (random.nextDouble() < 0.008D) {
+                            entity.playSound(ModSounds.SCP035_IDLE.get(), 1F, 1F);
                         }
                     }
                 }
@@ -157,10 +157,10 @@ public class SCP035Item extends ArmorItem {
         String state = "angry";
         if (stack.getTag().getFloat("state") == State.PASSIVE.state) {
             state = "passive";
-        } else if (stack.getTag().getFloat("state") == State.EQUIPPED.state){
+        } else if (stack.getTag().getFloat("state") == State.EQUIPPED.state) {
             state = "equipped";
         }
-        return new ResourceLocation(Overtime.MOD_ID, "textures/models/scp035_"+ state +".png").toString();
+        return new ResourceLocation(Overtime.MOD_ID, "textures/models/scp035_" + state + ".png").toString();
     }
 
     @Override

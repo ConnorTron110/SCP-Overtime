@@ -1,6 +1,6 @@
 package io.github.connortron110.overtime.common.items;
 
-import io.github.connortron110.overtime.core.init.ItemInit;
+import io.github.connortron110.overtime.core.init.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FlowingFluidBlock;
@@ -103,7 +103,7 @@ public class SCP035SpawnerItem extends ModSpawnEggItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean isSelected) {
         if (entity instanceof PlayerEntity) {
             if (!((PlayerEntity) entity).isCreative()) {
-                if (((PlayerEntity) entity).inventory.armor.get(3).getItem() != ItemInit.SCP035.get()) {
+                if (((PlayerEntity) entity).inventory.armor.get(3).getItem() != ModItems.SCP035.get()) {
                     ((PlayerEntity) entity).inventory.removeItem(stack);
                 }
             }

@@ -1,7 +1,7 @@
 package io.github.connortron110.overtime.common.items;
 
 import io.github.connortron110.overtime.Overtime;
-import io.github.connortron110.overtime.core.init.ItemInit;
+import io.github.connortron110.overtime.core.init.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -23,7 +23,7 @@ public class SCP500ContainerItem extends Item {
         if (stack.getDamageValue() != getMaxDamage(stack)) {
             player.getCooldowns().addCooldown(this, 110);
             stack.hurt(1, world.random, null);
-            player.addItem(ItemInit.SCP500_PILL.get().getDefaultInstance());
+            player.addItem(ModItems.SCP500_PILL.get().getDefaultInstance());
         }
 
         return ActionResult.sidedSuccess(stack, false);

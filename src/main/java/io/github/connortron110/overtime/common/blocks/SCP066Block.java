@@ -2,8 +2,8 @@ package io.github.connortron110.overtime.common.blocks;
 
 import io.github.connortron110.overtime.common.entities.scp.SCP066CatEntity;
 import io.github.connortron110.overtime.common.entities.scp.SCP066_2Entity;
-import io.github.connortron110.overtime.core.init.EntityInit;
-import io.github.connortron110.overtime.core.init.ItemInit;
+import io.github.connortron110.overtime.core.init.ModEntities;
+import io.github.connortron110.overtime.core.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -51,16 +51,16 @@ public class SCP066Block extends Block {
     @Override
     public ActionResultType use(BlockState state, World world, BlockPos pos, PlayerEntity entity, Hand hand, BlockRayTraceResult hit) {
         if (entity.getMainHandItem().getItem() != Items.SHEARS && entity.getMainHandItem().getItem() == Blocks.AIR.asItem()) {
-            world.playSound(null, pos, NOTES.get(RANDOM.nextInt(NOTES.size())), SoundCategory.BLOCKS, 1F, (float) Math.pow(2.0D, (RANDOM.nextInt(24) - 12) / 12.0D));
-            world.addParticle(ParticleTypes.NOTE, pos.getX() + .5D, pos.getY() + .8D, pos.getZ() + .5D, RANDOM.nextDouble(), 0.0D, 0.0D);
+            world.playSound(null, pos, NOTES.get(RANDOM.nextInt(NOTES.size())), SoundCategory.BLOCKS, 1F, (float) Math.pow(2D, (RANDOM.nextInt(24) - 12) / 12D));
+            world.addParticle(ParticleTypes.NOTE, pos.getX() + 0.5D, pos.getY() + 0.8D, pos.getZ() + 0.5D, RANDOM.nextDouble(), 0D, 0D);
 
 
 
             if (Math.random() < 0.05D && Math.random() < 0.3D) {
                 world.destroyBlock(pos, false);
                 if (world instanceof ServerWorld) {
-                    SCP066CatEntity customEntity = new SCP066CatEntity(EntityInit.SCP066_CAT.get(), world);
-                    customEntity.moveTo(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, world.getRandom().nextFloat() * 360.0F, 0.0F);
+                    SCP066CatEntity customEntity = new SCP066CatEntity(ModEntities.SCP066_CAT.get(), world);
+                    customEntity.moveTo(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, world.getRandom().nextFloat() * 360F, 0F);
                     customEntity.finalizeSpawn((IServerWorld) world, world.getCurrentDifficultyAt(customEntity.blockPosition()), SpawnReason.MOB_SUMMONED, null, null);
                     world.addFreshEntity(customEntity);
                 }
@@ -70,7 +70,7 @@ public class SCP066Block extends Block {
 
             //Cupcake Event
             if (Math.random() < 0.05D && Math.random() < 0.3D) {
-                ItemEntity entityToSpawn = new ItemEntity(world, pos.getX()+.5, pos.getY()+.5, pos.getZ()+.5, ItemInit.CUPCAKE.get().getDefaultInstance());
+                ItemEntity entityToSpawn = new ItemEntity(world, pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, ModItems.CUPCAKE.get().getDefaultInstance());
                 entityToSpawn.setPickUpDelay(10);
                 entityToSpawn.setExtendedLifetime();
                 world.addFreshEntity(entityToSpawn);
@@ -81,9 +81,9 @@ public class SCP066Block extends Block {
                     double d1 = RANDOM.nextGaussian() * 0.02D;
                     double d2 = RANDOM.nextGaussian() * 0.02D;
                     double d5 = 0.5D - 0.2;
-                    double d6 = (double)pos.getX() + d5 + RANDOM.nextDouble() * 0.2 * 2.0D;
-                    double d7 = (double)pos.getY() + RANDOM.nextDouble() * 1.1;
-                    double d8 = (double)pos.getZ() + d5 + RANDOM.nextDouble() * 0.2 * 2.0D;
+                    double d6 = (double)pos.getX() + d5 + RANDOM.nextDouble() * 0.2D * 2D;
+                    double d7 = (double)pos.getY() + RANDOM.nextDouble() * 1.1D;
+                    double d8 = (double)pos.getZ() + d5 + RANDOM.nextDouble() * 0.2D * 2D;
                     world.addParticle(ParticleTypes.HAPPY_VILLAGER, d6, d7, d8, d0, d1, d2);
                 }
             }
@@ -94,8 +94,8 @@ public class SCP066Block extends Block {
             world.playSound(null, pos, SoundEvents.RABBIT_ATTACK, SoundCategory.NEUTRAL, 1F, 1F);
 
             if (!world.isClientSide) {
-                SCP066_2Entity customEntity = new SCP066_2Entity(EntityInit.SCP066.get(), world);
-                customEntity.moveTo(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, RANDOM.nextFloat() * 360.0F, 0.0F);
+                SCP066_2Entity customEntity = new SCP066_2Entity(ModEntities.SCP066.get(), world);
+                customEntity.moveTo(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, RANDOM.nextFloat() * 360F, 0F);
                 customEntity.finalizeSpawn((IServerWorld) world, world.getCurrentDifficultyAt(customEntity.blockPosition()), SpawnReason.MOB_SUMMONED, null, null);
                 world.addFreshEntity(customEntity);
             }
@@ -105,9 +105,9 @@ public class SCP066Block extends Block {
                 double d1 = RANDOM.nextGaussian() * 0.02D;
                 double d2 = RANDOM.nextGaussian() * 0.02D;
                 double d5 = 0.5D - 0.2;
-                double d6 = (double)pos.getX() + d5 + RANDOM.nextDouble() * 0.2 * 2.0D;
-                double d7 = (double)pos.getY() + RANDOM.nextDouble() - 0.2;
-                double d8 = (double)pos.getZ() + d5 + RANDOM.nextDouble() * 0.2 * 2.0D;
+                double d6 = (double)pos.getX() + d5 + RANDOM.nextDouble() * 0.2D * 2D;
+                double d7 = (double)pos.getY() + RANDOM.nextDouble() - 0.2D;
+                double d8 = (double)pos.getZ() + d5 + RANDOM.nextDouble() * 0.2D * 2D;
                 world.addParticle(ParticleTypes.ANGRY_VILLAGER, d6, d7, d8, d0, d1, d2);
             }
         }

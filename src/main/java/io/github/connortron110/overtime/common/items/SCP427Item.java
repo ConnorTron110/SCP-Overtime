@@ -3,8 +3,8 @@ package io.github.connortron110.overtime.common.items;
 import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.client.model.SCP427NecklaceModel;
 import io.github.connortron110.overtime.common.entities.scp.SCP427_1Entity;
-import io.github.connortron110.overtime.core.init.EntityInit;
-import io.github.connortron110.overtime.core.init.ItemInit;
+import io.github.connortron110.overtime.core.init.ModEntities;
+import io.github.connortron110.overtime.core.init.ModItems;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -39,7 +39,7 @@ public class SCP427Item extends ArmorItem {
 
             @Override
             public boolean hasWork() {
-                if (player.inventory.armor.get(2).getItem() != ItemInit.SCP427.get()) {
+                if (player.inventory.armor.get(2).getItem() != ModItems.SCP427.get()) {
                     CompoundNBT nbt = stack.getOrCreateTag();
                     nbt.putDouble("stage", 0);
                     stack.setTag(nbt);
@@ -105,28 +105,28 @@ public class SCP427Item extends ArmorItem {
 
         //Logic Side
         if (stage == 5) {
-            SCP427_1Entity customEntity = new SCP427_1Entity(EntityInit.SCP427.get(), world);
-            customEntity.moveTo(player.getX(), player.getY(), player.getZ(), random.nextFloat() * 360.0F, 0.0F);
+            SCP427_1Entity customEntity = new SCP427_1Entity(ModEntities.SCP427.get(), world);
+            customEntity.moveTo(player.getX(), player.getY(), player.getZ(), random.nextFloat() * 360F, 0F);
             customEntity.finalizeSpawn((IServerWorld) world, world.getCurrentDifficultyAt(customEntity.blockPosition()), SpawnReason.MOB_SUMMONED, null, null);
             world.addFreshEntity(customEntity);
 
-            nbt.putDouble("stage", 0);
+            nbt.putDouble("stage", 0D);
             stack.setTag(nbt);
             player.hurt(FLESHBEAST, Float.MAX_VALUE);
         }
-        else if (stage%1 == 0.0D) {
-            nbt.putDouble("stage", stage+.5D);
+        else if (stage % 1 == 0.0D) {
+            nbt.putDouble("stage", stage + 0.5D);
             stack.setTag(nbt);
-            queueStageChange(stack, player, stage+1);
+            queueStageChange(stack, player, stage + 1D);
         }
     }
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean isSelected) {
         if (entity instanceof PlayerEntity) {
-            if (((PlayerEntity) entity).inventory.armor.get(2).getItem() != ItemInit.SCP427.get()) {
+            if (((PlayerEntity) entity).inventory.armor.get(2).getItem() != ModItems.SCP427.get()) {
                 CompoundNBT nbt = stack.getOrCreateTag();
-                nbt.putDouble("stage", 0);
+                nbt.putDouble("stage", 0D);
                 stack.setTag(nbt);
             }
         }

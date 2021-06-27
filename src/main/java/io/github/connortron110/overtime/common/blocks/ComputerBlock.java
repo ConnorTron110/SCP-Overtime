@@ -1,6 +1,6 @@
 package io.github.connortron110.overtime.common.blocks;
 
-import io.github.connortron110.overtime.core.init.BlockInit;
+import io.github.connortron110.overtime.core.init.ModBlocks;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -64,7 +64,7 @@ public class ComputerBlock extends HorizontalBlock {
                 Block.box(12, 0.5, 7, 13, 8.5, 9)
         ).reduce((v1, v2) -> VoxelShapes.join(v1, v2, IBooleanFunction.OR)).get();
 
-        if (this.getRegistryName().equals(BlockInit.TERMINAL.get().getRegistryName())) {
+        if (this.getRegistryName().equals(ModBlocks.TERMINAL.get().getRegistryName())) {
             NORTH = Stream.of(
                     Block.box(2, 7, 5.75, 3, 8, 6.75),
                     Block.box(1, 0, 6, 15, 13, 16),
@@ -119,7 +119,7 @@ public class ComputerBlock extends HorizontalBlock {
     public ActionResultType use(BlockState state, World world, BlockPos pos, PlayerEntity entity, Hand hand, BlockRayTraceResult hit) {
         state = state.cycle(POWERED);
         world.setBlock(pos, state, 10);
-        world.playSound(null, pos, SoundEvents.ARROW_HIT_PLAYER, SoundCategory.BLOCKS, 0.5F, state.getValue(POWERED) ? 1 : 0.08F);
+        world.playSound(null, pos, SoundEvents.ARROW_HIT_PLAYER, SoundCategory.BLOCKS, 0.5F, state.getValue(POWERED) ? 1F : 0.08F);
         return ActionResultType.sidedSuccess(world.isClientSide);
     }
 

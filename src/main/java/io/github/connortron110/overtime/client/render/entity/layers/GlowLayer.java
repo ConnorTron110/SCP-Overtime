@@ -29,6 +29,6 @@ public class GlowLayer<T extends Entity, M extends EntityModel<T>> extends Layer
         String replacement = "_glow" + variant + ".png";
         String glowLocation = getTextureLocation(entity).getPath().replace(".png", replacement);
         IVertexBuilder ivertexbuilder = bufferIn.getBuffer(RenderType.eyes(new ResourceLocation(Overtime.MOD_ID, glowLocation)));
-        getParentModel().renderToBuffer(matrixStackIn, ivertexbuilder, 15728640, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
+        getParentModel().renderToBuffer(matrixStackIn, ivertexbuilder, 15728640, OverlayTexture.NO_OVERLAY, 1F, 1F, 1F, 1F);
     }
 }

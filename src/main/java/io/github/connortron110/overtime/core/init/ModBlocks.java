@@ -13,7 +13,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class BlockInit {
+public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Overtime.MOD_ID);
 
     public static final RegistryObject<Block> MAGNETIC_BLOCK_ON = register("magnetic_block_on", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.METAL)));
@@ -159,8 +159,8 @@ public class BlockInit {
     public static final RegistryObject<Block> CAUTION_LINE_VERTICAL = register("caution_line_vertical", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.METAL).noOcclusion()));
     public static final RegistryObject<Block> CAUTION_LINE_DIAGONAL = register("caution_line_diagonal", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.METAL).noOcclusion()));
 
-    public static final RegistryObject<DoorBlock> LIGHT_DOOR = register("light_door", Overtime.TAB_BLOCKS, () -> new DoorBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL).requiresCorrectToolForDrops().strength(3.0F).sound(SoundType.METAL).noOcclusion()));
-    public static final RegistryObject<DoorBlock> HEAVY_DOOR = register("heavy_door", Overtime.TAB_BLOCKS, () -> new DoorBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL).requiresCorrectToolForDrops().strength(5.0F).sound(SoundType.METAL).noOcclusion()));
+    public static final RegistryObject<DoorBlock> LIGHT_DOOR = register("light_door", Overtime.TAB_BLOCKS, () -> new DoorBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL).requiresCorrectToolForDrops().strength(3F).sound(SoundType.METAL).noOcclusion()));
+    public static final RegistryObject<DoorBlock> HEAVY_DOOR = register("heavy_door", Overtime.TAB_BLOCKS, () -> new DoorBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL).requiresCorrectToolForDrops().strength(5F).sound(SoundType.METAL).noOcclusion()));
 
     public static final RegistryObject<GrassBlock> SCP2845_GRASS = register("scp2845_block", Overtime.TAB_BLOCKS, () -> new GrassBlock(AbstractBlock.Properties.copy(ModMaterialProperties.GRASS)));
     public static final RegistryObject<RotatedPillarBlock> SCP2845_LOG = register("scp2845_log", Overtime.TAB_BLOCKS, () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(ModMaterialProperties.WOOD).sound(SoundType.BASALT)));
@@ -192,7 +192,7 @@ public class BlockInit {
 
     private static <T extends Block> RegistryObject<T> register(String name, ItemGroup tab, Supplier<T> block) {
         RegistryObject<T> reg = registerNoItem(name, block);
-        ItemInit.ITEMS.register(name, () -> new BlockItem(reg.get(), new Item.Properties().tab(tab)));
+        ModItems.ITEMS.register(name, () -> new BlockItem(reg.get(), new Item.Properties().tab(tab)));
         return reg;
     }
 }

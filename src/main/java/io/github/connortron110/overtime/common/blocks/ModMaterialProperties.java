@@ -15,7 +15,7 @@ public final class ModMaterialProperties {
             .strength(0.6F)
             .sound(SoundType.GRASS));
     public static final AbstractBlock WOOD = new Block(AbstractBlock.Properties.of(Material.WOOD, MaterialColor.WOOD)
-            .strength(2.0F, 3.0F)
+            .strength(2F, 3F)
             .sound(SoundType.WOOD));
     public static final AbstractBlock STONE = new Block(AbstractBlock.Properties.of(Material.STONE, MaterialColor.STONE)
             .strength(1.5F,6F)

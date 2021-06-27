@@ -18,7 +18,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 @SuppressWarnings("unchecked")
 @Mod.EventBusSubscriber(modid = Overtime.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class EntityInit {
+public class ModEntities {
     public static DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITIES, Overtime.MOD_ID);
 
     public static final RegistryObject<EntityType<AcidSpitEntity>> ACID_SPIT = register("acid_spit", AcidSpitEntity::new, EntityClassification.MISC, .25F, .25F);
@@ -40,20 +40,20 @@ public class EntityInit {
 
     @SubscribeEvent
     public static void onEntityAttributeCreation(EntityAttributeCreationEvent event) {
-        event.put(EntityInit.SCP035_TENDRIL.get(), createBaseAttributes(20, 0, 4,2).add(Attributes.KNOCKBACK_RESISTANCE, 1000).build());
-        event.put(EntityInit.SCP066.get(), createBaseAttributes(66, .2, 1,2).build());
-        event.put(EntityInit.SCP066_CAT.get(), createBaseAttributes(66, .2, 0,0).build());
-        event.put(EntityInit.SCP427.get(), createBaseAttributes(800, .4, 6,10).build());
-        event.put(EntityInit.SCP650.get(), createBaseAttributes(60, .5, 0, 0).build());
-        event.put(EntityInit.SCP745.get(), createBaseAttributes(45, .5, 5, 1).add(Attributes.KNOCKBACK_RESISTANCE, .1).build());
-        event.put(EntityInit.SCP835_JP.get(), createBaseAttributes(80, .4, 8, 1).build());
-        event.put(EntityInit.SCP1529.get(), createBaseAttributes(300, .2, 1, 1).add(Attributes.KNOCKBACK_RESISTANCE, 1000).build());
-        event.put(EntityInit.SCP1762.get(), createBaseAttributes(2, .3, 3,2).add(Attributes.FLYING_SPEED, .3).build());
-        event.put(EntityInit.SCP2761.get(), createBaseAttributes(850, .4, 8, 10).add(Attributes.KNOCKBACK_RESISTANCE, 1000).build());
-        event.put(EntityInit.SCP3199.get(), createBaseAttributes(450, .4, 5, 1).build());
-        event.put(EntityInit.SCP3199_EGG.get(), createBaseAttributes(1000, 0, 0, 0).build());
-        event.put(EntityInit.SCP3456.get(), createBaseAttributes(750, .3, 9, 2).build());
-        event.put(EntityInit.SCP5167.get(), createBaseAttributes(50, .4, 3, 1).build());
+        event.put(SCP035_TENDRIL.get(), createBaseAttributes(20, 0, 4,2).add(Attributes.KNOCKBACK_RESISTANCE, 1000).build());
+        event.put(SCP066.get(), createBaseAttributes(66, .2, 1,2).build());
+        event.put(SCP066_CAT.get(), createBaseAttributes(66, .2, 0,0).build());
+        event.put(SCP427.get(), createBaseAttributes(800, .4, 6,10).build());
+        event.put(SCP650.get(), createBaseAttributes(60, .5, 0, 0).build());
+        event.put(SCP745.get(), createBaseAttributes(45, .5, 5, 1).add(Attributes.KNOCKBACK_RESISTANCE, .1).build());
+        event.put(SCP835_JP.get(), createBaseAttributes(80, .4, 8, 1).build());
+        event.put(SCP1529.get(), createBaseAttributes(300, .2, 1, 1).add(Attributes.KNOCKBACK_RESISTANCE, 1000).build());
+        event.put(SCP1762.get(), createBaseAttributes(2, .3, 3,2).add(Attributes.FLYING_SPEED, .3).build());
+        event.put(SCP2761.get(), createBaseAttributes(850, .4, 8, 10).add(Attributes.KNOCKBACK_RESISTANCE, 1000).build());
+        event.put(SCP3199.get(), createBaseAttributes(450, .4, 5, 1).build());
+        event.put(SCP3199_EGG.get(), createBaseAttributes(1000, 0, 0, 0).build());
+        event.put(SCP3456.get(), createBaseAttributes(750, .3, 9, 2).build());
+        event.put(SCP5167.get(), createBaseAttributes(50, .4, 3, 1).build());
     }
 
     private static AttributeModifierMap.MutableAttribute createBaseAttributes(double health, double moveSpeed, double attackDamage, double attackKnockback) {

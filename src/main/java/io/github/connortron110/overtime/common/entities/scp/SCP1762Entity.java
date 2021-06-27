@@ -1,7 +1,7 @@
 package io.github.connortron110.overtime.common.entities.scp;
 
 import io.github.connortron110.overtime.common.blocks.SCP1762Block;
-import io.github.connortron110.overtime.core.init.BlockInit;
+import io.github.connortron110.overtime.core.init.ModBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.CreatureEntity;
@@ -42,8 +42,8 @@ public class SCP1762Entity extends CreatureEntity {
     public SCP1762Entity(EntityType<? extends CreatureEntity> entityType, World world) {
         super(entityType, world);
         moveControl = new FlyingMovementController(this, 10, true);
-        this.setPathfindingMalus(PathNodeType.DANGER_FIRE, -1.0F);
-        this.setPathfindingMalus(PathNodeType.DAMAGE_FIRE, -1.0F);
+        this.setPathfindingMalus(PathNodeType.DANGER_FIRE, -1F);
+        this.setPathfindingMalus(PathNodeType.DAMAGE_FIRE, -1F);
     }
 
     @Override
@@ -66,13 +66,13 @@ public class SCP1762Entity extends CreatureEntity {
         this.goalSelector.addGoal(1, new RandomWalkingGoal(this, 0.8D, 20) {
             protected Vector3d getPosition() {
                 Random random = getRandom();
-                double dir_x = getX() + ((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
-                double dir_y = getY() + ((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
-                double dir_z = getZ() + ((random.nextFloat() * 2.0F - 1.0F) * 16.0F);
+                double dir_x = getX() + ((random.nextFloat() * 2F - 1F) * 16F);
+                double dir_y = getY() + ((random.nextFloat() * 2F - 1F) * 16F);
+                double dir_z = getZ() + ((random.nextFloat() * 2F - 1F) * 16F);
                 return new Vector3d(dir_x, dir_y, dir_z);
             }
         });
-        this.goalSelector.addGoal(2, new TemptGoal(this, 1.0D, Ingredient.of((new ItemStack(Blocks.AIR, 1)).getItem()), false));
+        this.goalSelector.addGoal(2, new TemptGoal(this, 1D, Ingredient.of((new ItemStack(Blocks.AIR, 1)).getItem()), false));
     }
 
     @Nullable
@@ -135,7 +135,7 @@ public class SCP1762Entity extends CreatureEntity {
         super.baseTick();
         if (level.isClientSide) return;
         if (!getSpawnPointPos().equals(new BlockPos(0,0,0))){
-            if (level.getBlockState(getSpawnPointPos()).getBlock() == BlockInit.SCP1762.get()) {
+            if (level.getBlockState(getSpawnPointPos()).getBlock() == ModBlocks.SCP1762.get()) {
                 if (!level.getBlockState(getSpawnPointPos()).getValue(SCP1762Block.ACTIVE)) {
                     kill();
                 }

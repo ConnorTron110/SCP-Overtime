@@ -32,9 +32,9 @@ public class SCP066_2Entity extends MonsterEntity {
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        goalSelector.addGoal(1, new MeleeAttackGoal(this, .8D, false));
-        goalSelector.addGoal(2, new RandomWalkingGoal(this, .8D));
-        goalSelector.addGoal(3, new LookAtGoal(this, PlayerEntity.class, 8.0F));
+        goalSelector.addGoal(1, new MeleeAttackGoal(this, 0.8D, false));
+        goalSelector.addGoal(2, new RandomWalkingGoal(this, 0.8D));
+        goalSelector.addGoal(3, new LookAtGoal(this, PlayerEntity.class, 8F));
         goalSelector.addGoal(4, new LookRandomlyGoal(this));
 
         targetSelector.addGoal(1, new HurtByTargetGoal(this));
@@ -49,7 +49,7 @@ public class SCP066_2Entity extends MonsterEntity {
 
     @Override
     protected void playStepSound(BlockPos pos, BlockState state) {
-        playSound(ModSounds.SCP066_ROLLING.get(), 0.15F, 1);
+        playSound(ModSounds.SCP066_ROLLING.get(), 0.15F, 1F);
     }
 
     private boolean spinTask = false;
@@ -58,67 +58,66 @@ public class SCP066_2Entity extends MonsterEntity {
     public void baseTick() {
         super.baseTick();
 
-        if (!level.isClientSide){
+        if (level.isClientSide) return;
 
-            List<LivingEntity> players = CommonCode.getPlayersAround(blockPosition(), level, 2.5D, EntityPredicates.NO_CREATIVE_OR_SPECTATOR);
+        List<LivingEntity> players = CommonCode.getPlayersAround(blockPosition(), level, 2.5D, EntityPredicates.NO_CREATIVE_OR_SPECTATOR);
 
-            //Spin Attack
-            if (getPersistentData().getBoolean("066spin")) {
-                if (level.getServer() != null) {
-                    //FIXME No better way to spin it other than this
-                    level.getServer().getCommands().performCommand(createCommandSourceStack().withSuppressedOutput().withPermission(4), "/execute at @e[type=overtime:scp066,limit=1,distance=..1] run tp @e[type=overtime:scp066,limit=1,distance=..1] ~ ~ ~ ~35 ~");
-                    level.playSound(null, blockPosition(), SoundEvents.WOOL_BREAK, SoundCategory.HOSTILE, 1, 1);
-                    level.getServer().getCommands().performCommand(createCommandSourceStack().withSuppressedOutput().withPermission(4), "/particle minecraft:cloud ~ ~0.1 ~ 0.05 0.01 0.05 .1 5 normal");
-                    players.forEach((player) -> player.hurt(WHIPPED, 1F));
-                }
-                if (!spinTask) {
-                    spinTask = true;
-                    WorldWorkerManager.addWorker(new WorldWorkerManager.IWorker() {
-                        int ticks = 0;
+        //Spin Attack
+        if (getPersistentData().getBoolean("066spin")) {
+            if (level.getServer() != null) {
+                //FIXME No better way to spin it other than this
+                level.getServer().getCommands().performCommand(createCommandSourceStack().withSuppressedOutput().withPermission(4), "/execute at @e[type=overtime:scp066,limit=1,distance=..1] run tp @e[type=overtime:scp066,limit=1,distance=..1] ~ ~ ~ ~35 ~");
+                level.playSound(null, blockPosition(), SoundEvents.WOOL_BREAK, SoundCategory.HOSTILE, 1F, 1F);
+                level.getServer().getCommands().performCommand(createCommandSourceStack().withSuppressedOutput().withPermission(4), "/particle minecraft:cloud ~ ~0.1 ~ 0.05 0.01 0.05 .1 5 normal");
+                players.forEach((player) -> player.hurt(WHIPPED, 1F));
+            }
+            if (!spinTask) {
+                spinTask = true;
+                WorldWorkerManager.addWorker(new WorldWorkerManager.IWorker() {
+                    int ticks = 0;
 
-                        @Override
-                        public boolean hasWork() {
-                            return ticks <= 20;
+                    @Override
+                    public boolean hasWork() {
+                        return ticks <= 20;
+                    }
+
+                    @Override
+                    public boolean doWork() {
+                        if (ticks == 20) {
+                            getPersistentData().putBoolean("066spin", false);
+                            spinTask = false;
                         }
-
-                        @Override
-                        public boolean doWork() {
-                            if (ticks == 20) {
-                                getPersistentData().putBoolean("066spin", false);
-                                spinTask = false;
-                            }
-                            ticks++;
-                            return false;
-                        }
-                    });
-                }
+                        ticks++;
+                        return false;
+                    }
+                });
             }
+        }
 
-            if (players.isEmpty()) {
-                return;
-            }
+        if (players.isEmpty()) {
+            return;
+        }
 
-            if (!getPersistentData().getBoolean("066spin") && Math.random() < 0.005D) getPersistentData().putBoolean("066spin", true);
+        if (!getPersistentData().getBoolean("066spin") && Math.random() < 0.005D) getPersistentData().putBoolean("066spin", true);
 
-            //Blind Event
-            if (Math.random() < 0.005D) {
-                players.forEach((player) -> player.addEffect(new EffectInstance(Effects.BLINDNESS, 100, 1)));
-            }
+        //Blind Event
+        if (Math.random() < 0.005D) {
+            players.forEach((player) -> player.addEffect(new EffectInstance(Effects.BLINDNESS, 100, 1)));
+        }
 
-            //Loud Music Thing Event
-            if (Math.random() < 0.005D) {
-                if (level.getServer() != null) {
-                    players.forEach((player) -> {
-                        player.hurt(DEAF, 10F);
-                        player.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 100, 2));
-                        player.addEffect(new EffectInstance(Effects.CONFUSION, 200, 1));
-                    });
-                    level.getServer().getCommands().performCommand(createCommandSourceStack().withSuppressedOutput().withPermission(4), "/particle minecraft:poof ~ ~0.5 ~ 0.05 0.05 0.05 .2 15 normal");
-                    level.playSound(null, blockPosition(), ModSounds.SCP066_BEETHOVEN.get(), SoundCategory.HOSTILE, 30, 1);
+        //Loud Music Thing Event
+        if (Math.random() < 0.005D) {
+            if (level.getServer() != null) {
+                players.forEach((player) -> {
+                    player.hurt(DEAF, 10F);
+                    player.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 100, 2));
+                    player.addEffect(new EffectInstance(Effects.CONFUSION, 200, 1));
+                });
+                level.getServer().getCommands().performCommand(createCommandSourceStack().withSuppressedOutput().withPermission(4), "/particle minecraft:poof ~ ~0.5 ~ 0.05 0.05 0.05 .2 15 normal");
+                level.playSound(null, blockPosition(), ModSounds.SCP066_BEETHOVEN.get(), SoundCategory.HOSTILE, 30F, 1F);
 
-                    //TODO Add Crack Block
-                    //entity.level.getServer().getCommands().performCommand(entity.createCommandSourceStack().withSuppressedOutput().withPermission(4), "execute at @p positioned ~ ~ ~ run setblock ~ ~ ~ ascpm:scp_106crack");
-                }
+                //TODO Add Crack Block
+                //entity.level.getServer().getCommands().performCommand(entity.createCommandSourceStack().withSuppressedOutput().withPermission(4), "execute at @p positioned ~ ~ ~ run setblock ~ ~ ~ ascpm:scp_106crack");
             }
         }
     }

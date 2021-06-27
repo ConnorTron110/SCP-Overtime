@@ -32,26 +32,25 @@ public class GasMaskItem extends ArmorItem {
 
     @Override
     public void onArmorTick(ItemStack stack, World world, PlayerEntity player) {
-        if (world.isClientSide) {
-            if (!shouldBreath) {
-                shouldBreath = true;
-                player.playSound(ModSounds.MASK_BREATHING.get(), 0.5F, 1);
-                WorldWorkerManager.addWorker(new WorldWorkerManager.IWorker() {
-                    int ticks = 0;
+        if (!world.isClientSide) return;
+        if (!shouldBreath) {
+            shouldBreath = true;
+            player.playSound(ModSounds.MASK_BREATHING.get(), 0.5F, 1F);
+            WorldWorkerManager.addWorker(new WorldWorkerManager.IWorker() {
+                int ticks = 0;
 
-                    @Override
-                    public boolean hasWork() {
-                        return ticks <= 100;
-                    }
+                @Override
+                public boolean hasWork() {
+                    return ticks <= 100;
+                }
 
-                    @Override
-                    public boolean doWork() {
-                        if (ticks == 100) shouldBreath = false;
-                        ticks++;
-                        return false;
-                    }
-                });
-            }
+                @Override
+                public boolean doWork() {
+                    if (ticks == 100) shouldBreath = false;
+                    ticks++;
+                    return false;
+                }
+            });
         }
     }
 
@@ -60,21 +59,21 @@ public class GasMaskItem extends ArmorItem {
         RenderSystem.disableDepthTest();
         RenderSystem.depthMask(false);
         RenderSystem.defaultBlendFunc();
-        RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+        RenderSystem.color4f(1F, 1F, 1F, 1F);
         RenderSystem.disableAlphaTest();
         Minecraft.getInstance().getTextureManager().bind(new ResourceLocation(Overtime.MOD_ID, "textures/misc/gasmaskblur.png"));
         Tessellator tessellator = Tessellator.getInstance();
         BufferBuilder bufferbuilder = tessellator.getBuilder();
         bufferbuilder.begin(7, DefaultVertexFormats.POSITION_TEX);
-        bufferbuilder.vertex(0.0D, height, -90.0D).uv(0.0F, 1.0F).endVertex();
-        bufferbuilder.vertex(width, height, -90.0D).uv(1.0F, 1.0F).endVertex();
-        bufferbuilder.vertex(width, 0.0D, -90.0D).uv(1.0F, 0.0F).endVertex();
-        bufferbuilder.vertex(0.0D, 0.0D, -90.0D).uv(0.0F, 0.0F).endVertex();
+        bufferbuilder.vertex(0D, height, -90D).uv(0F, 1F).endVertex();
+        bufferbuilder.vertex(width, height, -90D).uv(1F, 1F).endVertex();
+        bufferbuilder.vertex(width, 0D, -90D).uv(1F, 0F).endVertex();
+        bufferbuilder.vertex(0D, 0D, -90D).uv(0F, 0F).endVertex();
         tessellator.end();
         RenderSystem.depthMask(true);
         RenderSystem.enableDepthTest();
         RenderSystem.enableAlphaTest();
-        RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+        RenderSystem.color4f(1F, 1F, 1F, 1F);
     }
 
     @Nullable

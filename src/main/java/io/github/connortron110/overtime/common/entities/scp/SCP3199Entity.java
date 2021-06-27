@@ -1,7 +1,7 @@
 package io.github.connortron110.overtime.common.entities.scp;
 
 import io.github.connortron110.overtime.common.entities.projectile.AcidSpitEntity;
-import io.github.connortron110.overtime.core.init.EntityInit;
+import io.github.connortron110.overtime.core.init.ModEntities;
 import io.github.connortron110.overtime.core.init.ModSounds;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityType;
@@ -43,7 +43,7 @@ public class SCP3199Entity extends MonsterEntity {
 
     @Override
     public void playStepSound(BlockPos pos, BlockState blockIn) {
-        playSound(ModSounds.GENERIC_STEP.get(), 0.15F, 1.0F);
+        playSound(ModSounds.GENERIC_STEP.get(), 0.15F, 1F);
     }
 
     @Override
@@ -60,7 +60,7 @@ public class SCP3199Entity extends MonsterEntity {
     public void die(DamageSource source) {
         super.die(source);
 
-        SCP3199EggEntity eggEntity = new SCP3199EggEntity(EntityInit.SCP3199_EGG.get(), level);
+        SCP3199EggEntity eggEntity = new SCP3199EggEntity(ModEntities.SCP3199_EGG.get(), level);
         eggEntity.moveTo(position());
         level.addFreshEntity(eggEntity);
     }
@@ -78,9 +78,9 @@ public class SCP3199Entity extends MonsterEntity {
                 double d1 = getTarget().getY(0.3333333333333333D) - spit.getY();
                 double d2 = getTarget().getZ() - this.getZ();
                 float f = MathHelper.sqrt(d0 * d0 + d2 * d2) * 0.2F;
-                spit.shoot(d0, d1 + (double)f, d2, 1.5F, 10.0F);
+                spit.shoot(d0, d1 + (double)f, d2, 1.5F, 10F);
                 if (!this.isSilent()) {
-                    this.level.playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.LLAMA_SPIT, this.getSoundSource(), 1.0F, 1.0F + (this.random.nextFloat() - this.random.nextFloat()) * 0.2F);
+                    this.level.playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.LLAMA_SPIT, this.getSoundSource(), 1F, 1F + (this.random.nextFloat() - this.random.nextFloat()) * 0.2F);
                 }
 
                 level.addFreshEntity(spit);
@@ -89,8 +89,8 @@ public class SCP3199Entity extends MonsterEntity {
 
 
         if (Math.random() < 0.05D && Math.random() < 0.05D && Math.random() < 0.01D) {
-            playSound(ModSounds.SCP3199_SCREAM.get(), 1, 1);
-            SCP3199EggEntity eggEntity = new SCP3199EggEntity(EntityInit.SCP3199_EGG.get(), level);
+            playSound(ModSounds.SCP3199_SCREAM.get(), 1F, 1F);
+            SCP3199EggEntity eggEntity = new SCP3199EggEntity(ModEntities.SCP3199_EGG.get(), level);
             eggEntity.moveTo(position());
             level.addFreshEntity(eggEntity);
         }

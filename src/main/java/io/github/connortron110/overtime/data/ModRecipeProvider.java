@@ -1,8 +1,8 @@
-package io.github.connortron110.overtime.datagen;
+package io.github.connortron110.overtime.data;
 
-import io.github.connortron110.overtime.core.init.BlockInit;
-import io.github.connortron110.overtime.core.init.ItemInit;
-import net.minecraft.data.*;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.IFinishedRecipe;
+import net.minecraft.data.RecipeProvider;
 
 import java.util.function.Consumer;
 

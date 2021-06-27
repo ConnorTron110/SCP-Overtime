@@ -14,8 +14,9 @@ public class SCP714Item extends Item {
     }
 
     @Override
-    public void inventoryTick(ItemStack itemStack, World world, Entity entity, int slot, boolean selected) {
-        if (selected && !entity.level.isClientSide) {
+    public void inventoryTick(ItemStack itemStack, World level, Entity entity, int slot, boolean selected) {
+        if (level.isClientSide) return;
+        if (selected) {
             if (entity instanceof LivingEntity) {
                 ((LivingEntity) entity).addEffect(new EffectInstance(Effects.WEAKNESS, 20, 1, true, true));
                 ((LivingEntity) entity).addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 20, 0, true, true));

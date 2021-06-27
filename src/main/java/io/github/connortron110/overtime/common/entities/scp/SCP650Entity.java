@@ -51,7 +51,7 @@ public class SCP650Entity extends CreatureEntity {
             List<LivingEntity> entities = CommonCode.getPlayersAround(blockPosition(), level, 0.25D, EntityPredicates.NO_CREATIVE_OR_SPECTATOR);
             if (!entities.isEmpty()) {
                 entities.forEach(entity -> {
-                    entity.playSound(SoundEvents.AMBIENT_CAVE, 1, 1);
+                    entity.playSound(SoundEvents.AMBIENT_CAVE, 1F, 1F);
                     entity.addEffect(new EffectInstance(Effects.CONFUSION, 100));
                 });
             }

@@ -1,6 +1,6 @@
 package io.github.connortron110.overtime.common.entities.scp;
 
-import io.github.connortron110.overtime.core.init.BlockInit;
+import io.github.connortron110.overtime.core.init.ModBlocks;
 import io.github.connortron110.overtime.core.init.ModSounds;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -35,7 +35,7 @@ public class SCP835_JPEntity extends MonsterEntity {
 
     @Override
     public void playStepSound(BlockPos pos, BlockState blockIn) {
-        playSound(ModSounds.GENERIC_STEP.get(), 0.15F, 1.0F);
+        playSound(ModSounds.GENERIC_STEP.get(), 0.15F, 1F);
     }
 
     @Override
@@ -47,6 +47,6 @@ public class SCP835_JPEntity extends MonsterEntity {
     @Override
     public void awardKillScore(Entity entity, int score, DamageSource damageSource) {
         super.awardKillScore(entity, score, damageSource);
-        level.setBlock(blockPosition(), BlockInit.BLOOD_PUDDLE.get().defaultBlockState(), 3);
+        level.setBlock(blockPosition(), ModBlocks.BLOOD_PUDDLE.get().defaultBlockState(), 3);
     }
 }

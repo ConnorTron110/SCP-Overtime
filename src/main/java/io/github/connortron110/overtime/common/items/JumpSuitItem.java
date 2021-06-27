@@ -19,7 +19,7 @@ public class JumpSuitItem extends ArmorItem {
 
     public JumpSuitItem(IArmorMaterial material, EquipmentSlotType equipmentSlotType, Properties properties, @Nullable String type) {
         super(material, equipmentSlotType, properties);
-        color = type != null ? "_"+type : "";
+        color = type != null ? "_" + type : "";
     }
 
     @Nullable
@@ -32,6 +32,6 @@ public class JumpSuitItem extends ArmorItem {
     @Nullable
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
-        return new ResourceLocation(Overtime.MOD_ID, "textures/models/jumpsuit"+color+".png").toString();
+        return new ResourceLocation(Overtime.MOD_ID, "textures/models/jumpsuit" + color + ".png").toString();
     }
 }

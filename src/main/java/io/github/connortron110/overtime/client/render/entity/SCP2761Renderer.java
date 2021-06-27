@@ -26,8 +26,7 @@ public class SCP2761Renderer extends MobRenderer<SCP2761Entity, SCP2761Model<SCP
 
     @Override
     public void render(SCP2761Entity entity, float p_225623_2_, float p_225623_3_, MatrixStack p_225623_4_, IRenderTypeBuffer p_225623_5_, int p_225623_6_) {
-        if (entity.isSleeping()) model = ASLEEP;
-        else model = AWAKE;
+        model = entity.isSleeping() ? ASLEEP : AWAKE;
         super.render(entity, p_225623_2_, p_225623_3_, p_225623_4_, p_225623_5_, p_225623_6_);
     }
 }

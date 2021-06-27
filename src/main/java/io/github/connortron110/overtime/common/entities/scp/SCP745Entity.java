@@ -34,7 +34,7 @@ public class SCP745Entity extends MonsterEntity {
         //this.goalSelector.addGoal(1, (Goal)new LookAtGoal((MobEntity)this, SCP173Entity.class, 6.0F));
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2D, true));
         this.goalSelector.addGoal(3, new LeapAtTargetGoal(this, 0.4F));
-        this.goalSelector.addGoal(4, new FollowMobGoal(this, 1.0D, 10.0F, 5.0F));
+        this.goalSelector.addGoal(4, new FollowMobGoal(this, 1D, 10F, 5F));
         this.goalSelector.addGoal(5, new RandomWalkingGoal(this, 0.8D));
 
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this)).setAlertOthers());
@@ -68,7 +68,7 @@ public class SCP745Entity extends MonsterEntity {
 
     @Override
     public void playStepSound(BlockPos pos, BlockState blockIn) {
-        playSound(ModSounds.GENERIC_STEP.get(), 0.15F, 1.0F);
+        playSound(ModSounds.GENERIC_STEP.get(), 0.15F, 1F);
     }
 
     @Override

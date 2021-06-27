@@ -34,7 +34,7 @@ public class SCP3456Entity extends MonsterEntity {
 
     @Override
     public void playStepSound(BlockPos pos, BlockState blockIn) {
-        playSound(ModSounds.HEAVY_STEP.get(), 0.15F, 1.0F);
+        playSound(ModSounds.HEAVY_STEP.get(), 0.15F, 1F);
     }
 
     @Override
@@ -54,10 +54,8 @@ public class SCP3456Entity extends MonsterEntity {
 
     @Override
     public boolean hurt(DamageSource source, float amount) {
-        if (source.getDirectEntity() instanceof ArrowEntity)
-            return false;
-        if (source == DamageSource.FALL)
-            return false;
+        if (source.getDirectEntity() instanceof ArrowEntity) return false;
+        if (source == DamageSource.FALL) return false;
         return super.hurt(source, amount);
     }
 
