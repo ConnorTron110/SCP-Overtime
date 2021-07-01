@@ -33,11 +33,9 @@ import javax.annotation.Nullable;
 import java.util.Random;
 
 public class SCP1762Entity extends CreatureEntity {
-    private static final DataParameter<Integer> DATA_VARIANT_ID = EntityDataManager.defineId(SCP1762Entity.class, DataSerializers.INT);
 
-    private static final DataParameter<Integer> DATA_X = EntityDataManager.defineId(SCP1762Entity.class, DataSerializers.INT);
-    private static final DataParameter<Integer> DATA_Y = EntityDataManager.defineId(SCP1762Entity.class, DataSerializers.INT);
-    private static final DataParameter<Integer> DATA_Z = EntityDataManager.defineId(SCP1762Entity.class, DataSerializers.INT);
+    private static final DataParameter<Integer> DATA_VARIANT_ID = EntityDataManager.defineId(SCP1762Entity.class, DataSerializers.INT);
+    private static final DataParameter<BlockPos> SPAWN_POS = EntityDataManager.defineId(SCP1762Entity.class, DataSerializers.BLOCK_POS);
 
     public SCP1762Entity(EntityType<? extends CreatureEntity> entityType, World world) {
         super(entityType, world);
@@ -80,21 +78,16 @@ public class SCP1762Entity extends CreatureEntity {
     public ILivingEntityData finalizeSpawn(IServerWorld world, DifficultyInstance difficultyInstance, SpawnReason spawnReason, @Nullable ILivingEntityData iLivingEntityData, @Nullable CompoundNBT compoundNBT) {
         this.setVariant(random.nextInt(8));
         if (spawnReason == SpawnReason.TRIGGERED) {
-            this.setSpawnPointPos(blockPosition().getX(), blockPosition().getY(), blockPosition().getZ());
+            this.setSpawnPointPos(blockPosition().asLong());
         }
         return super.finalizeSpawn(world, difficultyInstance, spawnReason, iLivingEntityData, compoundNBT);
     }
 
     private BlockPos getSpawnPointPos() {
-        int x = this.entityData.get(DATA_X);
-        int y = this.entityData.get(DATA_Y);
-        int z = this.entityData.get(DATA_Z);
-        return new BlockPos(x,y,z);
+        return this.entityData.get(SPAWN_POS);
     }
-    private void setSpawnPointPos(double x, double y, double z) {
-        this.entityData.set(DATA_X, (int) x);
-        this.entityData.set(DATA_Y, (int) y);
-        this.entityData.set(DATA_Z, (int) z);
+    private void setSpawnPointPos(long spawnPos) {
+        this.entityData.set(SPAWN_POS, BlockPos.of(spawnPos));
     }
 
     public int getVariant() {
@@ -108,26 +101,21 @@ public class SCP1762Entity extends CreatureEntity {
     protected void defineSynchedData() {
         super.defineSynchedData();
         this.entityData.define(DATA_VARIANT_ID, 0);
-        this.entityData.define(DATA_X, 0);
-        this.entityData.define(DATA_Y, 0);
-        this.entityData.define(DATA_Z, 0);
+        this.entityData.define(SPAWN_POS, blockPosition());
     }
 
     @Override
     public void addAdditionalSaveData(CompoundNBT nbt) {
         super.addAdditionalSaveData(nbt);
         nbt.putInt("Variant", this.getVariant());
-        BlockPos spawnPos = getSpawnPointPos();
-        nbt.putInt("SpawnX", spawnPos.getX());
-        nbt.putInt("SpawnY", spawnPos.getY());
-        nbt.putInt("SpawnZ", spawnPos.getZ());
+        nbt.putLong("SpawnPos", getSpawnPointPos().asLong());
     }
 
     @Override
     public void readAdditionalSaveData(CompoundNBT nbt) {
         super.readAdditionalSaveData(nbt);
         this.setVariant(nbt.getInt("Variant"));
-        this.setSpawnPointPos(nbt.getInt("SpawnX"), nbt.getInt("SpawnY"), nbt.getInt("SpawnZ"));
+        this.setSpawnPointPos(nbt.getLong("SpawnPos"));
     }
 
     @Override
