@@ -9,6 +9,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Predicate;
@@ -49,5 +50,18 @@ public class CommonCode {
             });
         }
         return isViewed.get();
+    }
+
+    //Not most optimal method but can be useful for a lot of things
+    public static List<BlockPos> getAllPositionsInAABB(AxisAlignedBB bb) {
+        List<BlockPos> list = new ArrayList<>();
+        for (int x = 0; x != (bb.getXsize() + 1); x++) {
+            for (int y = 0; y != (bb.getYsize() + 1); y++) {
+                for (int z = 0; z != (bb.getZsize() + 1); z++) {
+                    list.add(new BlockPos(x + bb.minX, y + bb.minY, z + bb.minZ));
+                }
+            }
+        }
+        return list;
     }
 }

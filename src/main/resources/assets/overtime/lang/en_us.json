@@ -165,6 +165,7 @@
   "entity.overtime.scp035_tendril": "SCP-035 Tendril",
   "entity.overtime.scp066": "SCP-066-2 - \"Eric's Toy\"",
   "entity.overtime.scp066_cat": "SCP-066 - Cat",
+  "entity.overtime.scp303": "SCP-303 - The Doorman",
   "entity.overtime.scp427": "SCP-427 - Lovecraftian Locket Flesh",
   "entity.overtime.scp745": "SCP-745 - The Headlights",
   "entity.overtime.scp835_jp": "SCP-835-JP - Keteru Yamiko",
@@ -178,6 +179,7 @@
 
   "item.overtime.scp035_tendril_spawner": "SCP-035 Tendril Spawner",
   "item.overtime.scp066_spawn_egg": "SCP-066-2 - \"Eric's Toy\" Spawn Egg",
+  "item.overtime.scp303_spawn_egg": "SCP-303 - The Doorman Spawn Egg",
   "item.overtime.scp427_spawn_egg": "SCP-427 Lovecraftian Flesh Spawn Egg",
   "item.overtime.scp745_spawn_egg": "SCP-745 - The Headlights Spawn Egg",
   "item.overtime.scp835_jp_spawn_egg": "SCP-835-JP - Keteru Yamiko Spawn Egg",

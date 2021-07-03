@@ -42,6 +42,7 @@ public class ClientEvents {
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.SCP035_TENDRIL.get(), SCP035TendrilRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.SCP066.get(), SCP066Renderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.SCP066_CAT.get(), CatRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntities.SCP303.get(), SCP303Renderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.SCP427.get(), SCP427Renderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.SCP650.get(), SCP650Renderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntities.SCP745.get(), SCP745Renderer::new);

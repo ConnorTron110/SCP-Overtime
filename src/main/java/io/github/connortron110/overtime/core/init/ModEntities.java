@@ -26,6 +26,7 @@ public class ModEntities {
     public static final RegistryObject<EntityType<SCP035TendrilEntity>> SCP035_TENDRIL = register("scp035_tendril", SCP035TendrilEntity::new, EntityClassification.MONSTER, 1F, 3F);
     public static final RegistryObject<EntityType<SCP066_2Entity>> SCP066 = register("scp066", SCP066_2Entity::new, EntityClassification.MONSTER, .6F, .6F);
     public static final RegistryObject<EntityType<SCP066CatEntity>> SCP066_CAT = register("scp066_cat", SCP066CatEntity::new, EntityClassification.CREATURE, 1F, 1F);
+    public static final RegistryObject<EntityType<SCP303Entity>> SCP303 = register("scp303", SCP303Entity::new, EntityClassification.MONSTER, 0.7F, 1.9F);
     public static final RegistryObject<EntityType<SCP427_1Entity>> SCP427 = register("scp427", SCP427_1Entity::new, EntityClassification.MONSTER, 1.5F, 2.5F);
     public static final RegistryObject<EntityType<SCP650Entity>> SCP650 = register("scp650", SCP650Entity::new, EntityClassification.CREATURE, 0.5F, 1.75F);
     public static final RegistryObject<EntityType<SCP745Entity>> SCP745 = register("scp745", SCP745Entity::new, EntityClassification.MONSTER, 1.5F, 1.8F);
@@ -43,6 +44,7 @@ public class ModEntities {
         event.put(SCP035_TENDRIL.get(), createBaseAttributes(20, 0, 4,2).add(Attributes.KNOCKBACK_RESISTANCE, 1000).build());
         event.put(SCP066.get(), createBaseAttributes(66, .2, 1,2).build());
         event.put(SCP066_CAT.get(), createBaseAttributes(66, .2, 0,0).build());
+        event.put(SCP303.get(), createBaseAttributes(50, .4, 2, 0).build());
         event.put(SCP427.get(), createBaseAttributes(800, .4, 6,10).build());
         event.put(SCP650.get(), createBaseAttributes(60, .5, 0, 0).build());
         event.put(SCP745.get(), createBaseAttributes(45, .5, 5, 1).add(Attributes.KNOCKBACK_RESISTANCE, .1).build());

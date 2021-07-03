@@ -90,6 +90,23 @@
     ]
   },
 
+  "scp303_death": {
+    "category": "hostile",
+    "sounds": [{ "name": "overtime:scp/303/death", "stream": false }]
+  },
+  "scp303_hurt": {
+    "category": "hostile",
+    "sounds": [{ "name": "overtime:scp/303/hurt", "stream": false }]
+  },
+  "scp303_idle": {
+    "category": "hostile",
+    "sounds": [
+      { "name": "overtime:scp/303/idle1", "stream": false },
+      { "name": "overtime:scp/303/idle2", "stream": false },
+      { "name": "overtime:scp/303/idle3", "stream": false }
+    ]
+  },
+
   "scp745_death": {
     "category": "hostile",
     "sounds": [{ "name": "overtime:scp/745/death", "stream": false }]
