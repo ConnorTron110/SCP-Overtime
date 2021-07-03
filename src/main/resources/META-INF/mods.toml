@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-license="All rights reserved"
+license="Creative Commons Attribution-NonCommercial 3.0"
 #issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/"
 
 [[mods]]
@@ -9,14 +9,12 @@ license="All rights reserved"
     displayName="SCP Overtime"
     # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
     #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
-    # A URL for the "homepage" for this mod, displayed in the mod UI
-    #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
-    # A file name (in the root of the mod JAR) containing a logo for display
-    #logoFile="examplemod.png"
-    credits="Thanks for this example mod goes to Java"
-    authors="ConnorTron110, Gus"
+    displayURL="https://discord.gg/sxDyCTng"
+    logoFile="logo.png"
+    credits="Tac0dile and Sir.Pancakes for help with models and Concept Build. ConnorTron110 for code."
+    authors="Gusutab0"
     description='''
-    TODO lmao
+    A tribute to the SCP Foundation gaming community such as SCP Containment Breach and SCP Unity and many others.
     '''
 
 [[dependencies.overtime]]
