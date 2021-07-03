@@ -137,7 +137,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock(ModBlocks.SCP1499_SLAB_1.get(), modLoc("block/"+ ModBlocks.SCP1499_BLOCK_1.get().getRegistryName().getPath()), modLoc("block/"+ ModBlocks.SCP1499_BLOCK_1.get().getRegistryName().getPath()));
         simpleBlock(ModBlocks.SCP1499_BLOCK_2.get());
         stairsBlock(ModBlocks.SCP1499_STAIRS_2.get(), modLoc("block/"+ ModBlocks.SCP1499_BLOCK_2.get().getRegistryName().getPath()));
-        slabBlock(ModBlocks.SCP1499_SLAB_2.get(), modLoc("block/"+ ModBlocks.SCP1499_BLOCK_2.get().getRegistryName().getPath()), modLoc("block/"+ ModBlocks.SCP1499_BLOCK_1.get().getRegistryName().getPath()));
+        slabBlock(ModBlocks.SCP1499_SLAB_2.get(), modLoc("block/"+ ModBlocks.SCP1499_BLOCK_2.get().getRegistryName().getPath()), modLoc("block/"+ ModBlocks.SCP1499_BLOCK_2.get().getRegistryName().getPath()));
 
         simpleBlock(ModBlocks.CLOTH_BLOCK.get());
         simpleBlock(ModBlocks.CONTAINMENT_GLASS.get());
