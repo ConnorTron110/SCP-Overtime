@@ -90,6 +90,31 @@
     ]
   },
 
+  "scp131_danger": {
+    "category": "ambient",
+    "sounds": [{ "name": "overtime:scp/131/danger", "stream": false }]
+  },
+  "scp131_death": {
+    "category": "ambient",
+    "sounds": [{ "name": "overtime:scp/131/death", "stream": false }]
+  },
+  "scp131_idle": {
+    "category": "ambient",
+    "sounds": [
+      { "name": "overtime:scp/131/idle1", "stream": false },
+      { "name": "overtime:scp/131/idle2", "stream": false },
+      { "name": "overtime:scp/131/idle3", "stream": false }
+    ]
+  },
+  "scp131_walk": {
+    "category": "ambient",
+    "sounds": [
+      { "name": "overtime:scp/131/walkshort", "stream": false },
+      { "name": "overtime:scp/131/walkmedium", "stream": false },
+      { "name": "overtime:scp/131/walklong", "stream": false }
+    ]
+  },
+
   "scp303_death": {
     "category": "hostile",
     "sounds": [{ "name": "overtime:scp/303/death", "stream": false }]
