@@ -31,7 +31,7 @@ public class SCP745Renderer extends MobRenderer<SCP745Entity, SCP745Model<SCP745
     @Override
     public void render(SCP745Entity entity, float p_225623_2_, float p_225623_3_, MatrixStack p_225623_4_, IRenderTypeBuffer iRenderTypeBuffer, int p_225623_6_) {
 
-        int variant = entity.getVariant();
+        byte variant = entity.getVariant();
         glowLayer.setVariant(variant);
         TextFormatting color = TextFormatting.WHITE;
         if (variant == 1) color = TextFormatting.AQUA;

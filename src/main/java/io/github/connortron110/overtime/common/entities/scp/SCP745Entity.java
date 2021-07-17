@@ -22,7 +22,7 @@ import net.minecraft.world.World;
 
 public class SCP745Entity extends MonsterEntity {
 
-    private static final DataParameter<Integer> COLOUR = EntityDataManager.defineId(SCP745Entity.class, DataSerializers.INT);
+    private static final DataParameter<Byte> COLOUR = EntityDataManager.defineId(SCP745Entity.class, DataSerializers.BYTE);
 
     public SCP745Entity(EntityType<? extends SCP745Entity> type, World world) {
         super(type, world);
@@ -41,29 +41,29 @@ public class SCP745Entity extends MonsterEntity {
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, false, true));
     }
 
-    public int getVariant() {
-        return MathHelper.clamp(this.entityData.get(COLOUR), 0, 3);
+    public byte getVariant() {
+        return (byte) MathHelper.clamp(this.entityData.get(COLOUR), 0, 3);
     }
-    public void setVariant(int variant) {
+    public void setVariant(byte variant) {
         this.entityData.set(COLOUR, variant);
     }
 
     @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
-        this.entityData.define(COLOUR, 0);
+        this.entityData.define(COLOUR, (byte) 0);
     }
 
     @Override
     public void addAdditionalSaveData(CompoundNBT nbt) {
         super.addAdditionalSaveData(nbt);
-        nbt.putInt("Variant", this.getVariant());
+        nbt.putByte("Variant", this.getVariant());
     }
 
     @Override
     public void readAdditionalSaveData(CompoundNBT nbt) {
         super.readAdditionalSaveData(nbt);
-        this.setVariant(nbt.getInt("Variant"));
+        this.setVariant(nbt.getByte("Variant"));
     }
 
     @Override
@@ -97,7 +97,7 @@ public class SCP745Entity extends MonsterEntity {
         }
 
         if (Math.random() < 0.007D && Math.random() < 0.07D && Math.random() < 0.7D) {
-            setVariant(getRandom().nextInt(4));
+            setVariant((byte) getRandom().nextInt(4));
         }
     }
 }

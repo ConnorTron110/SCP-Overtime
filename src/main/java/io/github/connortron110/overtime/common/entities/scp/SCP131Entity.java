@@ -31,8 +31,7 @@ import javax.annotation.Nullable;
 //TODO SCP173 related things
 public class SCP131Entity extends CreatureEntity {
 
-    private static final DataParameter<Integer> DATA_VARIANT_ID = EntityDataManager.defineId(SCP131Entity.class, DataSerializers.INT);
-
+    private static final DataParameter<Byte> DATA_VARIANT_ID = EntityDataManager.defineId(SCP131Entity.class, DataSerializers.BYTE);
 
     public SCP131Entity(EntityType<? extends CreatureEntity> entityType, World level) {
         super(entityType, level);
@@ -45,17 +44,17 @@ public class SCP131Entity extends CreatureEntity {
         this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 0.8D));
     }
 
-    public int getVariant() {
-        return MathHelper.clamp(this.entityData.get(DATA_VARIANT_ID), 0, 1);
+    public byte getVariant() {
+        return (byte) MathHelper.clamp(this.entityData.get(DATA_VARIANT_ID), 0, 1);
     }
-    public void setVariant(int variant) {
+    public void setVariant(byte variant) {
         this.entityData.set(DATA_VARIANT_ID, variant);
     }
 
     @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
-        this.entityData.define(DATA_VARIANT_ID, 0);
+        this.entityData.define(DATA_VARIANT_ID, (byte) 0);
     }
 
     @Override
@@ -67,13 +66,13 @@ public class SCP131Entity extends CreatureEntity {
     @Override
     public void readAdditionalSaveData(CompoundNBT nbt) {
         super.readAdditionalSaveData(nbt);
-        this.setVariant(nbt.getInt("Variant"));
+        this.setVariant(nbt.getByte("Variant"));
     }
 
     @Nullable
     @Override
     public ILivingEntityData finalizeSpawn(IServerWorld p_213386_1_, DifficultyInstance p_213386_2_, SpawnReason p_213386_3_, @Nullable ILivingEntityData p_213386_4_, @Nullable CompoundNBT p_213386_5_) {
-        this.setVariant(random.nextInt(2));
+        this.setVariant((byte) random.nextInt(2));
         return super.finalizeSpawn(p_213386_1_, p_213386_2_, p_213386_3_, p_213386_4_, p_213386_5_);
     }
 
