@@ -17,10 +17,13 @@ public class DataGenerators {
         gen.addProvider(new ModBlockStateProvider(gen, event.getExistingFileHelper()));
         gen.addProvider(new ModItemModelProvider(gen, event.getExistingFileHelper()));
 
-        gen.addProvider(new ModLootTableProvider(gen));
-        gen.addProvider(new ModRecipeProvider(gen));
-
         ModBlockTagsProvider blockTags = new ModBlockTagsProvider(gen, event.getExistingFileHelper());
         gen.addProvider(blockTags);
+        gen.addProvider(new ModItemTagsProvider(gen, blockTags, event.getExistingFileHelper()));
+
+        gen.addProvider(new ModLangProvider(gen));
+        gen.addProvider(new ModLootTableProvider(gen));
+        gen.addProvider(new ModRecipeProvider(gen));
+        gen.addProvider(new ModSoundsProvider(gen, event.getExistingFileHelper()));
     }
 }

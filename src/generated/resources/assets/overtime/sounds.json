@@ -1,0 +1,261 @@
+{
+  "generic_step": {
+    "subtitle": "subtitle.generic_step",
+    "sounds": [
+      "overtime:generic_step1",
+      "overtime:generic_step2",
+      "overtime:generic_step3",
+      "overtime:generic_step4"
+    ]
+  },
+  "heavy_step": {
+    "subtitle": "subtitle.heavy_step",
+    "sounds": [
+      "overtime:heavy_step1",
+      "overtime:heavy_step2",
+      "overtime:heavy_step3",
+      "overtime:heavy_step4"
+    ]
+  },
+  "mask_breathing": {
+    "subtitle": "subtitle.mask_breathing",
+    "sounds": [
+      "overtime:mask_breathing_1",
+      "overtime:mask_breathing_2"
+    ]
+  },
+  "scp035_takeover": {
+    "subtitle": "subtitle.scp035_takeover",
+    "sounds": [
+      "overtime:scp/035/takeover_1",
+      "overtime:scp/035/takeover_2"
+    ]
+  },
+  "scp035_angry": {
+    "subtitle": "subtitle.scp035_angry",
+    "sounds": [
+      "overtime:scp/035/angry_1",
+      "overtime:scp/035/angry_2",
+      "overtime:scp/035/angry_3",
+      "overtime:scp/035/angry_4"
+    ]
+  },
+  "scp035_idle": {
+    "subtitle": "subtitle.scp035_idle",
+    "sounds": [
+      "overtime:scp/035/idle_1",
+      "overtime:scp/035/idle_2",
+      "overtime:scp/035/idle_3",
+      "overtime:scp/035/idle_4",
+      "overtime:scp/035/idle_5",
+      "overtime:scp/035/idle_6"
+    ]
+  },
+  "scp035_equip": {
+    "subtitle": "subtitle.scp035_equip",
+    "sounds": [
+      "overtime:scp/035/equip"
+    ]
+  },
+  "scp035_tendril_idle": {
+    "subtitle": "subtitle.scp035_tendril_idle",
+    "sounds": [
+      "overtime:scp/035/tendril/idle"
+    ]
+  },
+  "scp035_tendril_spawn": {
+    "subtitle": "subtitle.scp035_tendril_spawn",
+    "sounds": [
+      "overtime:scp/035/tendril/spawn"
+    ]
+  },
+  "scp066_rolling": {
+    "subtitle": "subtitle.scp066_rolling",
+    "sounds": [
+      "overtime:scp/066/rolling"
+    ]
+  },
+  "scp066_beethoven": {
+    "subtitle": "subtitle.scp066_beethoven",
+    "sounds": [
+      "overtime:scp/066/beethoven"
+    ]
+  },
+  "scp066_idle": {
+    "subtitle": "subtitle.scp066_idle",
+    "sounds": [
+      "overtime:scp/066/eric1",
+      "overtime:scp/066/eric2",
+      "overtime:scp/066/eric3",
+      "overtime:scp/066/notes1",
+      "overtime:scp/066/notes2",
+      "overtime:scp/066/notes3",
+      "overtime:scp/066/notes4",
+      "overtime:scp/066/notes5",
+      "overtime:scp/066/notes6"
+    ]
+  },
+  "scp131_danger": {
+    "subtitle": "subtitle.scp131_danger",
+    "sounds": [
+      "overtime:scp/131/danger"
+    ]
+  },
+  "scp131_death": {
+    "subtitle": "subtitle.scp131_death",
+    "sounds": [
+      "overtime:scp/131/death"
+    ]
+  },
+  "scp131_idle": {
+    "subtitle": "subtitle.scp131_idle",
+    "sounds": [
+      "overtime:scp/131/idle1",
+      "overtime:scp/131/idle2",
+      "overtime:scp/131/idle3"
+    ]
+  },
+  "scp131_walk": {
+    "subtitle": "subtitle.scp131_walk",
+    "sounds": [
+      "overtime:scp/131/walkshort",
+      "overtime:scp/131/walkmedium",
+      "overtime:scp/131/walklong"
+    ]
+  },
+  "scp303_death": {
+    "subtitle": "subtitle.scp303_death",
+    "sounds": [
+      "overtime:scp/303/death"
+    ]
+  },
+  "scp303_hurt": {
+    "subtitle": "subtitle.scp303_hurt",
+    "sounds": [
+      "overtime:scp/303/hurt"
+    ]
+  },
+  "scp303_idle": {
+    "subtitle": "subtitle.scp303_idle",
+    "sounds": [
+      "overtime:scp/303/idle1",
+      "overtime:scp/303/idle2",
+      "overtime:scp/303/idle3"
+    ]
+  },
+  "scp745_death": {
+    "subtitle": "subtitle.scp745_death",
+    "sounds": [
+      "overtime:scp/745/death"
+    ]
+  },
+  "scp745_hurt": {
+    "subtitle": "subtitle.scp745_hurt",
+    "sounds": [
+      "overtime:scp/745/hurt"
+    ]
+  },
+  "scp745_idle": {
+    "subtitle": "subtitle.scp745_idle",
+    "sounds": [
+      "overtime:scp/745/idle"
+    ]
+  },
+  "scp1762_ost": {
+    "subtitle": "subtitle.scp1762_ost",
+    "sounds": [
+      {
+        "name": "overtime:scp/1762ost",
+        "stream": true
+      }
+    ]
+  },
+  "scp2761_death": {
+    "subtitle": "subtitle.scp2761_death",
+    "sounds": [
+      "overtime:scp/2761/death"
+    ]
+  },
+  "scp2761_hurt": {
+    "subtitle": "subtitle.scp2761_hurt",
+    "sounds": [
+      "overtime:scp/2761/hurt1",
+      "overtime:scp/2761/hurt2",
+      "overtime:scp/2761/hurt3"
+    ]
+  },
+  "scp2761_idle": {
+    "subtitle": "subtitle.scp2761_idle",
+    "sounds": [
+      "overtime:scp/2761/idle1",
+      "overtime:scp/2761/idle2",
+      "overtime:scp/2761/idle3",
+      "overtime:scp/2761/idle4",
+      "overtime:scp/2761/idle5",
+      "overtime:scp/2761/idle6",
+      "overtime:scp/2761/idle7",
+      "overtime:scp/2761/idle8"
+    ]
+  },
+  "scp3199_death": {
+    "subtitle": "subtitle.scp3199_death",
+    "sounds": [
+      "overtime:scp/3199/death"
+    ]
+  },
+  "scp3199_idle": {
+    "subtitle": "subtitle.scp3199_idle",
+    "sounds": [
+      "overtime:scp/3199/idle1",
+      "overtime:scp/3199/idle2",
+      "overtime:scp/3199/idle3",
+      "overtime:scp/3199/idle4"
+    ]
+  },
+  "scp3199_scream": {
+    "subtitle": "subtitle.scp3199_scream",
+    "sounds": [
+      "overtime:scp/3199/scream1",
+      "overtime:scp/3199/scream2"
+    ]
+  },
+  "scp3456_death": {
+    "subtitle": "subtitle.scp3456_death",
+    "sounds": [
+      "overtime:scp/3456/death"
+    ]
+  },
+  "scp3456_idle": {
+    "subtitle": "subtitle.scp3456_idle",
+    "sounds": [
+      "overtime:scp/3456/idle1",
+      "overtime:scp/3456/idle2",
+      "overtime:scp/3456/idle3",
+      "overtime:scp/3456/scream"
+    ]
+  },
+  "scp3456_hurt": {
+    "subtitle": "subtitle.scp3456_hurt",
+    "sounds": [
+      "overtime:scp/3456/hurt"
+    ]
+  },
+  "scp5167_death": {
+    "subtitle": "subtitle.scp5167_death",
+    "sounds": [
+      "overtime:scp/5167/death"
+    ]
+  },
+  "scp5167_meeting": {
+    "subtitle": "subtitle.scp5167_meeting",
+    "sounds": [
+      "overtime:scp/5167/meeting"
+    ]
+  },
+  "scp5167_walk": {
+    "subtitle": "subtitle.scp5167_walk",
+    "sounds": [
+      "overtime:scp/5167/walk"
+    ]
+  }
+}
