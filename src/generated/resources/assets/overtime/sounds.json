@@ -20,41 +20,8 @@
   "mask_breathing": {
     "subtitle": "subtitle.mask_breathing",
     "sounds": [
-      "overtime:mask_breathing_1",
-      "overtime:mask_breathing_2"
-    ]
-  },
-  "scp035_takeover": {
-    "subtitle": "subtitle.scp035_takeover",
-    "sounds": [
-      "overtime:scp/035/takeover_1",
-      "overtime:scp/035/takeover_2"
-    ]
-  },
-  "scp035_angry": {
-    "subtitle": "subtitle.scp035_angry",
-    "sounds": [
-      "overtime:scp/035/angry_1",
-      "overtime:scp/035/angry_2",
-      "overtime:scp/035/angry_3",
-      "overtime:scp/035/angry_4"
-    ]
-  },
-  "scp035_idle": {
-    "subtitle": "subtitle.scp035_idle",
-    "sounds": [
-      "overtime:scp/035/idle_1",
-      "overtime:scp/035/idle_2",
-      "overtime:scp/035/idle_3",
-      "overtime:scp/035/idle_4",
-      "overtime:scp/035/idle_5",
-      "overtime:scp/035/idle_6"
-    ]
-  },
-  "scp035_equip": {
-    "subtitle": "subtitle.scp035_equip",
-    "sounds": [
-      "overtime:scp/035/equip"
+      "overtime:mask_breathing1",
+      "overtime:mask_breathing2"
     ]
   },
   "scp035_tendril_idle": {
@@ -69,10 +36,37 @@
       "overtime:scp/035/tendril/spawn"
     ]
   },
-  "scp066_rolling": {
-    "subtitle": "subtitle.scp066_rolling",
+  "scp035_angry": {
+    "subtitle": "subtitle.scp035_angry",
     "sounds": [
-      "overtime:scp/066/rolling"
+      "overtime:scp/035/angry1",
+      "overtime:scp/035/angry2",
+      "overtime:scp/035/angry3",
+      "overtime:scp/035/angry4"
+    ]
+  },
+  "scp035_equip": {
+    "subtitle": "subtitle.scp035_equip",
+    "sounds": [
+      "overtime:scp/035/equip"
+    ]
+  },
+  "scp035_idle": {
+    "subtitle": "subtitle.scp035_idle",
+    "sounds": [
+      "overtime:scp/035/idle1",
+      "overtime:scp/035/idle2",
+      "overtime:scp/035/idle3",
+      "overtime:scp/035/idle4",
+      "overtime:scp/035/idle5",
+      "overtime:scp/035/idle6"
+    ]
+  },
+  "scp035_takeover": {
+    "subtitle": "subtitle.scp035_takeover",
+    "sounds": [
+      "overtime:scp/035/takeover1",
+      "overtime:scp/035/takeover2"
     ]
   },
   "scp066_beethoven": {
@@ -93,6 +87,12 @@
       "overtime:scp/066/notes4",
       "overtime:scp/066/notes5",
       "overtime:scp/066/notes6"
+    ]
+  },
+  "scp066_rolling": {
+    "subtitle": "subtitle.scp066_rolling",
+    "sounds": [
+      "overtime:scp/066/rolling"
     ]
   },
   "scp131_danger": {
@@ -225,6 +225,12 @@
       "overtime:scp/3456/death"
     ]
   },
+  "scp3456_hurt": {
+    "subtitle": "subtitle.scp3456_hurt",
+    "sounds": [
+      "overtime:scp/3456/hurt"
+    ]
+  },
   "scp3456_idle": {
     "subtitle": "subtitle.scp3456_idle",
     "sounds": [
@@ -232,12 +238,6 @@
       "overtime:scp/3456/idle2",
       "overtime:scp/3456/idle3",
       "overtime:scp/3456/scream"
-    ]
-  },
-  "scp3456_hurt": {
-    "subtitle": "subtitle.scp3456_hurt",
-    "sounds": [
-      "overtime:scp/3456/hurt"
     ]
   },
   "scp5167_death": {

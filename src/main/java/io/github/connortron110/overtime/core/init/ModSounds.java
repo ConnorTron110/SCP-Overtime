@@ -14,16 +14,16 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> HEAVY_STEP = registerSound("heavy_step");
     public static final RegistryObject<SoundEvent> MASK_BREATHING = registerSound("mask_breathing");
 
-    public static final RegistryObject<SoundEvent> SCP035_TAKEOVER = registerSound("scp035_takeover");
-    public static final RegistryObject<SoundEvent> SCP035_ANGRY = registerSound("scp035_angry");
-    public static final RegistryObject<SoundEvent> SCP035_IDLE = registerSound("scp035_idle");
-    public static final RegistryObject<SoundEvent> SCP035_EQUIP = registerSound("scp035_equip");
     public static final RegistryObject<SoundEvent> SCP035_TENDRIL_IDLE = registerSound("scp035_tendril_idle");
     public static final RegistryObject<SoundEvent> SCP035_TENDRIL_SPAWN = registerSound("scp035_tendril_spawn");
+    public static final RegistryObject<SoundEvent> SCP035_ANGRY = registerSound("scp035_angry");
+    public static final RegistryObject<SoundEvent> SCP035_EQUIP = registerSound("scp035_equip");
+    public static final RegistryObject<SoundEvent> SCP035_IDLE = registerSound("scp035_idle");
+    public static final RegistryObject<SoundEvent> SCP035_TAKEOVER = registerSound("scp035_takeover");
 
-    public static final RegistryObject<SoundEvent> SCP066_ROLLING = registerSound("scp066_rolling");
     public static final RegistryObject<SoundEvent> SCP066_BEETHOVEN = registerSound("scp066_beethoven");
     public static final RegistryObject<SoundEvent> SCP066_IDLE = registerSound("scp066_idle");
+    public static final RegistryObject<SoundEvent> SCP066_ROLLING = registerSound("scp066_rolling");
 
     public static final RegistryObject<SoundEvent> SCP131_DANGER = registerSound("scp131_danger");
     public static final RegistryObject<SoundEvent> SCP131_DEATH = registerSound("scp131_death");
@@ -49,8 +49,8 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> SCP3199_SCREAM = registerSound("scp3199_scream");
 
     public static final RegistryObject<SoundEvent> SCP3456_DEATH = registerSound("scp3456_death");
-    public static final RegistryObject<SoundEvent> SCP3456_IDLE = registerSound("scp3456_idle");
     public static final RegistryObject<SoundEvent> SCP3456_HURT = registerSound("scp3456_hurt");
+    public static final RegistryObject<SoundEvent> SCP3456_IDLE = registerSound("scp3456_idle");
 
     public static final RegistryObject<SoundEvent> SCP5167_DEATH = registerSound("scp5167_death");
     public static final RegistryObject<SoundEvent> SCP5167_MEETING = registerSound("scp5167_meeting");
