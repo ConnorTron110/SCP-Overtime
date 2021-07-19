@@ -68,7 +68,7 @@ public class ModSoundsProvider extends SoundDefinitionsProvider {
 
     private void add(RegistryObject<? extends SoundEvent> reg, ModSoundDefinition modSoundDefinition) {
         String path = reg.get().getLocation().getPath();
-         add(path, modSoundDefinition.subtitle("subtitle."+path).build());
+        add(path, modSoundDefinition.subtitle("subtitle."+path).build());
     }
 
     private static class ModSoundDefinition {
