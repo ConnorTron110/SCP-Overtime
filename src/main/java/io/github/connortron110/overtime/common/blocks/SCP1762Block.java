@@ -4,6 +4,7 @@ import io.github.connortron110.overtime.common.entities.scp.SCP1762Entity;
 import io.github.connortron110.overtime.core.init.ModBlocks;
 import io.github.connortron110.overtime.core.init.ModEntities;
 import io.github.connortron110.overtime.core.init.ModSounds;
+import io.github.connortron110.overtime.core.util.CommonCode;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
@@ -39,6 +40,8 @@ public class SCP1762Block extends HorizontalBlock {
 
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
     public static final BooleanProperty ACTIVE = BooleanProperty.create("active");
+
+    private static final VoxelShape[] SHAPES = CommonCode.makeHorizontalShapes(Block.box(3, 0, 4.5, 13, 8.05, 11.5));
 
     public SCP1762Block() {
         super(Properties.copy(ModMaterialProperties.WOOD));
@@ -134,9 +137,7 @@ public class SCP1762Block extends HorizontalBlock {
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader iBlockReader, BlockPos pos, ISelectionContext context) {
-        VoxelShape NS = Block.box(3, 0, 4.5, 13, 8.05, 11.5);
-        VoxelShape EW = Block.box(4.5, 0, 3, 11.5, 8.05, 13);
-        return (state.getValue(FACING) == Direction.NORTH || state.getValue(FACING) == Direction.SOUTH) ? NS : EW;
+        return SHAPES[state.getValue(FACING).get2DDataValue()];
     }
 
     @Nullable

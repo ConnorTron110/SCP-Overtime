@@ -15,6 +15,9 @@ import net.minecraft.world.IBlockReader;
 import javax.annotation.Nullable;
 
 public class FoolishnessBlock extends HorizontalBlock {
+
+    private static final VoxelShape SHAPE = Block.box(4, 0, 4, 12, 1, 12);
+
     public FoolishnessBlock() {
         super(AbstractBlock.Properties.copy(ModMaterialProperties.WOOD));
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
@@ -22,7 +25,7 @@ public class FoolishnessBlock extends HorizontalBlock {
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader iBlockReader, BlockPos pos, ISelectionContext context) {
-        return Block.box(4, 0, 4, 12, 1, 12);
+        return SHAPE;
     }
 
     @Nullable

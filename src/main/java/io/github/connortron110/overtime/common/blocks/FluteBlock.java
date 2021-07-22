@@ -1,5 +1,6 @@
 package io.github.connortron110.overtime.common.blocks;
 
+import io.github.connortron110.overtime.core.util.CommonCode;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -15,6 +16,9 @@ import net.minecraft.world.IBlockReader;
 import javax.annotation.Nullable;
 
 public class FluteBlock extends HorizontalBlock {
+
+    private static final VoxelShape[] SHAPES = CommonCode.makeHorizontalShapes(Block.box(2.5, 0, 7.5, 13.5, 1, 8.5));
+
     public FluteBlock() {
         super(AbstractBlock.Properties.copy(ModMaterialProperties.WOOD));
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
@@ -22,15 +26,7 @@ public class FluteBlock extends HorizontalBlock {
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader iBlockReader, BlockPos pos, ISelectionContext context) {
-        VoxelShape NS = Block.box(2.5, 0, 7.5, 13.5, 1, 8.5);
-        VoxelShape EW = Block.box(7.5, 0, 2.5, 8.5, 1, 13.5);
-
-        switch (state.getValue(FACING)) {
-            case NORTH:
-            case SOUTH:
-                return NS;
-            default: return EW;
-        }
+        return SHAPES[state.getValue(FACING).get2DDataValue()];
     }
 
     @Nullable

@@ -16,6 +16,9 @@ import net.minecraft.world.IWorldReader;
 import javax.annotation.Nullable;
 
 public class CeilingCameraBlock extends HorizontalBlock {
+
+    private static final VoxelShape SHAPE = VoxelShapes.join(Block.box(4, 14, 4, 12, 16, 12), Block.box(5.5, 10, 5.5, 10.5, 14, 10.5), IBooleanFunction.OR);
+
     public CeilingCameraBlock() {
         super(AbstractBlock.Properties.copy(ModMaterialProperties.METAL));
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
@@ -23,7 +26,7 @@ public class CeilingCameraBlock extends HorizontalBlock {
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader iBlockReader, BlockPos pos, ISelectionContext context) {
-        return VoxelShapes.join(Block.box(4, 14, 4, 12, 16, 12), Block.box(5.5, 10, 5.5, 10.5, 14, 10.5), IBooleanFunction.OR);
+        return SHAPE;
     }
 
     @Override

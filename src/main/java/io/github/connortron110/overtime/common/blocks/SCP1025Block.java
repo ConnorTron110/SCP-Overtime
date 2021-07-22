@@ -1,5 +1,6 @@
 package io.github.connortron110.overtime.common.blocks;
 
+import io.github.connortron110.overtime.core.util.CommonCode;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -25,6 +26,9 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class SCP1025Block extends HorizontalBlock {
+
+    private static final VoxelShape[] SHAPES = CommonCode.makeHorizontalShapes(Block.box(5, 0, 4, 11, 2, 12));
+
     public SCP1025Block() {
         super(AbstractBlock.Properties.copy(ModMaterialProperties.FABRIC));
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
@@ -53,9 +57,7 @@ public class SCP1025Block extends HorizontalBlock {
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader iBlockReader, BlockPos pos, ISelectionContext context) {
-        VoxelShape NS = Block.box(5, 0, 4, 11, 2, 12);
-        VoxelShape EW = Block.box(4, 0, 5, 12, 2, 11);
-        return (state.getValue(FACING) == Direction.NORTH || state.getValue(FACING) == Direction.SOUTH) ? NS : EW;
+        return SHAPES[state.getValue(FACING).get2DDataValue()];
     }
 
     @Nullable

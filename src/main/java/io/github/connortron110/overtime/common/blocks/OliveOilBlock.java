@@ -17,6 +17,9 @@ import net.minecraft.world.IBlockReader;
 import javax.annotation.Nullable;
 
 public class OliveOilBlock extends HorizontalBlock {
+
+    private static final VoxelShape SHAPE = VoxelShapes.join(Block.box(7, 8, 7, 9, 12, 9), Block.box(6, 0, 6, 10, 8, 10), IBooleanFunction.OR);
+
     public OliveOilBlock() {
         super(AbstractBlock.Properties.copy(ModMaterialProperties.GLASS));
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
@@ -24,7 +27,7 @@ public class OliveOilBlock extends HorizontalBlock {
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader iBlockReader, BlockPos pos, ISelectionContext context) {
-        return VoxelShapes.join(Block.box(7, 8, 7, 9, 12, 9), Block.box(6, 0, 6, 10, 8, 10), IBooleanFunction.OR);
+        return SHAPE;
     }
 
     @Nullable

@@ -25,13 +25,16 @@ import net.minecraft.world.server.ServerWorld;
 import java.util.ArrayList;
 
 public class SCP066Block extends Block {
+
+    private static final VoxelShape SHAPE = Block.box(4.5, 0, 4.5, 11.5, 7, 11.5);
+
     public SCP066Block() {
         super(Properties.copy(ModMaterialProperties.FABRIC));
     }
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader iBlockReader, BlockPos pos, ISelectionContext context) {
-        return Block.box(4.5, 0, 4.5, 11.5, 7, 11.5);
+        return SHAPE;
     }
 
     public static final ArrayList<SoundEvent> NOTES = new ArrayList<>();
