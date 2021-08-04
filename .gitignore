@@ -16,11 +16,9 @@ out
 # gradle
 build
 .gradle
+!.gradle/ISSUE_TEMPLATE/
 
 # other
 eclipse
 run
 src/generated/resources/.cache/
-
-# Files from Forge MDK
-forge*changelog.txt
