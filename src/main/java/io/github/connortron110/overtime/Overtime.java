@@ -1,16 +1,16 @@
 package io.github.connortron110.overtime;
 
-import io.github.connortron110.overtime.core.init.ModBlocks;
-import io.github.connortron110.overtime.core.init.ModEntities;
-import io.github.connortron110.overtime.core.init.ModItems;
-import io.github.connortron110.overtime.core.init.ModSounds;
+import io.github.connortron110.overtime.core.init.*;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.network.NetworkRegistry;
+import net.minecraftforge.fml.network.simple.SimpleChannel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,6 +19,8 @@ public class Overtime {
 
     public static final String MOD_ID = "overtime";
     public static final Logger LOGGER = LogManager.getLogger("Overtime");
+    private static final String PROTOCOL_VERSION = "1";
+    public static final SimpleChannel NETWORK = NetworkRegistry.newSimpleChannel(new ResourceLocation(MOD_ID, "network"), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
 
     //Item Groups
     public static final ItemGroup TAB_ITEMS = new ItemGroup(ItemGroup.TABS.length, "overtimeitems") {
@@ -54,5 +56,6 @@ public class Overtime {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
+        int id = 0;
     }
 }
