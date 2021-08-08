@@ -1,6 +1,7 @@
 package io.github.connortron110.overtime;
 
 import io.github.connortron110.overtime.core.init.*;
+import io.github.connortron110.overtime.network.client.SoundHandlerMessage;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -9,6 +10,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.network.NetworkDirection;
 import net.minecraftforge.fml.network.NetworkRegistry;
 import net.minecraftforge.fml.network.simple.SimpleChannel;
 import org.apache.logging.log4j.LogManager;
@@ -57,5 +59,6 @@ public class Overtime {
 
     private void setup(final FMLCommonSetupEvent event) {
         int id = 0;
+        NETWORK.messageBuilder(SoundHandlerMessage.class, id++, NetworkDirection.PLAY_TO_CLIENT).encoder(SoundHandlerMessage::encode).decoder(SoundHandlerMessage::decode).consumer(SoundHandlerMessage::handle).add();
     }
 }
