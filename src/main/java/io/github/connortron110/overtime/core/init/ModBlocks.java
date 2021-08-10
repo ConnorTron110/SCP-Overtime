@@ -179,7 +179,7 @@ public class ModBlocks {
     public static final RegistryObject<BloodPuddleBlock> BLOOD_PUDDLE = register("blood_puddle", Overtime.TAB_MISC, BloodPuddleBlock::new);
     public static final RegistryObject<ServerBlock> SERVER = register("server", Overtime.TAB_MISC, ServerBlock::new);
     public static final RegistryObject<ComputerBlock> COMPUTER = register("computer", Overtime.TAB_MISC, ComputerBlock::new);
-    public static final RegistryObject<ComputerBlock> TERMINAL = register("terminal", Overtime.TAB_MISC, ComputerBlock::new);
+    public static final RegistryObject<ComputerBlock> TERMINAL = register("terminal", Overtime.TAB_MISC, TerminalBlock::new);
 
     public static final RegistryObject<SCP066Block> SCP066_BLOCK = register("scp066_block", Overtime.TAB_MISC, SCP066Block::new);
     public static final RegistryObject<SCP1025Block> SCP1025 = register("scp1025", Overtime.TAB_MISC, SCP1025Block::new);
