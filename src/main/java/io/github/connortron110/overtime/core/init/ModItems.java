@@ -2,6 +2,7 @@ package io.github.connortron110.overtime.core.init;
 
 import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.common.items.*;
+import io.github.connortron110.overtime.common.items.firearms.GunBaseItem;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
@@ -19,6 +20,16 @@ public class ModItems {
 
     public static final RegistryObject<Item> CUPCAKE = ITEMS.register("cupcake", () -> new Item(new Item.Properties().tab(Overtime.TAB_ITEMS).stacksTo(16).rarity(Rarity.COMMON).food(new Food.Builder().nutrition(4).saturationMod(0.3F).build())));
     public static final RegistryObject<SwordItem> MOB_DESPAWNER = ITEMS.register("mob_despawner", () -> new SwordItem(ItemTier.NETHERITE, 69420, 42069, new Item.Properties().tab(Overtime.TAB_ITEMS).fireResistant()));
+
+    public static final RegistryObject<Item> MONEY = ITEMS.register("money", () -> new Item(new Item.Properties().tab(Overtime.TAB_ITEMS)));
+    //TODO REDACTED Drink that does nothing...
+    public static final RegistryObject<DrinkItem> CANNED_COFFEE = ITEMS.register("canned_coffee", () -> new DrinkItem(new Item.Properties().tab(Overtime.TAB_ITEMS)));
+    public static final RegistryObject<DrinkItem> CAKEA_COLA = ITEMS.register("cakea_cola", () -> new DrinkItem(new Item.Properties().tab(Overtime.TAB_ITEMS)));
+    public static final RegistryObject<DrinkItem> SANGRITA_DILE = ITEMS.register("sangrita_dile", () -> new DrinkItem(new Item.Properties().tab(Overtime.TAB_ITEMS)));
+    public static final RegistryObject<DrinkItem> SKY_FISH = ITEMS.register("sky_fish", () -> new DrinkItem(new Item.Properties().tab(Overtime.TAB_ITEMS)));
+    public static final RegistryObject<DrinkItem> PUMPKIN_PUNCH = ITEMS.register("pumpkin_punch", () -> new DrinkItem(new Item.Properties().tab(Overtime.TAB_ITEMS)));
+
+
     public static final RegistryObject<ArmorItem> HAZMAT_HELMET = ITEMS.register("hazmat_helmet", () -> new HazmatSuitItem(ArmorMaterial.IRON, EquipmentSlotType.HEAD, new Item.Properties().tab(Overtime.TAB_ITEMS), null));
     public static final RegistryObject<ArmorItem> HAZMAT_CHEST = ITEMS.register("hazmat_chest", () -> new HazmatSuitItem(ArmorMaterial.IRON, EquipmentSlotType.CHEST, new Item.Properties().tab(Overtime.TAB_ITEMS), null));
     public static final RegistryObject<ArmorItem> HAZMAT_LEGGINGS = ITEMS.register("hazmat_leggings", () -> new HazmatSuitItem(ArmorMaterial.IRON, EquipmentSlotType.LEGS, new Item.Properties().tab(Overtime.TAB_ITEMS), null));

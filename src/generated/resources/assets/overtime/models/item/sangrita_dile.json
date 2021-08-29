@@ -1,0 +1,6 @@
+{
+  "parent": "overtime:item/drink",
+  "textures": {
+    "drink": "overtime:item/sangrita_dile"
+  }
+}

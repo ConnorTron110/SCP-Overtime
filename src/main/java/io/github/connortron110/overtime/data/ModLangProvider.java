@@ -62,6 +62,13 @@ public class ModLangProvider extends LanguageProvider {
             item(ModItems.CUPCAKE, "Cupcake");
             item(ModItems.MOB_DESPAWNER, "Mob Despawner");
 
+            item(ModItems.MONEY, "Money");
+            item(ModItems.CANNED_COFFEE, "Canned Coffee");
+            item(ModItems.CAKEA_COLA, "Cake'a Cola");
+            item(ModItems.SANGRITA_DILE, "Sangrita Dile");
+            item(ModItems.SKY_FISH, "Sky Fish");
+            item(ModItems.PUMPKIN_PUNCH, "Pumpkin Punch");
+
             item(ModItems.HAZMAT_HELMET, "Hazmat Helmet");
             item(ModItems.HAZMAT_CHEST, "Hazmat Chest");
             item(ModItems.HAZMAT_LEGGINGS, "Hazmat Leggings");
@@ -234,6 +241,10 @@ public class ModLangProvider extends LanguageProvider {
                 block(ModBlocks.CAUTION_LINE_DIAGONAL, "Caution Line Diagonal");
                 block(ModBlocks.LIGHT_DOOR, "Light Door");
                 block(ModBlocks.HEAVY_DOOR, "Heavy Door");
+
+                block(ModBlocks.VENDING_DRINK_BLUE, "Vending Machine Drink [Blue]");
+                block(ModBlocks.VENDING_DRINK_PINK, "Vending Machine Drink [Pink]");
+                block(ModBlocks.VENDING_DRINK_PURPLE, "Vending Machine Drink [Purple]");
 
                 block(ModBlocks.SCP2845_GRASS, "SCP-2845 Grass");
                 block(ModBlocks.SCP2845_LOG, "SCP-2845 Log");

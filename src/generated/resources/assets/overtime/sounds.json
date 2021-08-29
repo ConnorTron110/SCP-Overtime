@@ -24,6 +24,24 @@
       "overtime:mask_breathing2"
     ]
   },
+  "vending_machine_ambience": {
+    "subtitle": "subtitle.vending_machine_ambience",
+    "sounds": [
+      "overtime:vending_machine_ambience"
+    ]
+  },
+  "vending_machine_coin": {
+    "subtitle": "subtitle.vending_machine_coin",
+    "sounds": [
+      "overtime:vending_machine_coin"
+    ]
+  },
+  "vending_machine_drop_item": {
+    "subtitle": "subtitle.vending_machine_drop_item",
+    "sounds": [
+      "overtime:vending_machine_drop_item"
+    ]
+  },
   "scp035_tendril_idle": {
     "subtitle": "subtitle.scp035_tendril_idle",
     "sounds": [

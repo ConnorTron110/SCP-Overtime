@@ -179,6 +179,10 @@ public class ModLootTableProvider extends LootTableProvider {
             dropSelf(ModBlocks.LIGHT_DOOR.get());
             dropSelf(ModBlocks.HEAVY_DOOR.get());
 
+            add(ModBlocks.VENDING_DRINK_BLUE.get(), createDoorTable(ModBlocks.VENDING_DRINK_BLUE.get()));
+            add(ModBlocks.VENDING_DRINK_PINK.get(), createDoorTable(ModBlocks.VENDING_DRINK_PINK.get()));
+            add(ModBlocks.VENDING_DRINK_PURPLE.get(), createDoorTable(ModBlocks.VENDING_DRINK_PURPLE.get()));
+
             dropWhenSilkTouch(ModBlocks.SCP2845_GRASS.get());
             dropSelf(ModBlocks.SCP2845_LOG.get());
             dropWhenSilkTouch(ModBlocks.SCP2845_LEAVES.get());

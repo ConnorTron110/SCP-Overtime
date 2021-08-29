@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "overtime:block/caution_line_vertical_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "overtime:block/caution_line_vertical"
+    },
+    "axis=z": {
+      "model": "overtime:block/caution_line_vertical_horizontal",
+      "x": 90
     }
   }
 }

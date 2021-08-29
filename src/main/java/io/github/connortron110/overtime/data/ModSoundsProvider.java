@@ -22,6 +22,9 @@ public class ModSoundsProvider extends SoundDefinitionsProvider {
         add(ModSounds.GENERIC_STEP, new ModSoundDefinition().sound("generic_step", 4));
         add(ModSounds.HEAVY_STEP, new ModSoundDefinition().sound("heavy_step", 4));
         add(ModSounds.MASK_BREATHING, new ModSoundDefinition().sound("mask_breathing", 2));
+        add(ModSounds.VENDING_AMBIENCE, new ModSoundDefinition().sound("vending_machine_ambience"));
+        add(ModSounds.VENDING_COIN, new ModSoundDefinition().sound("vending_machine_coin"));
+        add(ModSounds.VENDING_DROP_ITEM, new ModSoundDefinition().sound("vending_machine_drop_item"));
 
         add(ModSounds.SCP035_TENDRIL_IDLE, new ModSoundDefinition("035/tendril").sound("idle"));
         add(ModSounds.SCP035_TENDRIL_SPAWN, new ModSoundDefinition("035/tendril").sound("spawn"));

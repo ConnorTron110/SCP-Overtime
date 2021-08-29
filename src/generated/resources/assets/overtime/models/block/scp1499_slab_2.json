@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "side": "overtime:block/scp1499_block_1",
-    "bottom": "overtime:block/scp1499_block_1",
-    "top": "overtime:block/scp1499_block_1"
+    "side": "overtime:block/scp1499_block_2",
+    "bottom": "overtime:block/scp1499_block_2",
+    "top": "overtime:block/scp1499_block_2"
   }
 }

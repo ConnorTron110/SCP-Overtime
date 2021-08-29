@@ -155,6 +155,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModBlocks.CAUTION_LINE_VERTICAL.get());
         withExistingParent(ModBlocks.CAUTION_LINE_DIAGONAL.get());
 
+        withExistingParent(ModBlocks.VENDING_DRINK_BLUE.get());
+        withExistingParent(ModBlocks.VENDING_DRINK_PINK.get());
+        withExistingParent(ModBlocks.VENDING_DRINK_PURPLE.get());
+
         withExistingParent(ModBlocks.SCP2845_GRASS.get());
         withExistingParent(ModBlocks.SCP2845_LOG.get());
         withExistingParent(ModBlocks.SCP2845_LEAVES.get());
@@ -188,6 +192,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder(ModItems.ICON_KETER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ ModItems.ICON_KETER.get().getRegistryName().getPath());
         getBuilder(ModItems.CUPCAKE.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ ModItems.CUPCAKE.get().getRegistryName().getPath());
         getBuilder(ModItems.MOB_DESPAWNER.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/pipe");
+
+        getBuilder(ModItems.MONEY.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/"+ ModItems.MONEY.get().getRegistryName().getPath());
+
+        getBuilder(ModItems.CANNED_COFFEE.get().getRegistryName().getPath()).parent(getExistingFile(modLoc("item/drink"))).texture("drink", "item/"+ ModItems.CANNED_COFFEE.get().getRegistryName().getPath());
+        getBuilder(ModItems.CAKEA_COLA.get().getRegistryName().getPath()).parent(getExistingFile(modLoc("item/drink"))).texture("drink", "item/"+ ModItems.CAKEA_COLA.get().getRegistryName().getPath());
+        getBuilder(ModItems.SANGRITA_DILE.get().getRegistryName().getPath()).parent(getExistingFile(modLoc("item/drink"))).texture("drink", "item/"+ ModItems.SANGRITA_DILE.get().getRegistryName().getPath());
+        getBuilder(ModItems.SKY_FISH.get().getRegistryName().getPath()).parent(getExistingFile(modLoc("item/drink"))).texture("drink", "item/"+ ModItems.SKY_FISH.get().getRegistryName().getPath());
+        getBuilder(ModItems.PUMPKIN_PUNCH.get().getRegistryName().getPath()).parent(getExistingFile(modLoc("item/drink"))).texture("drink", "item/"+ ModItems.PUMPKIN_PUNCH.get().getRegistryName().getPath());
+
         getBuilder(ModItems.HAZMAT_HELMET.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/hazmat_suit_helmet");
         getBuilder(ModItems.HAZMAT_CHEST.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/hazmat_suit_chest");
         getBuilder(ModItems.HAZMAT_LEGGINGS.get().getRegistryName().getPath()).parent(itemGenerated).texture("layer0", "item/hazmat_suit_leggings");

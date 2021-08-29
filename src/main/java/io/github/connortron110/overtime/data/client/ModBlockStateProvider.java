@@ -149,7 +149,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock(ModBlocks.MESH_STAIR.get(), modLoc("block/"+ ModBlocks.MESH_FLOOR.get().getRegistryName().getPath()));
         slabBlock(ModBlocks.MESH_SLAB.get(), modLoc("block/"+ ModBlocks.MESH_FLOOR.get().getRegistryName().getPath()), modLoc("block/"+ ModBlocks.MESH_FLOOR.get().getRegistryName().getPath()));
 
-        simpleBlock(ModBlocks.CAUTION_LINE_VERTICAL.get());
+        axisBlock(ModBlocks.CAUTION_LINE_VERTICAL.get(), modLoc("block/caution_line_vertical"), modLoc("block/caution_line_vertical_top"));
         simpleBlock(ModBlocks.CAUTION_LINE_DIAGONAL.get());
 
         doorBlock(ModBlocks.LIGHT_DOOR.get(), modLoc("block/light_door_bottom"), modLoc("block/light_door_top"));

@@ -13,6 +13,9 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> GENERIC_STEP = registerSound("generic_step");
     public static final RegistryObject<SoundEvent> HEAVY_STEP = registerSound("heavy_step");
     public static final RegistryObject<SoundEvent> MASK_BREATHING = registerSound("mask_breathing");
+    public static final RegistryObject<SoundEvent> VENDING_AMBIENCE = registerSound("vending_machine_ambience");
+    public static final RegistryObject<SoundEvent> VENDING_COIN = registerSound("vending_machine_coin");
+    public static final RegistryObject<SoundEvent> VENDING_DROP_ITEM = registerSound("vending_machine_drop_item");
 
     public static final RegistryObject<SoundEvent> SCP035_TENDRIL_IDLE = registerSound("scp035_tendril_idle");
     public static final RegistryObject<SoundEvent> SCP035_TENDRIL_SPAWN = registerSound("scp035_tendril_spawn");

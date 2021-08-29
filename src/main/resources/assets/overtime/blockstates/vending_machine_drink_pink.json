@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "facing=north,half=lower": { "model": "overtime:block/vending_machine_drink_pink" },
+    "facing=south,half=lower": { "model": "overtime:block/vending_machine_drink_pink", "y": 180 },
+    "facing=east,half=lower": { "model": "overtime:block/vending_machine_drink_pink", "y": 90 },
+    "facing=west,half=lower": { "model": "overtime:block/vending_machine_drink_pink", "y": 270 },
+
+    "facing=north,half=upper": { "model": "overtime:block/vending_machine_drink_pink" },
+    "facing=south,half=upper": { "model": "overtime:block/vending_machine_drink_pink", "y": 180 },
+    "facing=east,half=upper": { "model": "overtime:block/vending_machine_drink_pink", "y": 90 },
+    "facing=west,half=upper": { "model": "overtime:block/vending_machine_drink_pink", "y": 270 }
+  }
+}

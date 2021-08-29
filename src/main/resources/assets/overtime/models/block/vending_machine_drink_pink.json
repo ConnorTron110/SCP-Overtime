@@ -1,0 +1,7 @@
+{
+	"parent": "overtime:block/vending_machine_drink_blue",
+	"textures": {
+		"1": "overtime:block/vending_machine_drink_pink",
+		"particle": "overtime:block/vending_machine_drink_pink"
+	}
+}
