@@ -46,15 +46,17 @@ public class CommonCode {
 
     public static <T extends Entity> List<T> getViewingPlayers(T viewed, int trackingRange, double threshold, Predicate<? super T> predicates) {
         List<T> players = viewed.level.getEntitiesOfClass((Class<? extends T>) PlayerEntity.class, new AxisAlignedBB(viewed.blockPosition()).inflate(trackingRange), predicates);
+        List<T> toRemove = new ArrayList<>();
         if (!players.isEmpty()) {
-            players.parallelStream().forEach(player -> {
+            players.forEach(player -> {
                 Vector3d playerEyePos = viewed.getEyePosition(1).subtract(player.getEyePosition(1)).normalize();
                 Vector3d playerLookPos = player.getViewVector(1).normalize();
                 double dotProduct = playerLookPos.dot(playerEyePos);
                 if (!(dotProduct > threshold)) {
-                    players.remove(player);
+                    toRemove.add(player);
                 }
             });
+            players.removeAll(toRemove);
         }
         return players;
     }
@@ -63,7 +65,7 @@ public class CommonCode {
         List<LivingEntity> players = viewed.level.getEntitiesOfClass(PlayerEntity.class, new AxisAlignedBB(viewed.blockPosition()).inflate(trackingRange), EntityPredicates.ENTITY_STILL_ALIVE);
         AtomicBoolean isViewed = new AtomicBoolean(false);
         if (!players.isEmpty()) {
-            players.parallelStream().forEach(player -> {
+            players.forEach(player -> {
                 Vector3d playerEyePos = viewed.getEyePosition(1F).subtract(player.getEyePosition(1F)).normalize();
                 Vector3d playerLookPos = player.getViewVector(1F).normalize();
                 double dotProduct = playerLookPos.dot(playerEyePos);
