@@ -21,6 +21,7 @@ public class ModLangProvider extends LanguageProvider {
     protected void addTranslations() {
         /*Custom Messages*/ {
             add("scp1025.effect", "You read an article about %1$s");
+            add("scp1025.heartattack", "You read about Heart Attacks");
             add("scp1025.noeffect", "Its just a blank page...");
         }
 

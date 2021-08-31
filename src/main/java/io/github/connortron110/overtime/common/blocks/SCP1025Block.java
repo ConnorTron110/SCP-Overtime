@@ -10,6 +10,7 @@ import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.EffectType;
+import net.minecraft.potion.Effects;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
@@ -46,7 +47,11 @@ public class SCP1025Block extends HorizontalBlock {
         for (Effect effect : EFFECTS) {
             if (Math.random() < (1F / EFFECTS.size())) {
                 player.addEffect(new EffectInstance(effect, Integer.MAX_VALUE, 0, false, false));
-                player.sendMessage(new TranslationTextComponent("scp1025.effect", effect.getDisplayName()), Util.NIL_UUID);
+                if (effect != Effects.HARM) {
+                    player.sendMessage(new TranslationTextComponent("scp1025.effect", effect.getDisplayName()), Util.NIL_UUID);
+                } else {
+                    player.sendMessage(new TranslationTextComponent("scp1025.heartattack"), Util.NIL_UUID);
+                }
                 return ActionResultType.SUCCESS;
             }
         }
