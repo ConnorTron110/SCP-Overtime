@@ -70,6 +70,7 @@ public class ClientEvents {
         setRenderLayer(ModBlocks.DRAWER.get(), RenderType.cutout());
         setRenderLayer(ModBlocks.BLOOD_PUDDLE.get(), RenderType.cutout());
         setRenderLayer(ModBlocks.SCP066_BLOCK.get(), RenderType.cutout());
+        setRenderLayer(ModBlocks.SCP1025.get(), RenderType.cutout());
     }
 
     private static void registerItemModelOverrides() {
