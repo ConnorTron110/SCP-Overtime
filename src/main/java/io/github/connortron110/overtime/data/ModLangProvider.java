@@ -2,6 +2,7 @@ package io.github.connortron110.overtime.data;
 
 import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.core.init.ModBlocks;
+import io.github.connortron110.overtime.core.init.ModEffects;
 import io.github.connortron110.overtime.core.init.ModEntities;
 import io.github.connortron110.overtime.core.init.ModItems;
 import net.minecraft.block.Block;
@@ -20,9 +21,15 @@ public class ModLangProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         /*Custom Messages*/ {
+            add("scp966.nosleep", "No matter how hard you try, you cannot sleep.");
             add("scp1025.effect", "You read an article about %1$s");
             add("scp1025.heartattack", "You read about Heart Attacks");
             add("scp1025.noeffect", "Its just a blank page...");
+        }
+
+        /*Effects*/ {
+            addEffect(ModEffects.UNCONSCIOUS, "Unconscious");
+            addEffect(ModEffects.STALKING966, "SCP-966 Stalking");
         }
 
         /*Death Messages*/ {
@@ -41,6 +48,7 @@ public class ModLangProvider extends LanguageProvider {
             entityWithEgg(ModEntities.SCP427, ModItems.SCP427_SPAWN_EGG, "SCP-427 - Lovecraftian Locket Flesh");
             entityWithEgg(ModEntities.SCP745, ModItems.SCP745_SPAWN_EGG, "SCP-745 - The Headlights");
             entityWithEgg(ModEntities.SCP835_JP, ModItems.SCP835_JP_SPAWN_EGG, "SCP-835-JP - Keteru Yamiko");
+            entityWithEgg(ModEntities.SCP966, ModItems.SCP966_SPAWN_EGG, "SCP-966 - Sleep Killer");
             entityWithEgg(ModEntities.SCP1529, ModItems.SCP1529_SPAWN_EGG, "SCP-1529 - King of the Mountain");
             entity(ModEntities.SCP1762, "SCP-1762 - Origami Dragon");
             entityWithEgg(ModEntities.SCP2761, ModItems.SCP2761_SPAWN_EGG, "SCP-2761 - Bananazilla");

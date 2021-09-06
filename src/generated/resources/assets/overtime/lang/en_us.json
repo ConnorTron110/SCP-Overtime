@@ -143,6 +143,8 @@
   "death.attack.427fleshbeast": "%1$s got Transmutated by SCP-427",
   "death.attack.5167deaf": "%1$s got Deafened by SCP-5167",
   "death.attack.whipped": "%1$s got Whipped to death by SCP-066",
+  "effect.overtime.966stalking": "SCP-966 Stalking",
+  "effect.overtime.unconscious": "Unconscious",
   "entity.overtime.scp035_tendril": "SCP-035 Tendril",
   "entity.overtime.scp066": "SCP-066-2 - \"Eric's Toy\"",
   "entity.overtime.scp066_cat": "SCP-066 Cat",
@@ -158,6 +160,7 @@
   "entity.overtime.scp5167": "SCP-5167 - When The Imposter Is Sus",
   "entity.overtime.scp745": "SCP-745 - The Headlights",
   "entity.overtime.scp835_jp": "SCP-835-JP - Keteru Yamiko",
+  "entity.overtime.scp966": "SCP-966 - Sleep Killer",
   "item.overtime.cakea_cola": "Cake'a Cola",
   "item.overtime.canned_coffee": "Canned Coffee",
   "item.overtime.cupcake": "Cupcake",
@@ -204,6 +207,7 @@
   "item.overtime.scp714": "SCP-714",
   "item.overtime.scp745_spawn_egg": "SCP-745 - The Headlights Spawn Egg",
   "item.overtime.scp835_jp_spawn_egg": "SCP-835-JP - Keteru Yamiko Spawn Egg",
+  "item.overtime.scp966_spawn_egg": "SCP-966 - Sleep Killer Spawn Egg",
   "item.overtime.sky_fish": "Sky Fish",
   "itemGroup.overtimeblocks": "Overtime Building Blocks",
   "itemGroup.overtimeitems": "Overtime Items",
@@ -211,5 +215,6 @@
   "itemGroup.overtimemobs": "Overtime Mobs",
   "scp1025.effect": "You read an article about %1$s",
   "scp1025.heartattack": "You read about Heart Attacks",
-  "scp1025.noeffect": "Its just a blank page..."
+  "scp1025.noeffect": "Its just a blank page...",
+  "scp966.nosleep": "No matter how hard you try, you cannot sleep."
 }

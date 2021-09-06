@@ -32,6 +32,7 @@ public class ModEntities {
     public static final RegistryObject<EntityType<SCP650Entity>> SCP650 = register("scp650", SCP650Entity::new, EntityClassification.CREATURE, 0.5F, 1.75F);
     public static final RegistryObject<EntityType<SCP745Entity>> SCP745 = register("scp745", SCP745Entity::new, EntityClassification.MONSTER, 1.5F, 1.8F);
     public static final RegistryObject<EntityType<SCP835_JPEntity>> SCP835_JP = register("scp835_jp", SCP835_JPEntity::new, EntityClassification.MONSTER, .7F, 2F);
+    public static final RegistryObject<EntityType<SCP966Entity>> SCP966 = register("scp966", SCP966Entity::new, EntityClassification.MONSTER, .5F, 1.6F);
     public static final RegistryObject<EntityType<SCP1762Entity>> SCP1762 = register("scp1762", SCP1762Entity::new, EntityClassification.CREATURE, .5F, .5F);
     public static final RegistryObject<EntityType<SCP1529Entity>> SCP1529 = register("scp1529", SCP1529Entity::new, EntityClassification.MONSTER, .7F, 2F);
     public static final RegistryObject<EntityType<SCP2761Entity>> SCP2761 = register("scp2761", SCP2761Entity::new, EntityClassification.MONSTER, 2F, 5.5F);
@@ -51,6 +52,7 @@ public class ModEntities {
         event.put(SCP650.get(), createBaseAttributes(60, .5, 0, 0).build());
         event.put(SCP745.get(), createBaseAttributes(45, .5, 5, 1).add(Attributes.KNOCKBACK_RESISTANCE, .1).build());
         event.put(SCP835_JP.get(), createBaseAttributes(80, .4, 8, 1).build());
+        event.put(SCP966.get(), createBaseAttributes(80, .3, 1, .2).build());
         event.put(SCP1529.get(), createBaseAttributes(300, .2, 1, 1).add(Attributes.KNOCKBACK_RESISTANCE, 1000).build());
         event.put(SCP1762.get(), createBaseAttributes(2, .3, 3,2).add(Attributes.FLYING_SPEED, .3).build());
         event.put(SCP2761.get(), createBaseAttributes(850, .4, 8, 10).add(Attributes.KNOCKBACK_RESISTANCE, 1000).build());

@@ -63,6 +63,7 @@ public class ModItems {
     public static final RegistryObject<SpawnEggItem> SCP427_SPAWN_EGG = ITEMS.register("scp427_spawn_egg", () -> new ModSpawnEggItem(ModEntities.SCP427, new Color(0xE9CDCA).getRGB(), new Color(0xC69189).getRGB()));
     public static final RegistryObject<SpawnEggItem> SCP745_SPAWN_EGG = ITEMS.register("scp745_spawn_egg", () -> new ModSpawnEggItem(ModEntities.SCP745, new Color(0x060607).getRGB(), new Color(0xF5F5F6).getRGB()));
     public static final RegistryObject<SpawnEggItem> SCP835_JP_SPAWN_EGG = ITEMS.register("scp835_jp_spawn_egg", () -> new ModSpawnEggItem(ModEntities.SCP835_JP, new Color(0x333255).getRGB(), new Color(0x9C2417).getRGB()));
+    public static final RegistryObject<SpawnEggItem> SCP966_SPAWN_EGG = ITEMS.register("scp966_spawn_egg", () -> new ModSpawnEggItem(ModEntities.SCP966, new Color(0xDFDFDF).getRGB(), new Color(0x8D6B6B).getRGB()));
     public static final RegistryObject<SpawnEggItem> SCP1529_SPAWN_EGG = ITEMS.register("scp1529_spawn_egg", () -> new ModSpawnEggItem(ModEntities.SCP1529, new Color(0xABABAC).getRGB(), new Color(0xFDB301).getRGB()));
     public static final RegistryObject<SpawnEggItem> SCP2761_SPAWN_EGG = ITEMS.register("scp2761_spawn_egg", () -> new ModSpawnEggItem(ModEntities.SCP2761, new Color(0xF1D832).getRGB(), new Color(0xF9F5E2).getRGB()));
     public static final RegistryObject<SpawnEggItem> SCP3199_SPAWN_EGG = ITEMS.register("scp3199_spawn_egg", () -> new ModSpawnEggItem(ModEntities.SCP3199, new Color(0x9D8F87).getRGB(), new Color(0x8A836A).getRGB()));

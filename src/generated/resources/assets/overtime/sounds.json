@@ -179,6 +179,22 @@
       "overtime:scp/745/idle"
     ]
   },
+  "scp966_echo": {
+    "subtitle": "subtitle.scp966_echo",
+    "sounds": [
+      "overtime:scp/966/echo1",
+      "overtime:scp/966/echo2",
+      "overtime:scp/966/echo3"
+    ]
+  },
+  "scp966_idle": {
+    "subtitle": "subtitle.scp966_idle",
+    "sounds": [
+      "overtime:scp/966/idle1",
+      "overtime:scp/966/idle2",
+      "overtime:scp/966/idle3"
+    ]
+  },
   "scp1762_ost": {
     "subtitle": "subtitle.scp1762_ost",
     "sounds": [

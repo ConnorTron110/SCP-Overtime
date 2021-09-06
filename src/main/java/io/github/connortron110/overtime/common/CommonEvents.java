@@ -2,6 +2,7 @@ package io.github.connortron110.overtime.common;
 
 import io.github.connortron110.overtime.Overtime;
 import io.github.connortron110.overtime.common.entities.scp.SCP303Entity;
+import io.github.connortron110.overtime.core.init.ModEffects;
 import io.github.connortron110.overtime.core.util.CommonCode;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
@@ -13,11 +14,16 @@ import net.minecraft.state.properties.DoubleBlockHalf;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Direction;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.Util;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.entity.player.SleepingLocationCheckEvent;
+import net.minecraftforge.event.entity.player.SleepingTimeCheckEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -26,6 +32,29 @@ import java.util.stream.Collectors;
 
 @Mod.EventBusSubscriber(modid = Overtime.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class CommonEvents {
+
+    @SubscribeEvent
+    public static void sleepingTimeCheck(SleepingTimeCheckEvent event) {
+        PlayerEntity player = event.getPlayer();
+        if (player.hasEffect(ModEffects.UNCONSCIOUS.get())) {
+            event.setResult(Event.Result.ALLOW);
+        }
+        else if (player.hasEffect(ModEffects.STALKING966.get())) {
+            event.setResult(Event.Result.DENY);
+            player.sendMessage(new TranslationTextComponent("scp966.nosleep"), Util.NIL_UUID);
+        }
+    }
+
+    @SubscribeEvent
+    public static void unconsciousShouldStayAsleep(SleepingLocationCheckEvent event) {
+        if (event.getEntity() instanceof PlayerEntity) {
+            PlayerEntity player = (PlayerEntity) event.getEntity();
+            if (player.hasEffect(ModEffects.UNCONSCIOUS.get())) {
+                event.setResult(Event.Result.ALLOW);
+            }
+        }
+    }
+
     @SubscribeEvent
     public static void scp303DoorEvent(PlayerInteractEvent.RightClickBlock event) {
         PlayerEntity player = event.getPlayer();

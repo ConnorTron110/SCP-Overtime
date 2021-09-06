@@ -50,6 +50,9 @@ public class ModSoundsProvider extends SoundDefinitionsProvider {
         add(ModSounds.SCP745_HURT, new ModSoundDefinition(745).sound("hurt"));
         add(ModSounds.SCP745_IDLE, new ModSoundDefinition(745).sound("idle"));
 
+        add(ModSounds.SCP966_ECHO, new ModSoundDefinition(966).sound("echo", 3));
+        add(ModSounds.SCP966_IDLE, new ModSoundDefinition(966).sound("idle", 3));
+
         add(ModSounds.SCP1762_OST, new ModSoundDefinition().sound("scp/1762ost", true));
 
         add(ModSounds.SCP2761_DEATH, new ModSoundDefinition(2761).sound("death"));

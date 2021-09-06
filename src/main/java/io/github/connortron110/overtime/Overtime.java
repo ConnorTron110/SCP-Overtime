@@ -20,6 +20,7 @@ import org.apache.logging.log4j.Logger;
 public class Overtime {
 
     public static final String MOD_ID = "overtime";
+    //Only properly gets used in Mixins as to help with possible crashes
     public static final Logger LOGGER = LogManager.getLogger("Overtime");
     private static final String PROTOCOL_VERSION = "1";
     public static final SimpleChannel NETWORK = NetworkRegistry.newSimpleChannel(new ResourceLocation(MOD_ID, "network"), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
@@ -50,6 +51,7 @@ public class Overtime {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.ITEMS.register(bus);
         ModBlocks.BLOCKS.register(bus);
+        ModEffects.EFFECTS.register(bus);
         ModEntities.ENTITY_TYPES.register(bus);
         ModSounds.SOUNDS.register(bus);
 
