@@ -1,5 +1,6 @@
 package io.github.connortron110.overtime.common.blocks;
 
+import io.github.connortron110.overtime.common.blocks.base.BaseHorizontalBlock;
 import io.github.connortron110.overtime.common.entities.scp.SCP1762Entity;
 import io.github.connortron110.overtime.core.init.ModBlocks;
 import io.github.connortron110.overtime.core.init.ModEntities;
@@ -7,13 +8,11 @@ import io.github.connortron110.overtime.core.init.ModSounds;
 import io.github.connortron110.overtime.core.util.CommonCode;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalBlock;
 import net.minecraft.command.CommandSource;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
-import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
@@ -33,10 +32,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.WorldWorkerManager;
 
-import javax.annotation.Nullable;
 import java.util.Random;
 
-public class SCP1762Block extends HorizontalBlock {
+public class SCP1762Block extends BaseHorizontalBlock {
 
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
     public static final BooleanProperty ACTIVE = BooleanProperty.create("active");
@@ -138,12 +136,6 @@ public class SCP1762Block extends HorizontalBlock {
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader iBlockReader, BlockPos pos, ISelectionContext context) {
         return SHAPES[state.getValue(FACING).get2DDataValue()];
-    }
-
-    @Nullable
-    @Override
-    public BlockState getStateForPlacement(BlockItemUseContext context) {
-        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
     @Override

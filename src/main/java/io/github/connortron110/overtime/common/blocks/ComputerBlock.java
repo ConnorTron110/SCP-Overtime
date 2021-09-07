@@ -1,10 +1,10 @@
 package io.github.connortron110.overtime.common.blocks;
 
+import io.github.connortron110.overtime.common.blocks.base.BaseHorizontalBlock;
 import io.github.connortron110.overtime.core.util.CommonCode;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.BooleanProperty;
@@ -22,7 +22,7 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.stream.Stream;
 
-public class ComputerBlock extends HorizontalBlock {
+public class ComputerBlock extends BaseHorizontalBlock {
 
     public static final BooleanProperty POWERED = BooleanProperty.create("powered");
 

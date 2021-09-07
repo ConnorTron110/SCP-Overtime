@@ -1,5 +1,6 @@
 package io.github.connortron110.overtime.common.blocks;
 
+import io.github.connortron110.overtime.common.blocks.base.TwoTallHorizontalBlock;
 import io.github.connortron110.overtime.core.init.ModItems;
 import io.github.connortron110.overtime.core.init.ModSounds;
 import io.github.connortron110.overtime.core.util.CommonCode;

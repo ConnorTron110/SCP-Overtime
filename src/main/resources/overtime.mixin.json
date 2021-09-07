@@ -8,6 +8,7 @@
   "refmap": "overtime.refmap.json",
 
   "mixins": [
+    "AbstractBlockMixin",
     "PlayerEntityMixin"
   ],
   "client": [

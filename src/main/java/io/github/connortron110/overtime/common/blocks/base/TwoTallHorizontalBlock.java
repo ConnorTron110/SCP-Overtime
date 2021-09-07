@@ -1,6 +1,9 @@
-package io.github.connortron110.overtime.common.blocks;
+package io.github.connortron110.overtime.common.blocks.base;
 
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockRenderType;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -22,7 +25,7 @@ import javax.annotation.Nullable;
 /**
  * Used for 2 Tall Horizontal Facing blocks
  */
-public abstract class TwoTallHorizontalBlock extends HorizontalBlock {
+public abstract class TwoTallHorizontalBlock extends BaseHorizontalBlock {
 
     /**
      * If Tile Entity is required for whatever reason, bound it to the Bottom Half of the block
