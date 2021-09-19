@@ -20,6 +20,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.Constants;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.event.entity.EntityLeaveWorldEvent;
+import net.minecraftforge.event.entity.living.LivingSpawnEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.SleepingLocationCheckEvent;
 import net.minecraftforge.event.entity.player.SleepingTimeCheckEvent;
@@ -32,6 +35,13 @@ import java.util.stream.Collectors;
 
 @Mod.EventBusSubscriber(modid = Overtime.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class CommonEvents {
+
+    @SubscribeEvent
+    public static void scpPersistence(LivingSpawnEvent.AllowDespawn event) {
+        if (event.getEntity().getType().getRegistryName().getNamespace().equals("overtime")) {
+            event.setResult(Event.Result.DENY);
+        }
+    }
 
     @SubscribeEvent
     public static void sleepingTimeCheck(SleepingTimeCheckEvent event) {

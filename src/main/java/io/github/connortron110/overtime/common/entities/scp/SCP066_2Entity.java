@@ -26,7 +26,6 @@ public class SCP066_2Entity extends MonsterEntity {
     public SCP066_2Entity(EntityType<? extends MonsterEntity> entity, World world) {
         super(entity, world);
         xpReward = 2;
-        setPersistenceRequired();
     }
 
     @Override
