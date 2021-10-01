@@ -23,7 +23,7 @@ public abstract class ToggleCenterOffsetBlock extends Block {
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext itemUseContext) {
-        return this.defaultBlockState().setValue(OFFSET, itemUseContext.getPlayer() != null && !itemUseContext.getPlayer().isCrouching());
+        return this.defaultBlockState().setValue(OFFSET, itemUseContext.getPlayer() != null && !itemUseContext.getPlayer().isShiftKeyDown());
     }
 
     /**
