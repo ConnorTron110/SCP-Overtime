@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "overtime:item/mob_despawner"
+    "layer0": "overtime:item/pipe"
   }
 }

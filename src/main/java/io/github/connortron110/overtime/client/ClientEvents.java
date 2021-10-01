@@ -66,6 +66,10 @@ public class ClientEvents {
         setRenderLayer(ModBlocks.MESH_FLOOR.get(), RenderType.cutout());
         setRenderLayer(ModBlocks.MESH_STAIR.get(), RenderType.cutout());
         setRenderLayer(ModBlocks.MESH_SLAB.get(), RenderType.cutout());
+        setRenderLayer(ModBlocks.BARREL_BLUE.get(), RenderType.cutout());
+        setRenderLayer(ModBlocks.BARREL_RED.get(), RenderType.cutout());
+        setRenderLayer(ModBlocks.BARREL_GRAY.get(), RenderType.cutout());
+        setRenderLayer(ModBlocks.BARREL_YELLOW.get(), RenderType.cutout());
         setRenderLayer(ModBlocks.SCP2845_PLANT.get(), RenderType.cutout());
         setRenderLayer(ModBlocks.GIFT.get(), RenderType.cutout());
         setRenderLayer(ModBlocks.DRAWER.get(), RenderType.cutout());

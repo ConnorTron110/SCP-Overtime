@@ -51,11 +51,6 @@ public class ComputerBlock extends BaseHorizontalBlock {
 
     @Override
     public ActionResultType use(BlockState state, World world, BlockPos pos, PlayerEntity entity, Hand hand, BlockRayTraceResult hit) {
-        state.getDestroySpeed(world, pos);
-
-
-        world.getBlockState(pos).getDestroySpeed(world, pos);
-
         state = state.cycle(POWERED);
         world.setBlock(pos, state, 10);
         world.playSound(null, pos, SoundEvents.ARROW_HIT_PLAYER, SoundCategory.BLOCKS, 0.5F, state.getValue(POWERED) ? 1F : 0.08F);

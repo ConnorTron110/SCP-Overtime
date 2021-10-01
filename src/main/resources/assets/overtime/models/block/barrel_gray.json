@@ -1,0 +1,7 @@
+{
+  "parent": "overtime:block/barrel",
+  "textures": {
+    "0": "overtime:block/barrel_gray",
+    "particle": "overtime:block/barrel_gray"
+  }
+}

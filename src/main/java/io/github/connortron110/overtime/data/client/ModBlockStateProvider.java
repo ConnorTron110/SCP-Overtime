@@ -121,8 +121,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.OFFICE_WALL_MID.get());
         simpleBlock(ModBlocks.OFFICE_WALL_BOTTOM.get());
         simpleBlock(ModBlocks.OFFICE_CEILING.get());
-        //TODO Change
-        simpleBlock(ModBlocks.WHITE_WALL.get(), models().cubeAll(ModBlocks.WHITE_WALL.get().getRegistryName().getPath(), modLoc("block/office_wall_mid")));
+        simpleBlock(ModBlocks.WHITE_WALL.get(), models().cubeAll(ModBlocks.WHITE_WALL.get().getRegistryName().getPath(), modLoc("block/med_wall_white")));
         simpleBlock(ModBlocks.HEAVY_BLOCK.get());
 
         simpleBlock(ModBlocks.GRIT_1.get());
@@ -154,6 +153,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         doorBlock(ModBlocks.LIGHT_DOOR.get(), modLoc("block/light_door_bottom"), modLoc("block/light_door_top"));
         doorBlock(ModBlocks.HEAVY_DOOR.get(), modLoc("block/heavy_door_bottom"), modLoc("block/heavy_door_top"));
+
+        horizontalBlock(ModBlocks.CONCRETE_BARRIER.get(), models().getExistingFile(modLoc("block/concrete_barrier")));
+        simpleBlock(ModBlocks.TRAFFIC_CONE.get(), models().getExistingFile(modLoc("block/traffic_cone")));
 
         simpleBlock(ModBlocks.SCP2845_GRASS.get(), models().cubeBottomTop(ModBlocks.SCP2845_GRASS.get().getRegistryName().getPath(), modLoc("block/scp2845_side"), modLoc("block/scp2845_bottom"), modLoc("block/scp2845_top")));
         logBlock(ModBlocks.SCP2845_LOG.get());

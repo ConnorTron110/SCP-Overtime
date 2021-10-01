@@ -1,6 +1,7 @@
 package io.github.connortron110.overtime.core.init;
 
 import io.github.connortron110.overtime.Overtime;
+import io.github.connortron110.overtime.common.blocks.BarrelBlock;
 import io.github.connortron110.overtime.common.blocks.*;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -128,7 +129,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> OFFICE_WALL_MID = register("office_wall_mid", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.STONE)));
     public static final RegistryObject<Block> OFFICE_WALL_BOTTOM = register("office_wall_bottom", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.STONE)));
     public static final RegistryObject<Block> OFFICE_CEILING = register("office_ceiling", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.STONE)));
-    //TODO Needs own texture
     public static final RegistryObject<Block> WHITE_WALL = register("white_wall", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.STONE)));
     public static final RegistryObject<Block> HEAVY_BLOCK = register("heavy_block", Overtime.TAB_BLOCKS, () -> new Block(AbstractBlock.Properties.copy(ModMaterialProperties.STONE)));
 
@@ -165,6 +165,13 @@ public class ModBlocks {
     public static final RegistryObject<VendingDrinkMachineBlock> VENDING_DRINK_BLUE = register("vending_machine_drink_blue", Overtime.TAB_BLOCKS, () -> new VendingDrinkMachineBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL)));
     public static final RegistryObject<VendingDrinkMachineBlock> VENDING_DRINK_PINK = register("vending_machine_drink_pink", Overtime.TAB_BLOCKS, () -> new VendingDrinkMachineBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL)));
     public static final RegistryObject<VendingDrinkMachineBlock> VENDING_DRINK_PURPLE = register("vending_machine_drink_purple", Overtime.TAB_BLOCKS, () -> new VendingDrinkMachineBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL)));
+
+    public static final RegistryObject<ConcreteBarrierBlock> CONCRETE_BARRIER = register("concrete_barrier", Overtime.TAB_BLOCKS, () -> new ConcreteBarrierBlock(AbstractBlock.Properties.copy(ModMaterialProperties.STONE)));
+    public static final RegistryObject<TrafficConeBlock> TRAFFIC_CONE = register("traffic_cone", Overtime.TAB_BLOCKS, () -> new TrafficConeBlock(AbstractBlock.Properties.copy(ModMaterialProperties.WOOD)));
+    public static final RegistryObject<BarrelBlock> BARREL_BLUE = register("barrel_blue", Overtime.TAB_BLOCKS, () -> new BarrelBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL)));
+    public static final RegistryObject<BarrelBlock> BARREL_RED = register("barrel_red", Overtime.TAB_BLOCKS, () -> new BarrelBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL)));
+    public static final RegistryObject<BarrelBlock> BARREL_GRAY = register("barrel_gray", Overtime.TAB_BLOCKS, () -> new BarrelBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL)));
+    public static final RegistryObject<BarrelBlock> BARREL_YELLOW = register("barrel_yellow", Overtime.TAB_BLOCKS, () -> new BarrelBlock(AbstractBlock.Properties.copy(ModMaterialProperties.METAL)));
 
     public static final RegistryObject<GrassBlock> SCP2845_GRASS = register("scp2845_block", Overtime.TAB_BLOCKS, () -> new GrassBlock(AbstractBlock.Properties.copy(ModMaterialProperties.GRASS)));
     public static final RegistryObject<RotatedPillarBlock> SCP2845_LOG = register("scp2845_log", Overtime.TAB_BLOCKS, () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(ModMaterialProperties.WOOD).sound(SoundType.BASALT)));

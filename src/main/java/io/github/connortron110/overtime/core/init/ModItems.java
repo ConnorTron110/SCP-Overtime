@@ -29,6 +29,13 @@ public class ModItems {
     public static final RegistryObject<DrinkItem> SKY_FISH = ITEMS.register("sky_fish", () -> new DrinkItem(new Item.Properties().tab(Overtime.TAB_ITEMS)));
     public static final RegistryObject<DrinkItem> PUMPKIN_PUNCH = ITEMS.register("pumpkin_punch", () -> new DrinkItem(new Item.Properties().tab(Overtime.TAB_ITEMS)));
 
+    public static final RegistryObject<Item> COG = ITEMS.register("cog", () -> new Item(new Item.Properties().tab(Overtime.TAB_ITEMS)));
+    public static final RegistryObject<Item> TAPE = ITEMS.register("tape", () -> new Item(new Item.Properties().tab(Overtime.TAB_ITEMS)));
+    public static final RegistryObject<Item> SCRAP_METAL = ITEMS.register("scrap_metal", () -> new Item(new Item.Properties().tab(Overtime.TAB_ITEMS)));
+    public static final RegistryObject<SwordItem> PIPE = ITEMS.register("pipe", () -> new SwordItem(ItemTier.IRON, 4, 3, new Item.Properties().tab(Overtime.TAB_ITEMS)));
+    public static final RegistryObject<Item> WIRE = ITEMS.register("wire", () -> new Item(new Item.Properties().tab(Overtime.TAB_ITEMS)));
+    public static final RegistryObject<Item> SPRING = ITEMS.register("spring", () -> new Item(new Item.Properties().tab(Overtime.TAB_ITEMS)));
+
 
     public static final RegistryObject<ArmorItem> HAZMAT_HELMET = ITEMS.register("hazmat_helmet", () -> new HazmatSuitItem(ArmorMaterial.IRON, EquipmentSlotType.HEAD, new Item.Properties().tab(Overtime.TAB_ITEMS), null));
     public static final RegistryObject<ArmorItem> HAZMAT_CHEST = ITEMS.register("hazmat_chest", () -> new HazmatSuitItem(ArmorMaterial.IRON, EquipmentSlotType.CHEST, new Item.Properties().tab(Overtime.TAB_ITEMS), null));

@@ -162,6 +162,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModBlocks.VENDING_DRINK_PINK);
         withExistingParent(ModBlocks.VENDING_DRINK_PURPLE);
 
+        withExistingParent(ModBlocks.CONCRETE_BARRIER);
+        withExistingParent(ModBlocks.TRAFFIC_CONE);
+        withExistingParent(ModBlocks.BARREL_BLUE);
+        withExistingParent(ModBlocks.BARREL_RED);
+        withExistingParent(ModBlocks.BARREL_GRAY);
+        withExistingParent(ModBlocks.BARREL_YELLOW);
+
         withExistingParent(ModBlocks.SCP2845_GRASS);
         withExistingParent(ModBlocks.SCP2845_LOG);
         withExistingParent(ModBlocks.SCP2845_LEAVES);
@@ -193,7 +200,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ICON_EUCLID);
         simpleItem(ModItems.ICON_KETER);
         simpleItem(ModItems.CUPCAKE);
-        simpleItem(ModItems.MOB_DESPAWNER, "item/pipe");
+        simpleItem(ModItems.MOB_DESPAWNER);
 
         simpleItem(ModItems.MONEY);
 
@@ -202,6 +209,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         getBuilder(getPath(ModItems.SANGRITA_DILE)).parent(getExistingFile(modLoc("item/drink"))).texture("drink", "item/" + getPath(ModItems.SANGRITA_DILE));
         getBuilder(getPath(ModItems.SKY_FISH)).parent(getExistingFile(modLoc("item/drink"))).texture("drink", "item/" + getPath(ModItems.SKY_FISH));
         getBuilder(getPath(ModItems.PUMPKIN_PUNCH)).parent(getExistingFile(modLoc("item/drink"))).texture("drink", "item/" + getPath(ModItems.PUMPKIN_PUNCH));
+
+        simpleItem(ModItems.COG);
+        simpleItem(ModItems.TAPE);
+        simpleItem(ModItems.SCRAP_METAL);
+        simpleItem(ModItems.PIPE);
+        simpleItem(ModItems.WIRE);
+        simpleItem(ModItems.SPRING);
 
         simpleItem(ModItems.HAZMAT_HELMET, "item/hazmat_suit_helmet");
         simpleItem(ModItems.HAZMAT_CHEST, "item/hazmat_suit_chest");

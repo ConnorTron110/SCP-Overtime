@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "facing=north,offset=false": { "model": "overtime:block/barrel_red" },
+    "facing=south,offset=false": { "model": "overtime:block/barrel_red", "y": 180 },
+    "facing=east,offset=false": { "model": "overtime:block/barrel_red", "y": 90 },
+    "facing=west,offset=false": { "model": "overtime:block/barrel_red", "y": 270 },
+
+    "facing=north,offset=true": { "model": "overtime:block/barrel_red" },
+    "facing=south,offset=true": { "model": "overtime:block/barrel_red", "y": 180 },
+    "facing=east,offset=true": { "model": "overtime:block/barrel_red", "y": 90 },
+    "facing=west,offset=true": { "model": "overtime:block/barrel_red", "y": 270 }
+  }
+}
