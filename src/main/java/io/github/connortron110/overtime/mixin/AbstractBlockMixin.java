@@ -15,7 +15,7 @@ public abstract class AbstractBlockMixin {
     @Inject(at = @At(value = "RETURN"), method = "getOffset(Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/vector/Vector3d;", cancellable = true)
     public void getOffset(IBlockReader iBlockReader, BlockPos pos, CallbackInfoReturnable<Vector3d> cir) {
         AbstractBlock.AbstractBlockState abstractBlockState = (AbstractBlock.AbstractBlockState)((Object) this);
-        if (abstractBlockState.getBlock() instanceof ToggleCenterOffsetBlock) {
+        if (abstractBlockState.getBlock() instanceof ToggleCenterOffsetBlock && iBlockReader.getBlockState(pos).getBlock() instanceof ToggleCenterOffsetBlock) {
             if (iBlockReader.getBlockState(pos).getValue(ToggleCenterOffsetBlock.OFFSET)) {
                 cir.setReturnValue(Vector3d.ZERO);
             }
