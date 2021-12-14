@@ -1,31 +1,30 @@
 modLoader="javafml"
-loaderVersion="[36,)"
-license="Creative Commons Attribution-NonCommercial 3.0"
+loaderVersion="[39,)"
+license="All rights reserved"
 #issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/"
 
 [[mods]]
     modId="overtime"
     version="${file.jarVersion}"
-    displayName="SCP Overtime"
-    # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
+    displayName="Overtime"
     #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
-    displayURL="https://discord.gg/sxDyCTng"
-    logoFile="logo.png"
-    credits="Tac0dile and Sir.Pancakes for help with models and Concept Build. ConnorTron110 for code."
-    authors="Gusutab0"
+    #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+    #logoFile="examplemod.png"
+    credits="SCP Community, etc.."
+    authors="Gustab0, ConnorTron110"
     description='''
-    A tribute to the SCP Foundation gaming community such as SCP Containment Breach and SCP Unity and many others.
+    A Mod based on the SCP community.
     '''
 
 [[dependencies.overtime]]
     modId="forge"
     mandatory=true
-    versionRange="[36,)"
+    versionRange="[39,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.overtime]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5,1.17)"
+    versionRange="[1.18.1,1.19)"
     ordering="NONE"
     side="BOTH"

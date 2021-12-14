@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_wall_side_tall",
-  "textures": {
-    "wall": "overtime:block/metal_floor_2"
-  }
-}

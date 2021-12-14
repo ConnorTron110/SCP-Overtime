@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "side": "overtime:block/caution_line_vertical",
-    "end": "overtime:block/caution_line_vertical_top"
-  }
-}

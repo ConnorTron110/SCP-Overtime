@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_rh",
-  "textures": {
-    "bottom": "overtime:block/heavy_door_bottom",
-    "top": "overtime:block/heavy_door_top"
-  }
-}

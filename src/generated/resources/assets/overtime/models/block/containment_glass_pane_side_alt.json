@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/template_glass_pane_side_alt",
-  "textures": {
-    "pane": "overtime:block/containment_glass",
-    "edge": "overtime:block/containment_glass"
-  }
-}

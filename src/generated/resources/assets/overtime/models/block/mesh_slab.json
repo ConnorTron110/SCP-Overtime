@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "side": "overtime:block/mesh_floor",
-    "bottom": "overtime:block/mesh_floor",
-    "top": "overtime:block/mesh_floor"
-  }
-}

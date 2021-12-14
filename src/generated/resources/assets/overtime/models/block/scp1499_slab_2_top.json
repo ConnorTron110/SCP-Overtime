@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "side": "overtime:block/scp1499_block_2",
-    "bottom": "overtime:block/scp1499_block_2",
-    "top": "overtime:block/scp1499_block_2"
-  }
-}

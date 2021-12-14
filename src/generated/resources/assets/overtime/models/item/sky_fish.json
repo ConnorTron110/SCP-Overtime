@@ -1,6 +1,0 @@
-{
-  "parent": "overtime:item/drink",
-  "textures": {
-    "drink": "overtime:item/sky_fish"
-  }
-}

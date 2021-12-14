@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_fence_gate",
-  "textures": {
-    "texture": "overtime:block/metal_floor_3"
-  }
-}

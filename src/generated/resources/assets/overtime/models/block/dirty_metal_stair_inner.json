@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "side": "overtime:block/dirty_metal_floor",
-    "bottom": "overtime:block/dirty_metal_floor",
-    "top": "overtime:block/dirty_metal_floor"
-  }
-}

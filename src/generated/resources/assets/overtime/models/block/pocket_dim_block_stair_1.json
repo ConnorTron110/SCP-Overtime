@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "side": "overtime:block/pocket_dim_block_1",
-    "bottom": "overtime:block/pocket_dim_block_1",
-    "top": "overtime:block/pocket_dim_block_1"
-  }
-}

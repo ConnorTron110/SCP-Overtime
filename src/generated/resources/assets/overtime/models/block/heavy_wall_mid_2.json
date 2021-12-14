@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "overtime:block/heavy_wall_mid_2"
-  }
-}
